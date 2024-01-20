@@ -28,41 +28,23 @@ def main():
     cov_2_class_3 = numpy.array(Gen_2d_Gaussian(mean_3,cov_2,number_elements).tolist()).reshape((2,number_elements))
     cov_2_class_4 = numpy.array(Gen_2d_Gaussian(mean_4,cov_2,number_elements).tolist()).reshape((2,number_elements))
     
-    
+    classes = ["1"]*number_elements+["2"]*number_elements+["3"]*number_elements+["4"]*number_elements
+    cov_1 = numpy.concatenate((cov_1_class_1[0], cov_1_class_2[0], cov_1_class_3[0], cov_1_class_4[0]))
+    cov_2 = numpy.concatenate((cov_2_class_1[0], cov_2_class_2[0], cov_2_class_3[0], cov_2_class_4[0]))
+    print(classes,len(classes))
+    print(cov_1,len(cov_1))
+
+
     d_1 = {
-        'col0':["1"]*number_elements, 
-        'col1':cov_1_class_1[0], 
-        'col2':cov_1_class_1[1],
+        'col0':classes, 
+        'col1':cov_1,
 
-        'col3':["2"]*number_elements, 
-        'col4':cov_1_class_2[0], 
-        'col5':cov_1_class_2[1],
-
-        'col6':["3"]*number_elements, 
-        'col7':cov_1_class_3[0], 
-        'col8':cov_1_class_3[1],
-          
-        'col9':["4"]*number_elements, 
-        'col10':cov_1_class_4[0], 
-        'col11':cov_1_class_4[1]
     }
     
     d_2 = {
-        'col0':["1"]*number_elements, 
-        'col1':cov_2_class_1[0], 
-        'col2':cov_2_class_1[1],
+        'col0':classes, 
+        'col1':cov_2,
 
-        'col3':["2"]*number_elements, 
-        'col4':cov_2_class_2[0], 
-        'col5':cov_2_class_2[1],
-
-        'col6':["3"]*number_elements, 
-        'col7':cov_2_class_3[0], 
-        'col8':cov_2_class_3[1],
-          
-        'col9':["4"]*number_elements, 
-        'col10':cov_2_class_4[0], 
-        'col11':cov_2_class_4[1]
     }
 
     df_1 = pandas.DataFrame(data=d_1)
