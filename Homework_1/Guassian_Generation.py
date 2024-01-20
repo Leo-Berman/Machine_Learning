@@ -50,6 +50,6 @@ def main():
 
     df_1 = pandas.DataFrame(data=d_1)
     df_2 = pandas.DataFrame(data = d_2)
-    df_1.to_csv('/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_1/cov_1.csv' ,sep = ',',index=False, encoding='utf-8')
-    df_2.to_csv('/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_1/cov_2.csv' ,sep = ',',index=False, encoding='utf-8')
+    df_1.to_csv('cov_1.csv' ,sep = ',',index=False, encoding='utf-8')
+    df_2.to_csv('cov_2.csv' ,sep = ',',index=False, encoding='utf-8')
 main()
