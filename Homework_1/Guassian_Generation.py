@@ -33,8 +33,6 @@ def main():
     cov_1_col2 = numpy.concatenate((cov_1_class_1[1], cov_1_class_2[1], cov_1_class_3[1], cov_1_class_4[1]))
     cov_2_col1 = numpy.concatenate((cov_2_class_1[0], cov_2_class_2[0], cov_2_class_3[0], cov_2_class_4[0]))
     cov_2_col2 = numpy.concatenate((cov_2_class_1[1], cov_2_class_2[1], cov_2_class_3[1], cov_2_class_4[1]))
-    print(classes,len(classes))
-    print(cov_1,len(cov_1))
 
 
     d_1 = {
