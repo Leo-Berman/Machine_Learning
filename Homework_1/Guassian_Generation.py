@@ -5,7 +5,7 @@ def Gen_2d_Gaussian(mean,cov,n_elem):
 
 def main():
     # number of elements
-    number_elements = 100
+    number_elements = 10
 
     # declare means for each class
     mean_1 = [1,1]
