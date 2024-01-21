@@ -26,13 +26,11 @@ def main():
     cov_2_class_3 = numpy.random.multivariate_normal(mean_3,cov_2,number_elements)
     cov_2_class_4 = numpy.random.multivariate_normal(mean_4,cov_2,number_elements)
 
-    cov_1_col_1 = cov_1_class_1[:,0].tolist() + cov_1_class_2[:,0].tolist() + cov_1_class_3[:,0].tolist() + cov_1_class_4[:,0].tolist()
-    cov_1_col_2 = cov_1_class_1[:,1].tolist() + cov_1_class_2[:,1].tolist() + cov_1_class_3[:,1].tolist() + cov_1_class_4[:,1].tolist()
-    cov_2_col_1 = cov_2_class_1[:,0].tolist() + cov_2_class_2[:,0].tolist() + cov_2_class_3[:,0].tolist() + cov_2_class_4[:,0].tolist()
-    cov_2_col_2 = cov_2_class_1[:,1].tolist() + cov_2_class_2[:,1].tolist() + cov_2_class_3[:,1].tolist() + cov_2_class_4[:,1].tolist()
-    
-    
-    print(cov_1_col_1)
+    cov_1_col1 = cov_1_class_1[:,0].tolist() + cov_1_class_2[:,0].tolist() + cov_1_class_3[:,0].tolist() + cov_1_class_4[:,0].tolist()
+    cov_1_col2 = cov_1_class_1[:,1].tolist() + cov_1_class_2[:,1].tolist() + cov_1_class_3[:,1].tolist() + cov_1_class_4[:,1].tolist()
+    cov_2_col1 = cov_2_class_1[:,0].tolist() + cov_2_class_2[:,0].tolist() + cov_2_class_3[:,0].tolist() + cov_2_class_4[:,0].tolist()
+    cov_2_col2 = cov_2_class_1[:,1].tolist() + cov_2_class_2[:,1].tolist() + cov_2_class_3[:,1].tolist() + cov_2_class_4[:,1].tolist()
+    '''
     plt.plot(cov_1_class_1[:, 0], cov_1_class_1[:, 1], '.', alpha=0.5)
     plt.plot(cov_1_class_2[:, 0], cov_1_class_2[:, 1], '.', alpha=0.5)
     plt.plot(cov_1_class_3[:, 0], cov_1_class_3[:, 1], '.', alpha=0.5)
@@ -40,6 +38,7 @@ def main():
     plt.axis('equal')
     plt.grid()
     plt.show()
+    '''
     
     d_1 = {
         'col0':classes, 
