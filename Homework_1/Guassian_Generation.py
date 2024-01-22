@@ -2,6 +2,28 @@ import numpy
 import pandas
 import matplotlib.pyplot as plt
 
+def debug_csv():
+    classifier = [0,0,0,0,1,1,1,1]
+    
+    zero_error_x = [0,1,1,0,2,2,3,3]
+    zero_error_y = [0,0,1,1,2,3,2,3]
+    d_1 = {
+        'col0':classifier,
+        'col1':zero_error_x,
+        'col2':zero_error_y,
+    }
+    df_1 = pandas.DataFrame(data=d_1)
+    df_1.to_csv('no_error_debug.csv' ,sep = ',',index=False, encoding='utf-8')
+
+    zero_error_x[2] = 2.5
+    zero_error_y[2] = 2.5
+    d_1 = {
+        'col0':classifier,
+        'col1':zero_error_x,
+        'col2':zero_error_y,
+    }
+    df_1 = pandas.DataFrame(data=d_1)
+    df_1.to_csv('error_debug.csv' ,sep = ',',index=False, encoding='utf-8')
 def main():
     # number of elements
     number_elements = 100
@@ -57,4 +79,6 @@ def main():
     df_2 = pandas.DataFrame(data = d_2)
     df_1.to_csv('cov_1.csv' ,sep = ',',index=False, encoding='utf-8')
     df_2.to_csv('cov_2.csv' ,sep = ',',index=False, encoding='utf-8')
+
+    debug_csv()
 main()
