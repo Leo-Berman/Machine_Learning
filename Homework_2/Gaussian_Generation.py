@@ -35,6 +35,8 @@ def main():
     eigenvectors_list = []
     eigenvalues_list = []
 
+    # Colors list
+    colors_list = ['r','b','y','g','o']
 
     # Generate guassians for allcovariance matrixes
     for i in range(len(cov_list)):
@@ -49,13 +51,16 @@ def main():
         eigenvectors_list.append(eigenvectors)
         eigenvalues_list.append(eigenvalues)
 
-        print(eigenvectors)
-        
+        print("Eigenvalues = ",eigenvalues)
         # Plot the eigenvectors
-        for x in eigenvalues:     
-            plt.quiver(mean, x, scale = 10, zorder = 10)
+        for j in range(len(eigenvectors)):
+            print(eigenvalues[j])     
+            plt.quiver(*mean, *(eigenvectors[:,j]*eigenvalues[j]), scale = 18, color = colors_list[j], zorder = 10)
         
-        plt.axis('equal')
+        
+        #plt.axis('equal')
+        plt.xlim(-10,10)
+        plt.ylim(-10,10)
         plt.grid()
         #plt.show()
         plotname = "Cov_" + str(i) + ".png"
