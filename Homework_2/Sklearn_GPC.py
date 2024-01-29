@@ -1,4 +1,4 @@
-from sklearn.gaussian_process import GuassianProcessClassifier as GPC
+from sklearn.gaussian_process import GaussianProcessClassifier as GPC
 import numpy as np
 import pandas as pd
 
@@ -12,7 +12,7 @@ def main():
     eval_coords = np.array(list(zip(eval[:,1],eval[:,2])))
 
     # Set and train the algorithm
-    algo = QDA()
+    algo = GPC(optimizer = None)
     print(algo.fit(train_coords,train[:,0]))
 
     # Evaluate the algorithm
