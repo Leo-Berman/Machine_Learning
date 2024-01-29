@@ -28,9 +28,9 @@ class Custom_Gaussian:
                 value_totals[self.data[i][0]+"_x"] += self.data[i][1]
                 value_totals[self.data[i][0]+"_y"] += self.data[i][2]
             
-        for x in features:
+        for x in self.classes:
             print(value_totals[x+"_x"])
-            print(features[x].number_elements)
+            print(self.classes[x].number_elements)
             #features[x].x_mean = value_totals[x+"_x"]/features[x].number_elements
             #features[x].y_mean = value_totals[x+"_y"]/features[x].number_elements
 
