@@ -135,6 +135,7 @@ class Custom_Gaussian:
     
     # Evaluate data
     def eval(self,newdata):
+        
         # Keep track of guesses and return the correct/total
         total_correct = 0
         total_wrong = 0
