@@ -33,48 +33,59 @@ class Feature:
         self.x_sd = np.sqrt(x_sums_squared/(self.number_elements-1))
         self.y_sd = np.sqrt(y_sums_squared/(self.number_elements-1))
 
-class Custom_Gaussian:
-    # load data into a class
-    def __init__(self,indata):
-        self.data = indata
-        self.classes = {}
-        self.number_elements = 0
-    
-    # training the model
-    def train(self):
-        
-        # Keeping track of totals
-        value_totals = {}
+    # Add in feature data
+    def add_data(self,indata):
+        self.data.append(indata)
+        self.number_elements+=1
 
+    # calculating the mean of each feature of the class
+    def calculate_mean(self):
+        x_sum = 0
+        y_sum = 0
+        for x in self.data:
+            x_sum+=x[0]
+            y_sum+=x[1]
+        self.x_mean = x_sum/self.number_elements
+        self.y_mean = y_sum/self.number_elements
+        
+class Custom_Gaussian:
+    
+    # constructor
+    def __init__(self):
+        # keep track of classes
+        self.classes = {}
+
+        # keep track of number of elements
+        self.number_elements = 0
+
+        # Keeping track of totals
+        self.value_totals = {}
+
+    # training the model
+    def train(self,training_data):
+        
         # iterate through all data
-        for i in range(len(self.data)):
+        for i in range(len(training_data)):
             
             # check if there is already a feature for the class if not make one
-            if self.data[i][0] not in self.classes:
-                #print(self.data[i][0])
+            if training_data[i][0] not in self.classes:
+                #print(training_data[i][0])
 
                 # total values and make new features
-                self.classes[self.data[i][0]]=Feature(self.data[i][0])
-                value_totals[self.data[i][0]+"_x"] = float(self.data[i][1])
-                value_totals[self.data[i][0]+"_y"] = float(self.data[i][2])
-
-            else:
-                # add valuess to track means
-                value_totals[self.data[i][0]+"_x"] += float(self.data[i][1])
-                value_totals[self.data[i][0]+"_y"] += float(self.data[i][2])
+                self.classes[training_data[i][0]]=Feature(training_data[i][0])
             
-            # Add data to class and keep track of number of elements
-            self.classes[self.data[i][0]].number_elements+=1
-            self.classes[self.data[i][0]].data.append([float(self.data[i][1]),float(self.data[i][2])])
+            # Add data to feature
+            self.classes[training_data[i][0]].add_data([float(training_data[i][1]),float(training_data[i][2])])
+
+            # Keep track of total number of elements
             self.number_elements+=1
 
-        # calculate means and standard deviations
+        # Call functions for calculating means and standard deviations
         for x in self.classes:
-            self.classes[x].x_mean = value_totals[x+"_x"]/self.classes[x].number_elements
-            self.classes[x].y_mean = value_totals[x+"_y"]/self.classes[x].number_elements
+            self.classes[x].calculate_mean()
             self.classes[x].calculate_sd()
-
-    # printing data from the class (features)
+    
+    # printing data from the class
     def print_classes(self):
         for x in self.classes:
             self.classes[x].print_self()
@@ -84,13 +95,19 @@ class Custom_Gaussian:
     def return_probability(self,inclass,inx,iny):
         guess_elements = -1
         guess = None
+
+        # Iterate through the data and whichever one has more elements is my
+        # default guess
         for x in self.classes:
             if self.classes[x].number_elements > guess_elements:
                 guess_elements = self.classes[x].number_elements
                 guess = x
                 guess_prob = -1
         
+        # Iterate through all classes and calculate each features probability density
         for x in self.classes:
+
+            # Calculate probability density
             x_mean = self.classes[x].x_mean
             y_mean = self.classes[x].y_mean
             x_sd = self.classes[x].x_sd
@@ -101,21 +118,25 @@ class Custom_Gaussian:
             y_den = np.sqrt(2*np.pi*(y_sd**2))
             x_prob = x_num/x_den
             y_prob = y_num/y_den
-            #total_prob = (x_prob + y_prob)/2
-            #total_prob = x_prob*y_prob
-            #total_prob = np.convolve(x_prob,y_prob)
-            #print(x,total_prob) # debug
+
+            # Combine probability Density
+            total_prob = np.log(x_prob) + np.log(y_prob) + np.log(1/self.classes[x].number_elements)
+            
+            # If probability is greater than last guess set as new guess
             if total_prob > guess_prob:
                 guess_prob = total_prob
                 guess = x
         
-        #print(guess,guess_prob) # debug
+        # Check to see if guess was correct or incorrect
         if guess == inclass:
             return True
         else:
             return False
     
+    # Evaluate data
     def eval(self,newdata):
+        
+        # Keep track of guesses and return the correct/total
         total_correct = 0
         total_wrong = 0
         for x in newdata:
@@ -124,18 +145,20 @@ class Custom_Gaussian:
             else:
                 total_wrong += 1
         accuracy_rate = total_correct/self.number_elements
-        #print("Accuracy rate = ",accuracy_rate)
         return accuracy_rate
 
 def main():
+    
+    # read data in and turn it into a 3 column numpy array
     train = pd.read_csv("train.csv",comment = "#").to_numpy()
     eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
-    
     train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
     eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
 
-    my_gauss = Custom_Gaussian(train)
-    my_gauss.train()
+    # initialize model
+    my_gauss = Custom_Gaussian()
+    my_gauss.train(train)
+    #my_gauss.train(eval)
     my_gauss.print_classes()
     #my_gauss.eval([["dogs",0.002100,-0.434914]])
     

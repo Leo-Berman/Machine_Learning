@@ -106,7 +106,7 @@ class Custom_Gaussian:
         
         # Iterate through all classes and calculate each features probability density
         for x in self.classes:
-
+                
             # Calculate probability density
             x_mean = self.classes[x].x_mean
             y_mean = self.classes[x].y_mean
@@ -118,10 +118,15 @@ class Custom_Gaussian:
             y_den = np.sqrt(2*np.pi*(y_sd**2))
             x_prob = x_num/x_den
             y_prob = y_num/y_den
+            
+
+            # calculating probability
+
+
 
             # Combine probability Density
-            total_prob = (x_prob + y_prob)/2
-
+            total_prob = np.log(x_prob) + np.log(y_prob) + np.log(1/self.classes[x].number_elements)
+            
             # If probability is greater than last guess set as new guess
             if total_prob > guess_prob:
                 guess_prob = total_prob

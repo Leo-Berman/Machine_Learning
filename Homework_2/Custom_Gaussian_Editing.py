@@ -14,6 +14,7 @@ class Feature:
         self.data = []
         self.cov = 0
         self.cov_mat = []
+    
     # printing self
     def print_self(self):
         print(self.class_name,":")
@@ -22,12 +23,14 @@ class Feature:
         print("X Standard Deviation = ",self.x_sd)
         print("Y mean = ",self.y_mean)
         print("Y Standard Deviation = ",self.y_sd)
+        print("Covariance = ",self.cov)
+        print("Covraiance Matrix = \n",self.cov_mat)
+
 
     # calculating the standard deviation
     def calculate_sd(self):
         x_sums_squared = 0
         y_sums_squared = 0
-        
         for x in self.data:
             x_sums_squared += (self.x_mean - x[0])**2
             y_sums_squared += (self.y_mean - x[1])**2
@@ -39,7 +42,7 @@ class Feature:
         self.data.append(indata)
         self.number_elements+=1
 
-    # calculating the mean of each feature of the class
+    # Calculating the mean of each feature of the class
     def calculate_mean(self):
         x_sum = 0
         y_sum = 0
@@ -49,15 +52,17 @@ class Feature:
         self.x_mean = x_sum/self.number_elements
         self.y_mean = y_sum/self.number_elements
         
+    # Calculating covariance
     def calculate_covariance(self):
         work = 0
         for x in self.data:
             work+=(x[0]-self.x_mean) * (x[1]-self.y_mean)
-
         self.cov = work/(self.number_elements-1)
 
+    # Calculating covariance matrix
     def calculate_covariance_matrix(self):
         self.cov_mat = np.array([[self.x_sd, self.cov],[self.cov, self.y_sd]])
+
 class Custom_Gaussian:
     
     # constructor
@@ -118,19 +123,6 @@ class Custom_Gaussian:
         
         # Iterate through all classes and calculate each features probability density
         for x in self.classes:
-            '''    
-            # Calculate probability density
-            x_mean = self.classes[x].x_mean
-            y_mean = self.classes[x].y_mean
-            x_sd = self.classes[x].x_sd
-            y_sd = self.classes[x].y_sd
-            x_num = np.exp(-((inx-x_mean)**2)/(2*(x_sd**2)))
-            x_den = np.sqrt(2*np.pi*(x_sd**2))
-            y_num = np.exp(-((iny-y_mean)**2)/(2*(y_sd**2)))
-            y_den = np.sqrt(2*np.pi*(y_sd**2))
-            x_prob = x_num/x_den
-            y_prob = y_num/y_den
-            '''
 
             # Mean vector            
             x_mean = self.classes[x].x_mean
@@ -144,26 +136,29 @@ class Custom_Gaussian:
             covariance_matrix = self.classes[x].cov_mat
             
             # Print for debugging
-            print("mean vector = \n",mean_vector)
-            print("feature vector = \n",feature_vector)
-            print("covariance matrix = \n",covariance_matrix)
+            #print("mean vector = \n",mean_vector,"\n")
+            #print("feature vector = \n",feature_vector,"\n")
+            #print("covariance matrix = \n",covariance_matrix,"\n")
 
-            ele1 = -1*.5*np.transpose(feature_vector-mean_vector)*np.linalg.inv(covariance_matrix)*(feature_vector-mean_vector)
+            #print("DEBUG = \n",np.dot(feature_vector-mean_vector,np.linalg.inv(covariance_matrix)))
+            # Elements for calculating probability density
+            ele1 = -1*.5*np.dot(np.dot(np.transpose(feature_vector-mean_vector),np.linalg.inv(covariance_matrix)),(feature_vector-mean_vector))
+            #print("Element 1 = \n",ele1,"\n")
             ele2 = -1*.5*np.log(2*np.pi)
-            ele3 = -1*.5*np.log(covariance_matrix)
+            #print("Element 2 = \n",ele2,"\n")
+            ele3 = -1*.5*np.linalg.det(np.log(covariance_matrix))
+            #print("Element 3 = \n",ele3,"\n")
             ele4 = -1*.5*np.log(1/self.number_elements)
+            #print("Element 4 = \n",ele4,"\n")
 
-            total_prob = ele1 + ele2 + ele3 + ele4
-            print("score = \n",total_prob)
             # Calculate probability density
+            total_prob = ele1 + ele2 + ele3 + ele4
+            #print("score = \n",total_prob,"\n")
 
-            # Combine probability Density
-            #total_prob = x_prob/(x_prob+y_prob)
-            
             # If probability is greater than last guess set as new guess
-            #if total_prob > guess_prob:
-            #    guess_prob = total_prob
-            #    guess = x
+            if total_prob > guess_prob:
+                guess_prob = total_prob
+                guess = x
         
         # Check to see if guess was correct or incorrect
         if guess == inclass:
@@ -196,12 +191,12 @@ def main():
     # initialize model
     my_gauss = Custom_Gaussian()
     my_gauss.train(train)
-    #my_gauss.train(eval)
+    my_gauss.train(eval)
     my_gauss.print_classes()
     my_gauss.eval([["dogs",0.002100,-0.434914]])
     
-    #print("Evaluation data accuracy = ", 1-my_gauss.eval(eval))
-    #print("Training data accuracy = ", 1-my_gauss.eval(train))
+    print("Evaluation data accuracy = ", 1-my_gauss.eval(eval))
+    print("Training data accuracy = ", 1-my_gauss.eval(train))
     
 
 
