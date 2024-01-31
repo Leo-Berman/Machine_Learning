@@ -14,6 +14,8 @@ class Feature:
         self.data = []
         self.cov = 0
         self.cov_mat = []
+        self.x_var = 0
+        self.y_var = 0
     
     # printing self
     def print_self(self):
@@ -32,8 +34,8 @@ class Feature:
         x_sums_squared = 0
         y_sums_squared = 0
         for x in self.data:
-            x_sums_squared += (self.x_mean - x[0])**2
-            y_sums_squared += (self.y_mean - x[1])**2
+            x_sums_squared += (-self.x_mean + x[0])**2
+            y_sums_squared += (-self.y_mean + x[1])**2
         self.x_sd = np.sqrt(x_sums_squared/(self.number_elements-1))
         self.y_sd = np.sqrt(y_sums_squared/(self.number_elements-1))
 
@@ -61,8 +63,12 @@ class Feature:
 
     # Calculating covariance matrix
     def calculate_covariance_matrix(self):
-        self.cov_mat = np.array([[self.x_sd, self.cov],[self.cov, self.y_sd]])
+        self.cov_mat = np.array([[self.x_var, self.cov],[self.cov, self.y_var]])
 
+    # Calculating population variance
+    def calculate_variance(self):
+        self.x_var = self.x_sd**2
+        self.y_var = self.y_sd**2
 class Custom_Gaussian:
     
     # constructor
@@ -100,6 +106,7 @@ class Custom_Gaussian:
             self.classes[x].calculate_mean()
             self.classes[x].calculate_sd()
             self.classes[x].calculate_covariance()
+            self.classes[x].calculate_variance()
             self.classes[x].calculate_covariance_matrix()
 
     # printing data from the class
@@ -113,17 +120,9 @@ class Custom_Gaussian:
         guess_elements = -1
         guess = None
 
-        # Iterate through the data and whichever one has more elements is my
-        # default guess
-        for x in self.classes:
-            if self.classes[x].number_elements > guess_elements:
-                guess_elements = self.classes[x].number_elements
-                guess = x
-                guess_prob = -1
-        
         # Iterate through all classes and calculate each features probability density
         for x in self.classes:
-
+            guess_prob = -1
             # Mean vector            
             x_mean = self.classes[x].x_mean
             y_mean = self.classes[x].y_mean
@@ -142,17 +141,20 @@ class Custom_Gaussian:
 
             #print("DEBUG = \n",np.dot(feature_vector-mean_vector,np.linalg.inv(covariance_matrix)))
             # Elements for calculating probability density
-            ele1 = -1*.5*np.dot(np.dot(np.transpose(feature_vector-mean_vector),np.linalg.inv(covariance_matrix)),(feature_vector-mean_vector))
+            ele1_1 = -.5*np.dot(np.transpose(feature_vector-mean_vector),np.linalg.inv(covariance_matrix))
+            ele1_2 = feature_vector-mean_vector
+            ele1 = np.dot(ele1_1,ele1_2)
             #print("Element 1 = \n",ele1,"\n")
-            ele2 = -1*.5*np.log(2*np.pi)
+            ele2 = -.5*np.log(2*np.pi)
             #print("Element 2 = \n",ele2,"\n")
-            ele3 = -1*.5*np.linalg.det(np.log(covariance_matrix))
+            ele3 = -.5*(np.log(np.linalg.det(covariance_matrix)))
             #print("Element 3 = \n",ele3,"\n")
-            ele4 = -1*.5*np.log(1/self.number_elements)
+            ele4 = np.log(1/self.classes[x].number_elements)
+            #ele4 = np.log(.5)
             #print("Element 4 = \n",ele4,"\n")
 
             # Calculate probability density
-            total_prob = ele1 + ele2 + ele3 + ele4
+            total_prob = ele1 + ele2 + ele3 #+ ele4
             #print("score = \n",total_prob,"\n")
 
             # If probability is greater than last guess set as new guess
@@ -191,9 +193,9 @@ def main():
     # initialize model
     my_gauss = Custom_Gaussian()
     my_gauss.train(train)
-    my_gauss.train(eval)
+    #my_gauss.train(eval)
     my_gauss.print_classes()
-    my_gauss.eval([["dogs",0.002100,-0.434914]])
+    #my_gauss.eval([["dogs",0.002100,-0.434914]])
     
     print("Evaluation data accuracy = ", 1-my_gauss.eval(eval))
     print("Training data accuracy = ", 1-my_gauss.eval(train))
