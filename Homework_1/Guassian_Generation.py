@@ -1,8 +1,8 @@
 import numpy
 import pandas
 import matplotlib.pyplot as plt
-
-def debug_csv():
+import sys
+def debug_data1():
     classifier = [0,0,0,0,1,1,1,1]
     
     zero_error_x = [0,1,1,0,2,2,3,3]
@@ -24,7 +24,29 @@ def debug_csv():
     }
     df_1 = pandas.DataFrame(data=d_1)
     df_1.to_csv('error_debug.csv' ,sep = ',',index=False, encoding='utf-8')
-def main():
+
+def debug_data2():
+    nelem = 100
+    mean_1 = [1,1]
+    mean_2 = [-1,-1]
+    cov = [[1,0],[0,1]]
+
+    data1 = numpy.random.multivariate_normal(mean_1,cov,nelem)
+    data2 = numpy.random.multivariate_normal(mean_2,cov,nelem)
+
+    classes = ["1"]*nelem + ["2"]*nelem
+
+    data_col1 = data1[:,0].tolist() + data2[:,0].tolist()
+    data_col2 = data1[:,1].tolist() + data2[:,1].tolist()
+
+    d = {
+        'col0':classes, 
+        'col1':data_col1,
+        'col2':data_col2,
+    }
+    df = pandas.DataFrame(data = d)
+    df.to_csv('debug2.csv' ,sep = ',',index=False, encoding='utf-8')
+def hw_data():
     # number of elements
     number_elements = 100
 
@@ -80,5 +102,13 @@ def main():
     df_1.to_csv('cov_1.csv' ,sep = ',',index=False, encoding='utf-8')
     df_2.to_csv('cov_2.csv' ,sep = ',',index=False, encoding='utf-8')
 
-    debug_csv()
+def main():
+    if len(sys.argv) == 1:
+        hw_data()
+    elif sys.argv[1] == "-debug1":
+        debug_data1()
+    elif sys.argv[1] == "-debug2":
+        debug_data2()
+    else:
+        print("Use Sklearn_QDA.py as:\n'python3 Sklearn_QDA.py -debug(1/2)' or 'python3 Sklearn QDA.py'")
 main()

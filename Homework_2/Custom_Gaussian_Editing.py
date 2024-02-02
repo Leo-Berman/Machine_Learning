@@ -79,7 +79,7 @@ class Feature:
         self.cov_mat = np.array([[self.x_var, self.cov],[self.cov, self.y_var]])
 
         #print("Hand calc = \n",self.cov_mat)
-        #print(self.data[:,0])
+        #print(self.data[:,0])  
         #print("Numpy = \n",np.cov(self.data[:,0],self.data[:,1]))
     # Calculating population variance
     def calculate_variance(self):
@@ -201,8 +201,8 @@ class Custom_Gaussian:
 
 def hw_data():
     # read data in and turn it into a 3 column numpy array
-    train = pd.read_csv("debug2.csv",comment = "#").to_numpy()
-    eval = pd.read_csv("debug2.csv", comment = "#").to_numpy()
+    train = pd.read_csv("train.csv",comment = "#").to_numpy()
+    eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
     train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
     eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
 
@@ -218,20 +218,21 @@ def hw_data():
 
 def debug_data():
     # read data in and turn it into a 3 column numpy array
-    train = pd.read_csv("/home/tuo54571/Machine_Learning/Homework_1/cov_1.csv",comment = "#").to_numpy()
-    eval = pd.read_csv("/home/tuo54571/Machine_Learning/Homework_1/cov_2.csv", comment = "#").to_numpy()
+    train = pd.read_csv("debug2.csv",comment = "#").to_numpy()
+    eval = pd.read_csv("debug2.csv", comment = "#").to_numpy()
     train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
     eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
 
+    #print(train)
     # initialize model
     my_gauss = Custom_Gaussian()
     my_gauss.train(train)
     #my_gauss.train(eval)
-    #my_gauss.print_classes()
-    #print("Test Case = ",my_gauss.eval([["dogs",-50,-50]]))
+    my_gauss.print_classes()
+    print("Test Case = ",my_gauss.eval([["1",-1,-1]]))
     
-    print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
-    print("Training accuracy rate = ", 1-my_gauss.eval(train))
+    #print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
+    #print("Training accuracy rate = ", 1-my_gauss.eval(train))
 def main():
     if len(sys.argv) == 1:
         hw_data()
