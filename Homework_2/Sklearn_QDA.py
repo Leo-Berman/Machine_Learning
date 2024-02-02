@@ -20,8 +20,8 @@ def hw_data():
 
 def debug_data():
     # read in the data from the csv files
-    train = pd.read_csv("/home/tuo54571/Machine_Learning/Homework_1/cov_1.csv",comment = "#").to_numpy()
-    eval = pd.read_csv("/home/tuo54571/Machine_Learning/Homework_1/cov_2.csv", comment = "#").to_numpy()
+    train = pd.read_csv("debug2.csv",comment = "#").to_numpy()
+    eval = pd.read_csv("debug2.csv", comment = "#").to_numpy()
     
     train_coords = np.array(list(zip(train[:,1],train[:,2])))
     eval_coords = np.array(list(zip(eval[:,1],eval[:,2])))

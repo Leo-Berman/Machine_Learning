@@ -154,9 +154,9 @@ class Custom_Gaussian:
             
 
             # Print for debugging
-            print(x,"mean vector = \n",mean_vector,"\n")
+            #print(x,"mean vector = \n",mean_vector,"\n")
             #print("feature vector = \n",feature_vector,"\n")
-            print(x,"covariance matrix = \n",covariance_matrix,"\n")
+            #print(x,"covariance matrix = \n",covariance_matrix,"\n")
 
             #print("DEBUG = \n",np.dot(feature_vector-mean_vector,np.linalg.inv(covariance_matrix)))
             # Elements for calculating probability density
@@ -229,10 +229,10 @@ def debug_data():
     my_gauss.train(train)
     #my_gauss.train(eval)
     my_gauss.print_classes()
-    print("Test Case = ",my_gauss.eval([["1",-1,-1]]))
+    #print("Test Case = ",my_gauss.eval([["1",-1,-1]]))
     
-    #print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
-    #print("Training accuracy rate = ", 1-my_gauss.eval(train))
+    print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
+    print("Training accuracy rate = ", 1-my_gauss.eval(train))
 def main():
     if len(sys.argv) == 1:
         hw_data()
