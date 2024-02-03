@@ -4,6 +4,16 @@
 % Pages and colors used for the cover page
 \usepackage{tikz-page}
 \usepackage{url}
+\usepackage{lastpage}
+
+% Used for the math and code
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{pythonhighlight} % Got this from github! https://github.com/olivierverdier/python-latex-highlighting/blob/master/pythonhighlight.sty
+
+% Used for the pictures
+\usepackage{float}
+
 \usepackage[
   top=2cm,
   bottom=2cm,
@@ -37,72 +47,180 @@
 \pagestyle{plain}
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
-        
-        
-        % Put name data and assignment number here
-        \newcommand\personaldate{February 3, 2024}
-        \newcommand\myname{John Smith}
-        \newcommand\myemail{jsmith@temple.edu}
-        \newcommand\hwnum{XX}
-        \newcommand\mynameabbrev{J. Smith}
-        \newcommand\assignmenttitle{Title of the Assignment}
 
-        \begin{titlepage}
-                % Drawing the border and the text box 
-                \newcommand{\tikzpagelayout}{
-                \draw[line width = .04in,
-                color = cobalt]
-                ($(current page.north west)+(1in,-1in)$)
-                rectangle ($(current page.south east)+(-.625in,1in)$);
+
+% Put name data and assignment number here
+\newcommand\personaldate{February 3, 2024}
+\newcommand\myname{Leo Berman}
+\newcommand\myemail{leo.berman@temple.edu}
+\newcommand\hwnum{02}
+\newcommand\mynameabbrev{L. Berman}
+\newcommand\assignmenttitle{Bayesian Decision Theory}
+\newcommand\yourclass{ECE 8527: Machine Learning and Pattern Recognition}
+\begin{titlepage}
+	% Drawing the border and the text box 
+	\newcommand{\tikzpagelayout}{
+		\draw[line width = .04in,
+			color = cobalt]
+		($(current page.north west)+(1in,-1in)$)
+		rectangle ($(current page.south east)+(-.625in,1in)$);
+
+		\draw[line width = .04in,
+			color = brickred]
+		($(current page.north west)+(.92in,-.92in)$)
+		rectangle ($(current page.south east)+(-.705in,1.08in)$);
+		\node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
+	}
+
+	\begin{center}
+		\large{Homework Assignment No. \hwnum:}\break
+		\break
+		\large{\textbf{HW No. \hwnum: \assignmenttitle}}\break
+		\break
+		\large{submitted to:}\break
+		\break
+		\large{Professor Joseph Picone}\break
+		\large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
+		\large{Temple University}\break
+		\large{College of Engineering}\break
+		\large{1947 North 12th Street}\break
+		\large{Philadelphia, Pennsylvania 19122}\break
+		\break
+		\large{\personaldate}\break
+		\break
+		\large{prepared by: }\break
+		\break
+		\large{\myname}\break
+		\large{Email: \myemail}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[R,EH]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,EF]{\yourclass}
+\fancyfoot[R,EF]{\personaldate}
+\renewcommand{\thesection}{\Alph{section}.}
+\section{DESCRIPTION OF THE TASK}
+\begin{flushleft}
+	\large{Briefly describe the general approach that you used to solve the problem(s). Show snippets of code and explain how this code works. Show results in tables comparing new results to your baselines.}\break
+	\break
+	\large{For examples of well-formatted documents please review these conference abstracts:}\break
+	\break
+	\url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/dpath/abstract_v22.docx}\break
+	\url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/tueg/abstract_v10.docx}
+\end{flushleft}
+\section{Generate multivariate Gaussian distributions}
+\large{Generate multivariate Gaussian distributions with a mean vector of zero and covariances matrices :}
+\[
+(A)\begin{bmatrix} 
+        1 & 0\\
+        0 & 1
+\end{bmatrix}
+(B)\begin{bmatrix} 
+        5 & 0\\
+        0 & 2
+\end{bmatrix}
+(C)\begin{bmatrix} 
+        2 & 0\\
+        0 & 5
+\end{bmatrix}
+(D)\begin{bmatrix} 
+        1 & .5\\
+        .5 & 1
+\end{bmatrix}
+(E)\begin{bmatrix} 
+        1 & -.5\\
+        -.5 & 1
+\end{bmatrix}
+(F)\begin{bmatrix} 
+        5 & .5\\
+        .5 & 2
+\end{bmatrix}
+(G)\begin{bmatrix} 
+        5 & -5\\
+        -.5 & 2
+\end{bmatrix}
+\]
+\break\break
+In order to generate these covariance's and plot their eigenvectors I used the following matlab script.
+\begin{python}
+        # Import relevant libraries
+        import numpy
+        import pandas
+        import matplotlib.pyplot as plt
+
+        # generate multivariate guassians
+        def GMG(mean,cov,nelem):
+            return numpy.random.multivariate_normal(mean,cov,nelem)
         
-                \draw[line width = .04in,
-                color = brickred]
-                ($(current page.north west)+(.92in,-.92in)$)
-                rectangle ($(current page.south east)+(-.705in,1.08in)$);
-                \node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
-                }
+        # calculate eigenvectors
+        def CE(inmat):
+            return numpy.linalg.eig(inmat)
+        
+        def main():
+            # number of elements
+            number_elements = 5000
+        
+           # declare mean for all covariance matrixes
+            mean = [0,0]
+        
+            # declare covariance matrixes
+            cov_0 = [[1,0],[0,1]]
+            cov_1 = [[5,0],[0,2]]
+            cov_2 = [[2,0],[0,5]]
+            cov_3 = [[1,.5],[.5,1]]
+            cov_4 = [[1,-.5],[-.5,1]]
+            cov_5 = [[5,.5],[.5,2]]
+            cov_6 = [[5,-.5],[-.5,2]]
+        
+            # concatenate all covariance matrixes into a list
+            cov_list = [cov_0,cov_1,cov_2,cov_3,cov_4,cov_5,cov_6]
+        
+            # declare list for points to go into
+            points_list = []
+        
+            # declare list of eigenvectors and eIgenvalues
+            eigenvectors_list = []
+            eigenvalues_list = []
+        
+            # Colors list
+            colors_list = ['r','b','y','g','o']
+        
+            # Generate guassians for allcovariance matrixes
+            for i in range(len(cov_list)):
+                # Generate Guassian points
+                points_list.append(GMG(mean,cov_list[i],number_elements))
+                
+                # Plot the points
+                plt.plot(points_list[i][:,0], points_list[i][:,1], '.', alpha = 0.5, zorder = 0)
+                
+                # Calculate covariance matrix eigenvectors and eigenvalues
+                eigenvalues,eigenvectors = CE(cov_list[i])
+                eigenvectors_list.append(eigenvectors)
+                eigenvalues_list.append(eigenvalues)
+        
+                # Plot the eigenvectors
+                for j in range(len(eigenvectors)):
+                    print(eigenvalues[j])     
+                    plt.quiver(*mean, *(eigenvectors[:,j]*eigenvalues[j]), scale = 18, color = colors_list[j], zorder = 10)
+                
+                # Plot the rest of the points and save it as a png
+                plt.xlim(-10,10)
+                plt.ylim(-10,10)
+                plt.grid()
+                #plt.show()
+                plotname = "Cov_" + str(i) + ".png"
+                plt.savefig(plotname)
+                plt.clf()
+                plt.cla()
+               
+        main()
 
-                \begin{center}
-                        \large{Homework Assignment No. \hwnum:}\break
-                        \break
-                        \large{\textbf{HW No. \hwnum: \assignmenttitle}}\break
-                        \break
-                        \large{submitted to:}\break
-                        \break
-                        \large{Professor Joseph Picone}\break
-                        \large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
-                        \large{Temple University}\break
-                        \large{College of Engineering}\break
-                        \large{1947 North 12th Street}\break
-                        \large{Philadelphia, Pennsylvania 19122}\break
-                        \break
-                        \large{\personaldate}\break
-                        \break
-                        \large{prepared by: }\break
-                        \break
-                        \large{\myname}\break
-                        \large{Email: \myemail}
-                \end{center}
-        \end{titlepage}
-
-        \newpage
-        \pagestyle{fancy}
-        \fancyhead{}
-        \
-        \fancyhead[R,EH]{Page \thepage of 1}%\pageref{LastPage}}
-        \fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
-        \renewcommand{\thesection}{\Alph{section}.}
-        \section{DESCRIPTION OF THE TASK}
-        \begin{flushleft}
-        \large{Briefly describe the general approach that you used to solve the problem(s). Show snippets of code and explain how this code works. Show results in tables comparing new results to your baselines.}\break
-        \break
-        \large{For examples of well-formatted documents please review these conference abstracts:}\break
-        \break
-        \url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/dpath/abstract_v22.docx}\break
-        \url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/tueg/abstract_v10.docx}
-        \end{flushleft}
-        \section{DESCRIPTION OF THE TASK}
-        \large{Repeat the same process for the next task.}
-        \section{SUMMARY}
-        \large{Briefly describe what you learned from this assignment and ways you could improve your solutions.}
+\end{python}
+\section{SUMMARY}
+\large{Briefly describe what you learned from this assignment and ways you could improve your solutions.}
 \end{document}
