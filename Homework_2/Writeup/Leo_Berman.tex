@@ -1,6 +1,20 @@
 \documentclass{article}
+\pagenumbering{arabic}
+\newcommand{\newCommandName}{text to insert}
 % Pages and colors used for the cover page
 \usepackage{tikz-page}
+\usepackage{url}
+\usepackage[
+  top=2cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
+% Page numbers/header
+\usepackage{fancyhdr}
 \definecolor{brickred}{rgb}{0.8, 0.25, 0.33}
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
 \definecolor{cadetgrey}{rgb}{0.57, 0.64, 0.69}
@@ -18,44 +32,77 @@
                 },
         }
 
-% Drawing the border and the text box 
-\newcommand{\tikzpagelayout}{
-        \draw [line width = .04in,
-           color = cobalt]
-           ($(current page.north west)+(1in,-1in)$)
-           rectangle ($(current page.south east)+(-1in,1in)$);
 
-        \draw [line width = .04in,
-           color = brickred]
-           ($(current page.north west)+(.92in,-.92in)$)
-           rectangle ($(current page.south east)+(-1.08in,1.08in)$);
-        \node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
-      }
          
 \pagestyle{plain}
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
-    \begin{center}
-        \large{Homework Assignment No. XX:}\break
-        \break
-        \large{\textbf{HW No. XX: Title of the Assignment}}\break
-        \break
-        \large{submitted to:}\break
-        \break
-        \large{Professor Joseph Picone}\break
-        \large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
-        \large{Temple University}\break
-        \large{College of Engineering}\break
-        \large{1947 North 12th Street}\break
-        \large{Philadelphia, Pennsylvania 19122}\break
-        \break
-        \large{February 3, 2024}\break
-        \break
-        \large{prepared by: }\break
-        \break
-        \large{John Smith}\break
-        \large{Email: jsmith@temple.edu}
-    \end{center}
+        
+        
+        % Put name data and assignment number here
+        \newcommand\personaldate{February 3, 2024}
+        \newcommand\myname{John Smith}
+        \newcommand\myemail{jsmith@temple.edu}
+        \newcommand\hwnum{XX}
+        \newcommand\mynameabbrev{J. Smith}
+        \newcommand\assignmenttitle{Title of the Assignment}
 
-    \pagebreak
+        \begin{titlepage}
+                % Drawing the border and the text box 
+                \newcommand{\tikzpagelayout}{
+                \draw[line width = .04in,
+                color = cobalt]
+                ($(current page.north west)+(1in,-1in)$)
+                rectangle ($(current page.south east)+(-.625in,1in)$);
+        
+                \draw[line width = .04in,
+                color = brickred]
+                ($(current page.north west)+(.92in,-.92in)$)
+                rectangle ($(current page.south east)+(-.705in,1.08in)$);
+                \node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
+                }
+
+                \begin{center}
+                        \large{Homework Assignment No. \hwnum:}\break
+                        \break
+                        \large{\textbf{HW No. \hwnum: \assignmenttitle}}\break
+                        \break
+                        \large{submitted to:}\break
+                        \break
+                        \large{Professor Joseph Picone}\break
+                        \large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
+                        \large{Temple University}\break
+                        \large{College of Engineering}\break
+                        \large{1947 North 12th Street}\break
+                        \large{Philadelphia, Pennsylvania 19122}\break
+                        \break
+                        \large{\personaldate}\break
+                        \break
+                        \large{prepared by: }\break
+                        \break
+                        \large{\myname}\break
+                        \large{Email: \myemail}
+                \end{center}
+        \end{titlepage}
+
+        \newpage
+        \pagestyle{fancy}
+        \fancyhead{}
+        \
+        \fancyhead[R,EH]{Page \thepage of 1}%\pageref{LastPage}}
+        \fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
+        \renewcommand{\thesection}{\Alph{section}.}
+        \section{DESCRIPTION OF THE TASK}
+        \begin{flushleft}
+        Briefly describe the general approach that you used to solve the problem(s). Show snippets of code and explain how this code works. Show results in tables comparing new results to your baselines.\break
+        \break
+        For examples of well-formatted documents please review these conference abstracts:\break
+        \break
+        \url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/dpath/abstract_v22.docx}\break
+        \url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/tueg/abstract_v10.docx}
+        \end{flushleft}
+        \section{DESCRIPTION OF THE TASK}
+        Repeat the same process for the next task.
+        \section{SUMMARY}
+        Briefly describe what you learned from this assignment and ways you could improve your solutions.
 \end{document}
