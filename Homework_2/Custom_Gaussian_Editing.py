@@ -137,7 +137,6 @@ class Custom_Gaussian:
 
     # calculate probabilities for individual classes
     def return_probability(self,inclass,inx,iny):
-        guess_elements = -1
         guess = None
         guess_prob = -1*float("inf")
         # Iterate through all classes and calculate each features probability density
@@ -152,7 +151,8 @@ class Custom_Gaussian:
             # Covariance matrix
             covariance_matrix = self.classes[x].cov_mat
             
-
+            # Grab inverse matrix calculate once
+            #
             # Print for debugging
             #print(x,"mean vector = \n",mean_vector,"\n")
             #print("feature vector = \n",feature_vector,"\n")
@@ -168,12 +168,12 @@ class Custom_Gaussian:
             #print("Element 2 = \n",ele2,"\n")
             ele3 = -.5 * (np.log(np.linalg.det(covariance_matrix)))
             #print("Element 3 = \n",ele3,"\n")
-            ele4 = np.log(1/self.classes[x].number_elements)
+            ele4 = np.log(self.classes[x].number_elements/self.number_elements)
             #ele4 = np.log(.5)
             #print("Element 4 = \n",ele4,"\n")
 
             # Calculate probability density
-            total_prob = ele1 + ele3 + ele2 + ele3 + ele4
+            total_prob = ele1 + ele2 + ele3 + ele4
             #print("score = \n",total_prob,"\n")
 
             # If probability is greater than last guess set as new guess
@@ -192,11 +192,12 @@ class Custom_Gaussian:
         
         # Keep track of guesses and return the correct/total
         total_correct = 0
-        total_wrong = 0
+        total = 0
         for x in newdata:
+            total +=1
             if (self.return_probability(x[0],float(x[1]),float(x[2]))) == True:
                 total_correct += 1
-        accuracy_rate = total_correct/self.number_elements
+        accuracy_rate = total_correct/total
         return accuracy_rate
 
 def hw_data():
@@ -205,12 +206,12 @@ def hw_data():
     eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
     train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
     eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
-
+    print(eval)
     # initialize model
     my_gauss = Custom_Gaussian()
     my_gauss.train(train)
     #my_gauss.train(eval)
-    #my_gauss.print_classes()
+    my_gauss.print_classes()
     #print("Test Case = ",my_gauss.eval([["dogs",-50,-50]]))
     
     print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
@@ -218,8 +219,8 @@ def hw_data():
 
 def debug_data():
     # read data in and turn it into a 3 column numpy array
-    train = pd.read_csv("debug2.csv",comment = "#").to_numpy()
-    eval = pd.read_csv("debug2.csv", comment = "#").to_numpy()
+    train = pd.read_csv("train.csv",comment = "#").to_numpy()
+    eval = pd.read_csv("eval_joe.csv", comment = "#").to_numpy()
     train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
     eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
 
