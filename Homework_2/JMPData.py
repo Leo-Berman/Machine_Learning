@@ -7,7 +7,7 @@ def main():
     col0 = np.hstack((train[:,0],eval[:,0]))
     col1 = np.hstack((train[:,1],eval[:,1]))
     col2 = np.hstack((train[:,2],eval[:,2]))
-    col3 = ["train"]*len(train) + ["eval"]*len(eval)
+    col3 = [0]*len(train) + [1]*len(eval)
     print(col0)
     d = {
         "classes":col0,
