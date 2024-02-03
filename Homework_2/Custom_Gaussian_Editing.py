@@ -23,10 +23,7 @@ class Feature:
     def print_self(self):
         print(self.class_name,":")
         print("Number of elements = ", self.number_elements)
-        print("X mean = ",self.x_mean)
-        #print("X Standard Deviation = ",self.x_sd)
-        print("Y mean = ",self.y_mean)
-        #print("Y Standard Deviation = ",self.y_sd)
+        print("Mean Vector = ",self.mean_vec)
         print("Covariance = ",self.cov)
         print("Covariance Matrix = \n",self.cov_mat)
 
@@ -195,6 +192,8 @@ class Custom_Gaussian:
         total = 0
         for x in newdata:
             total +=1
+            # Call the return p robability function which guesses and returns True 
+            # When correct and False when not
             if (self.return_probability(x[0],float(x[1]),float(x[2]))) == True:
                 total_correct += 1
         accuracy_rate = total_correct/total

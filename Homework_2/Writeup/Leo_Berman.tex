@@ -13,6 +13,7 @@
 
 % Used for the pictures
 \usepackage{float}
+\usepackage{graphicx}
 
 \usepackage[
   top=2cm,
@@ -104,16 +105,8 @@
 \fancyfoot[L,EF]{\yourclass}
 \fancyfoot[R,EF]{\personaldate}
 \renewcommand{\thesection}{\Alph{section}.}
-\section{DESCRIPTION OF THE TASK}
-\begin{flushleft}
-	\large{Briefly describe the general approach that you used to solve the problem(s). Show snippets of code and explain how this code works. Show results in tables comparing new results to your baselines.}\break
-	\break
-	\large{For examples of well-formatted documents please review these conference abstracts:}\break
-	\break
-	\url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/dpath/abstract_v22.docx}\break
-	\url{https://isip.piconepress.com/publications/conference_presentations/2021/ieee_spmb/tueg/abstract_v10.docx}
-\end{flushleft}
-\section{Generate multivariate Gaussian distributions}
+
+\section{\MakeUppercase{Generate multivariate Gaussian distributions}}
 \large{Generate multivariate Gaussian distributions with a mean vector of zero and covariances matrices :}
 \[
 (A)\begin{bmatrix} 
@@ -221,6 +214,330 @@ In order to generate these covariance's and plot their eigenvectors I used the f
         main()
 
 \end{python}
+\pagebreak
+\begin{flushleft}
+As expected, the diagonal of the Covariance Matrices is expressed by the covariances (anti-diagonal of matrix) and the spread in the vertical or horizontal directions is expressed by the variances(diagonal of the matrix).\break
+\break
+For example, in Figure 7 there is a large spread in the horizontal direction so we can expect that the Matrix[0][0] element is going to be high. If we refer back to Matrix G we can see that the number is 5 which is significantly higher .
+\end{flushleft}
+\begin{figure}[!htb]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Cov_0.png}
+                \caption{(A)}
+        \end{minipage}\hfill
+        \begin{minipage}{0.24\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Cov_1.png}
+                \caption{(B)}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+        \centering
+                \includegraphics[width=1\linewidth]{../Cov_2.png}
+                \caption{(C)}
+        \end{minipage}\hfill
+        \begin{minipage}{0.24\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Cov_3.png}
+                \caption{(D)}
+        \end{minipage}
+\end{figure}
+\begin{figure}[!htb]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Cov_4.png}
+                \caption{(E)}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Cov_5.png}
+                \caption{(F)}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+        \centering
+                \includegraphics[width=1\linewidth]{../Cov_6.png}
+                \caption{(G)}
+        \end{minipage}
+\end{figure}
+\pagebreak
+\section{\MakeUppercase{Generate QDA on multiple analysis platforms}}
+\begin{flushleft}
+\textbf{IMLD}\break
+\break
+First, the proprietary software IMLD was used to get a base to compare from. When trained on the train.csv data from data set 13, the train.csv data had an error rate of 11.39\%\, and the eval.csv data had an error rate of 20.49\%\. \break
+\break
+IMLD's visualization of the decision surfaces:\break
+\begin{figure}[!htb]
+        \centering
+        \begin{minipage}{0.49\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../IMLDTrain.png}
+                \caption{Training Dat}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../IMLDEval.png}
+                \caption{Evaluation Data}
+        \end{minipage}
+\end{figure}
+\break
+\textbf{JMP}\break
+\break
+Next, the data was processed in the program JMP which uses a validation column process/notation. The model was trained on train.csv from data set 13 and validated using eval.csv from the same data set. The data train.csv had an error rate of 11.34\%\ and the validation data from eval.csv had an error rate of 21.31\%\break
+\break
+JMP's visualization using a canonical plot which is another plot type to show the correlation of two sets of variables:\break
+\begin{figure}[!htb]
+        \centering
+        \begin{minipage}{0.49\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../JMPCanonicalPlot.png}
+                \caption{Canonical Plot of QDA Model}
+        \end{minipage}
+\end{figure}
+\pagebreak
+\textbf{SKLearn}\break
+\break
+Next, the data was processed using SKLearn's QDA model which resulted in a train.csv error rate of 11.11\%\ and a eval.csv error rate of 20.83\%.\break
+\break
+This is the implimentation using SKLearn's QDA model:\break
+\begin{python}
+        from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis as QDA
+        import numpy as np
+        import pandas as pd
+        import sys
+        def hw_data():
+        # read in the data from the csv files
+        train = pd.read_csv("train.csv",comment = "#").to_numpy()
+        eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
+        
+        train_coords = np.array(list(zip(train[:,1],train[:,2])))
+        eval_coords = np.array(list(zip(eval[:,1],eval[:,2])))
+        
+        # Set and train the algorithm
+        algo = QDA()
+        algo.fit(train_coords,train[:,0])
+        
+        # Evaluate the algorithm
+        print("Evaluation accuracy rate: ",1-algo.score(eval_coords,eval[:,0]))
+        print("Training accuracy rate: ",1-algo.score(train_coords,train[:,0]))
+        
+        def debug_data():
+        # read in the data from the csv files
+        train = pd.read_csv("debug2.csv",comment = "#").to_numpy()
+        eval = pd.read_csv("debug2.csv", comment = "#").to_numpy()
+        
+        train_coords = np.array(list(zip(train[:,1],train[:,2])))
+        eval_coords = np.array(list(zip(eval[:,1],eval[:,2])))
+        
+        # Set and train the algorithm
+        algo = QDA()
+        algo.fit(train_coords,train[:,0])
+        
+        # Evaluate the algorithm
+        print("Evaluation accuracy rate: ",1-algo.score(eval_coords,eval[:,0]))
+        print("Training accuracy rate: ",1-algo.score(train_coords,train[:,0]))
+        def main():
+        
+        if len(sys.argv) == 1:
+                hw_data()
+        elif sys.argv[1] == "-debug":
+                debug_data()
+        else:
+                print("Use Sklearn_QDA.py as:\n'python3 Sklearn_QDA.py -debug' or 'python3 Sklearn QDA.py'")
+        
+        
+        main()
+\end{python}
+\pagebreak
+\textbf{Custom Implimentation}\break
+\break
+The custom implimentation resulted in a train.csv error rate of 11.12\%\, and an eval.csv error rate of 20.83\%.\break
+\break
+This is the custom implimentation:\break
+\begin{python}
+        # Import relevant values       
+        import numpy as np
+        import pandas as pd
+        import sys
+        class Feature:
+        
+                # initialize values
+                def __init__(self,inname):
+                        self.class_name =       inname
+                        self.number_elements =  0
+                        self.x_mean =           None
+                        self.y_mean =           None
+                        self.x_sd =             None
+                        self.y_sd =             None
+                        self.data =             np.array([])
+                        self.cov =              None
+                        self.cov_mat =          None
+                        self.x_var =            None
+                        self.y_var =            None
+                        self.mean_vec =         None
+        
+                # Add in feature data
+                def add_data(self,indata):
+                        if len(self.data) == 0:
+                                self.data = indata
+                        else:
+                                self.data=np.vstack([self.data, indata])
+                                self.number_elements+=1
+                
+                # Calculating the mean of each feature of the class
+                def calculate_mean(self):
+                        x_sum = 0
+                        y_sum = 0
+                        for x in self.data:
+                                x_sum+=x[0]
+                                y_sum+=x[1]
+                        self.x_mean = x_sum/self.number_elements
+                        self.y_mean = y_sum/self.number_elements
+                
+                # calculate mean_vector
+                def calculate_mean_vector(self):
+                        self.calculate_mean()
+                        self.mean_vec = np.array([self.x_mean,self.y_mean])
+                
+                # Calculating covariance
+                def calculate_covariance(self):
+                        work = 0
+                        for x in self.data:
+                                work+=(x[0] - self.x_mean) * (x[1] - self.y_mean)
+                        self.cov = work / (self.number_elements-1)
+                
+                # Calculating covariance matrix
+                def calculate_covariance_matrix(self):
+                        self.calculate_covariance()
+                        self.calculate_variance()
+                        self.cov_mat = np.array([[self.x_var, self.cov],[self.cov, self.y_var]])
+        
+                # Calculating variance
+                def calculate_variance(self):
+                        x_sum = 0
+                        y_sum = 0
+                        for x in self.data:
+                                x_sum+=(x[0]-self.x_mean)**2
+                                y_sum+=(x[1]-self.y_mean)**2
+                
+                        self.x_var = x_sum/(self.number_elements-1)
+                        self.y_var = y_sum/(self.number_elements-1)
+                
+        class Custom_Gaussian:
+        
+                # constructor
+                def __init__(self):
+                        # keep track of classes
+                        self.classes = {}
+                
+                        # keep track of number of elements
+                        self.number_elements = 0
+                
+                        # Keeping track of totals
+                        self.value_totals = {}
+                
+                # training the model
+                def train(self,training_data):
+                        
+                        # iterate through all data
+                        for i in range(len(training_data)):
+                        
+                        # check if there is already a feature for the class if not make one
+                        if training_data[i][0] not in self.classes:
+                                #print(training_data[i][0])
+                
+                                # total values and make new features
+                                self.classes[training_data[i][0]]=Feature(training_data[i][0])
+                        
+                        # Add data to feature
+                        self.classes[training_data[i][0]].add_data(np.array([float(training_data[i][1]),float(training_data[i][2])]))
+                
+                        # Keep track of total number of elements
+                        self.number_elements+=1
+                        delete cursor
+                        # Call functions for calculating means and covariance matrix
+                        for x in self.classes:
+                        self.classes[x].calculate_mean_vector()
+                        self.classes[x].calculate_covariance_matrix()
+                
+                # calculate probabilities for individual classes and make a guess
+                def return_probability(self,inclass,inx,iny):
+                        
+                        # No guess 0 confidence
+                        guess = None
+                        guess_prob = -1*float("inf")
+                        
+                        # Iterate through all classes and calculate each features probability density
+                        for x in self.classes:
+                        
+                                # Mean vector            
+                                mean_vector = self.classes[x].mean_vec
+                        
+                                # Feature vector
+                                feature_vector = np.array([inx,iny])
+                        
+                                # Covariance matrix
+                                covariance_matrix = self.classes[x].cov_mat
+                                
+                                # Elements for calculating naive bayes score
+                                ele1_1 = np.matmul(np.transpose(feature_vector-mean_vector),np.linalg.inv(covariance_matrix))
+                                ele1_2 = feature_vector-mean_vector
+                                ele1 = -.5 * np.matmul(ele1_1,ele1_2)
+                                ele2 = -.5 * np.log(2*np.pi)
+                                ele3 = -.5 * (np.log(np.linalg.det(covariance_matrix)))
+                                ele4 = np.log(self.classes[x].number_elements/self.number_elements)
+                        
+                                # Calculate naive bayes score
+                                total_prob = ele1 + ele2 + ele3 + ele4
+                        
+                                # If probability is greater than last guess set as new guess
+                                if total_prob > guess_prob:
+                                        guess_prob = total_prob
+                                        guess = x
+                        
+                        # Check to see if guess was correct or incorrect
+                        if guess == inclass:
+                                return True
+                        else:
+                                return False
+                
+                # Evaluate data
+                def eval(self,newdata):
+                        
+                        # Keep track of guesses and return the correct/total
+                        total_correct = 0
+                        total = 0
+                        for x in newdata:
+                                total +=1
+
+                                # Call the return p robability function which guesses and returns True 
+                                # When correct and False when not
+                                if (self.return_probability(x[0],float(x[1]),float(x[2]))) == True:
+                                        total_correct += 1
+
+                        # calculate accuracy_rate
+                        accuracy_rate = total_correct/total
+                        return accuracy_rate
+                
+        def main():
+
+        # read data in and turn it into a 3 column numpy array
+        train = pd.read_csv("train.csv",comment = "#").to_numpy()
+        eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
+        train = np.array(list(zip(train[:,0],train[:,1],train[:,2])))
+        eval = np.array(list(zip(eval[:,0],eval[:,1],eval[:,2])))
+        print(eval)
+        # initialize model
+        my_gauss = Custom_Gaussian()
+        my_gauss.train(train)
+        
+        # print the results from the evaluations
+        print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
+        print("Training accuracy rate = ", 1-my_gauss.eval(train))
+\end{python}
+\end{flushleft}
 \section{SUMMARY}
 \large{Briefly describe what you learned from this assignment and ways you could improve your solutions.}
 \end{document}
