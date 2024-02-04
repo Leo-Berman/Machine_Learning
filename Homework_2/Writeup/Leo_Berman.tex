@@ -17,6 +17,8 @@
 
 % For the table
 \usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{colortbl}
 
 \usepackage[
   top=2cm,
@@ -519,10 +521,23 @@ main()
 \end{python}
 \textbf{Summary Table}\break
 \break
-\begin{tabular}{|c| c| c| c| c| c| c| c| c| c| c|}
+\end{flushleft}
+\centering
+\begin{tabular}{|c| c| c| c| c| c| c| c| c| c|}
 \hline
-Algorithm & Data & \multicolumn{2}{|c|}{IMLD} & \multicolumn{2}{|c|}{JMP} & \multicolumn{2}{|c|}{SKLearn} & \multicolumn{2}{|c|}{Python}
+\rowcolor{gray!20}
+ &  & \multicolumn{2}{|c|}{IMLD} & \multicolumn{2}{|c|}{JMP} & \multicolumn{2}{|c|}{SKLearn} & \multicolumn{2}{|c|}{Python}\\\cline{3-10}
+\rowcolor{gray!20}
+\multirow{-2}{*}{Algorithm}&\multirow{-2}{*}{Data}& \multicolumn{1}{|c|}{Train} & \multicolumn{1}{|c|}{Eval} & \multicolumn{1}{|c|}{Train} & \multicolumn{1}{|c|}{Eval}& \multicolumn{1}{|c|}{Train} & \multicolumn{1}{|c|}{Eval}& \multicolumn{1}{|c|}{Train} & \multicolumn{1}{|c|}{Eval}\\
 \hline
+QDA & Set No. 13 & 11.39 & 20.49 & 11.34 & 21.31 & 11.11 & 20.83 & 11.12 & 20.83\\
+\hline 
 \end{tabular}
+
+
+\begin{flushleft}
+\textbf{Results of Summary Table}\break
+\break
+As was expected, the results of the table were similar. They all fell around the 11 to 12 percent error rate for training and around the 20 to 21 percent error rate for the evaluation.
 \end{flushleft}
 \end{document}
