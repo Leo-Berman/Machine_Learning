@@ -225,7 +225,7 @@ def hw_data():
     prior_values = []
     evaluation_scores = []
     for x in range(100):
-        evaluation_scores.append(1-my_gauss.eval(1,eval))
+        evaluation_scores.append(1-my_gauss.eval(x/100,eval))
         prior_values.append(x/100)
     d = {
         "priors":prior_values,
