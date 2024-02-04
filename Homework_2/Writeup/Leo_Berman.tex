@@ -539,9 +539,15 @@ QDA & Set No. 13 & 11.39 & 20.49 & 11.34 & 21.31 & 11.11 & 20.83 & 11.12 & 20.83
 \break
 As was expected, the results of the table were similar. They all fell around the 11 to 12 percent error rate for training and around the 20 to 21 percent error rate for the evaluation. However, IMLD and JMP had slightly different error rates which means they had slightly different algorithms to training the model. There are a few reasons this could be which could be rounding errors (possibly the case for the custom implimentation when compared to SKLearn's QDA) or due to using n instead of n-1 in the denominator when calculating the covariance matrix.  
 \section{\MakeUppercase{Redo QDA With Different Priors}}
-\textbf{JMP}\break
-\break
-\textbf{Custom Implimentation}\break
+In order to test the impact that calculating the priors has on Bayesian decision making, we can test a vector of priors for dog [0, 0.01, 0.02, 0.03,...,1.0] and a vector of prior for cat [1 - prior(dog)].\break
+\begin{figure}[!htb]
+        \centering
+        \begin{minipage}{0.49\textwidth}
+                \centering
+                \includegraphics[width=1\linewidth]{../Custom_Implimentation_Evaluation_Error_Rates_vs_Dog_Priors.png}
+                \caption{Custom Implimentation}
+        \end{minipage}
+\end{figure}
 \break
 \end{flushleft}
 \end{document}
