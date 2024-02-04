@@ -537,14 +537,16 @@ QDA & Set No. 13 & 11.39 & 20.49 & 11.34 & 21.31 & 11.11 & 20.83 & 11.12 & 20.83
 \break
 \textbf{Results of Summary Table}\break
 \break
-As was expected, the results of the table were similar. They all fell around the 11 to 12 percent error rate for training and around the 20 to 21 percent error rate for the evaluation. However, IMLD and JMP had slightly different error rates which means they had slightly different algorithms to training the model. There are a few reasons this could be which could be rounding errors (possibly the case for the custom implimentation when compared to SKLearn's QDA) or due to using n instead of n-1 in the denominator when calculating the covariance matrix.  
+As was expected, the results of the table were similar. They all fell around the 11 to 12 percent error rate for training and around the 20 to 21 percent error rate for the evaluation. However, IMLD and JMP had slightly different error rates which means they had slightly different algorithms to training the model. There are a few reasons this could be which could be rounding errors (possibly the case for the custom implimentation when compared to SKLearn's QDA), due to using n instead of n-1 in the denominator when calculating the covariance matrix, or it could be that the custom implimentation uses a prior equal to occurrences and the JMP uses a default equal priors method.  
 \section{\MakeUppercase{Redo QDA With Different Priors}}
-In order to test the impact that calculating the priors has on Bayesian decision making, we can test a vector of priors for dog [0, 0.01, 0.02, 0.03,...,1.0] and a vector of prior for cat [1 - prior(dog)].\break
+In order to test the impact that calculating the priors has on Bayesian decision making, we can test a vector of priors for dog [0, 0.01, 0.02, 0.03,...,1.0] and a vector of prior for cat [1 - prior(dog)]. This was done in python by changing a variable in the return\_probability scoring function.\break
+\break
+As can be seen below the charts match up pretty well (besides how each program decides to treat 0) and indicate that the more we are guessing dog, the better of a misclassification rate observed. This makes sense because in the evaluation data there are 6 times as many "dogs" points as there are "cats" points.
 \begin{figure}[!htb]
         \centering
-        \begin{minipage}{0.49\textwidth}
+        \begin{minipage}{0.8\textwidth}
                 \centering
-                \includegraphics[width=1\linewidth]{../Custom_Implimentation_Evaluation_Error_Rates_vs_Dog_Priors.png}
+                \includegraphics[width=1\linewidth]{../Evaluation_Error_Rates_vs_Dog_Priors.png}
                 \caption{Custom Implimentation}
         \end{minipage}
 \end{figure}

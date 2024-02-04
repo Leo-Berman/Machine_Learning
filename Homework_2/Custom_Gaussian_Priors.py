@@ -165,12 +165,23 @@ class Custom_Gaussian:
             #print("Element 2 = \n",ele2,"\n")
             ele3 = -.5 * (np.log(np.linalg.det(covariance_matrix)))
             #print("Element 3 = \n",ele3,"\n")
-            if x == "dogs":
-                #print("dogs")
-                ele4 = prior
+            if prior == 0:
+                if x == "dogs":
+                    ele4 = 0
+                else:
+                    ele4 = np.log(1)
+            elif prior == 1:
+                if x =="dogs":
+                    ele4 = np.log(1)
+                else:
+                    ele4 = 0
             else:
-                #print("cats")
-                ele4 = 1-prior
+                if x == "dogs":
+                #print("dogs")
+                    ele4 = np.log(prior)
+                else:
+                    #print("cats")
+                    ele4 = np.log(1-prior)
             #ele4 = np.log(.5)
             #print("Element 4 = \n",ele4,"\n")
 
@@ -225,8 +236,8 @@ def hw_data():
     prior_values = []
     evaluation_scores = []
     for x in range(100):
-        evaluation_scores.append(1-my_gauss.eval(x/100,eval))
-        prior_values.append(x/100)
+        evaluation_scores.append(1-my_gauss.eval((x)/100,eval))
+        prior_values.append((x)/100)
     d = {
         "priors":prior_values,
         "eval error rates":evaluation_scores,
