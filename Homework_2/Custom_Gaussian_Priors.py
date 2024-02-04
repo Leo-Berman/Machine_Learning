@@ -133,7 +133,7 @@ class Custom_Gaussian:
             print("")
 
     # calculate probabilities for individual classes
-    def return_probability(self,inclass,inx,iny):
+    def return_probability(self,prior,inclass,inx,iny):
         guess = None
         guess_prob = -1*float("inf")
         # Iterate through all classes and calculate each features probability density
@@ -165,7 +165,12 @@ class Custom_Gaussian:
             #print("Element 2 = \n",ele2,"\n")
             ele3 = -.5 * (np.log(np.linalg.det(covariance_matrix)))
             #print("Element 3 = \n",ele3,"\n")
-            ele4 = np.log(self.classes[x].number_elements/self.number_elements)
+            if x == "dogs":
+                #print("dogs")
+                ele4 = prior
+            else:
+                #print("cats")
+                ele4 = 1-prior
             #ele4 = np.log(.5)
             #print("Element 4 = \n",ele4,"\n")
 
@@ -185,17 +190,22 @@ class Custom_Gaussian:
             return False
     
     # Evaluate data
-    def eval(self,newdata):
+    def eval(self,prior,newdata):
         
         # Keep track of guesses and return the correct/total
         total_correct = 0
         total = 0
+
         for x in newdata:
             total +=1
             # Call the return p robability function which guesses and returns True 
             # When correct and False when not
-            if (self.return_probability(x[0],float(x[1]),float(x[2]))) == True:
+            if self.return_probability(prior,x[0],float(x[1]),float(x[2])) == True:
                 total_correct += 1
+            #print(prior)
+            #print(total)
+            
+            
         accuracy_rate = total_correct/total
         return accuracy_rate
 
@@ -212,9 +222,17 @@ def hw_data():
     #my_gauss.train(eval)
     my_gauss.print_classes()
     #print("Test Case = ",my_gauss.eval([["dogs",-50,-50]]))
-    
-    print("Evaluation accuracy rate = ", 1-my_gauss.eval(eval))
-    print("Training accuracy rate = ", 1-my_gauss.eval(train))
+    prior_values = []
+    evaluation_scores = []
+    for x in range(100):
+        evaluation_scores.append(1-my_gauss.eval(1,eval))
+        prior_values.append(x/100)
+    d = {
+        "priors":prior_values,
+        "eval error rates":evaluation_scores,
+    }
+    d = pd.DataFrame(data = d)
+    d.to_csv('PythonQDA_WrongPriors.csv',sep =',',index = False,encoding='utf-8')
 
 def debug_data():
     # read data in and turn it into a 3 column numpy array
