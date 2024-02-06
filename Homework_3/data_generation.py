@@ -57,7 +57,7 @@ def cascading_arrow(data,ylower,yhigher):
 
 def q2a(data):
     cascading_arrow(data,-1,3)    
-    plt.savefig("Q2a.png")
+    #plt.savefig("Q2a.png")
     plt.cla()
     print("Question 2a No. of Points = 110: ", data[110])
     
@@ -101,7 +101,7 @@ def q3a(data):
     # plot the points
     cascading_arrow(plot_data,.5,1.5)
 
-    plt.savefig('Q3a.png')
+    #plt.savefig('Q3a.png')
     plt.cla()
     print("Questoin 3a No. of Points = 110: ",plot_data[10])
 
@@ -150,9 +150,9 @@ def main():
             
 
     
-    #q2a(mean_plot_points[1.00])
+    q2a(mean_plot_points[1.00])
     #q2b(mean_plot_points)
-    #q3a(mean_plot_points)
+    q3a(mean_plot_points)
     #figure_generation(mean_plot_points)    
 
 

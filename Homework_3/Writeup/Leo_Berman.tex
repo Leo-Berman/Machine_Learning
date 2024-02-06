@@ -227,7 +227,8 @@
 			\caption{Mean of Means = (0.90, 0.92, \ldots, 1.10 )}
 	\end{minipage}
 \end{figure}
-\flushleft{When we compare the plot in Figure 4 to the plot of Figure 3, we can see that both plots converge to a mean estimation of 1.00, but not only does Figure 4 converge faster, it also has less noise. The reason that this happens is because there are more point surrounding the mean of 1.00 for Figure 4. Not only does it have access to all the points that Figure 1 has it also has access to the 10 other sets that have a combined mean of means equal to 1.00 as well.}
+\flushleft{When we compare the plot in Figure 4 to the plot of Figure 3, we can see that both plots converge to a mean estimation of 1.00, but not only does Figure 4 converge faster, it also has less noise. The reason that this happens is because there are more point surrounding the mean of 1.00 for Figure 4. Not only does it have access to all the points that Figure 1 has it also has access to the 10 other sets that have a combined mean of means equal to 1.00 as well.}\break
+\flushleft{One way to show this is to compare the points in each algorithm when they have process 110 data points. For Figure 4 this happens at x = 10 and for figure 1 this happens at x = 110. For Figures 1 and 4, their estimations after 110 data points were processed were 1.12 and 1.02 respectively. When the "noise" shown in Figure 1 is taken into account, the difference of these numbers show anecdotal evidence that the speed of convergence is linearly coorelated with the number of points independent of whether they come from a one dimensional vector or a ten dimensional vector as long as the mean = 1.}
 \pagebreak
 \section{\MakeUppercase{Last sec}}
 
