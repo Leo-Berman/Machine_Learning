@@ -13,7 +13,7 @@ def plot_histogram(data,name):
     
     # Display the plot
     plt.savefig(name+".png")
-def cascading_arrow(data,ylower,yhigher):
+def cascading_arrow(data,ylower=-2,yhigher=2):
     
     # generate x_axis
     x_axis = numpy.linspace(1,10**6,10**6)
@@ -85,15 +85,15 @@ def q2b(data):
     print("Question 2b No. of Points = 110: ", plot_data[int(110/6)])
     
 def q3a(data):
-    # find the mean of the first 6 sets summed together
+    # find the mean of the all the sets summed together
     mean_means_data = numpy.array(data[.90])
     for i in range(10):
         mean_means_data+=numpy.array(data[round(.92+(i*.02),2)])
     mean_means_data/=11
     plot_data = []
     sum = 0
-
-    # find the MLE of the mean of the first 6 sets summed together
+    
+    # find the MLE of the mean of the first 11 sets summed together
     for i,x in enumerate(mean_means_data):
         sum+=x
         plot_data.append(sum/(i+1))
@@ -105,6 +105,33 @@ def q3a(data):
     plt.cla()
     print("Questoin 3a No. of Points = 110: ",plot_data[10])
 
+def q4a(data):
+    #    print(data)
+    guess = 2
+    variance = 1
+    plot_data =[]
+
+    # find the mean of the all the sets summed together
+    mean_means_data = numpy.array(data[.90])
+    for i in range(10):
+        mean_means_data+=numpy.array(data[round(.92+(i*.02),2)])
+    mean_means_data/=11
+    plot_data = []
+    mysum = 0
+    
+
+    # find the MLE of the mean of the first 11 sets summed together
+    for i,x in enumerate(mean_means_data):
+        mysum+=x
+        mean = mysum/(i+1)
+        #prior=numpy.log(    (2*numpy.pi*variance**2)**-(.5)     *      numpy.exp(   -1*(mean-guess)**2/(2*variance**2)))
+        tau_n=(i/1+1)**-1
+        mu_n = tau_n * i * mean        
+        posterior=numpy.log(    (2*numpy.pi*variance**2)**-(.5)     *      numpy.exp(   -1*(mean-mu_n)**2/(2*variance**2)))                        
+        plot_data.append(posterior)
+    cascading_arrow(plot_data)
+    plt.show()
+    
 def figure_generation(data):
     # generate x_axis
     x_axis = numpy.linspace(1,10**6,10**6)
@@ -150,11 +177,11 @@ def main():
             
 
     
-    q2a(mean_plot_points[1.00])
+    #q2a(mean_plot_points[1.00])
     #q2b(mean_plot_points)
-    q3a(mean_plot_points)
+    #q3a(mean_plot_points)
     #figure_generation(mean_plot_points)    
-
+    q4a(mean_plot_points)
 
     '''
     d_2 = {
