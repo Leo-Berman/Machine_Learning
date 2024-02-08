@@ -121,15 +121,16 @@ def q4a(data):
     
 
     # find the MLE of the mean of the first 11 sets summed together
-    for i,x in enumerate(mean_means_data):
+    for j,x in enumerate(mean_means_data):
+        i = j+1
         mysum+=x
-        mean = mysum/(i+1)
+        mean = mysum/(i)
         #prior=numpy.log(    (2*numpy.pi*variance**2)**-(.5)     *      numpy.exp(   -1*(mean-guess)**2/(2*variance**2)))
         tau_n=(i/1+1)**-1
-        mu_n = tau_n * i * mean        
-        posterior=numpy.log(    (2*numpy.pi*variance**2)**-(.5)     *      numpy.exp(   -1*(mean-mu_n)**2/(2*variance**2)))                        
+        mu_n = tau_n* ( i * mean+2)
+        posterior=numpy.log(    (2*numpy.pi*tau_n**2)**-(.5)     *      numpy.exp(   -1*(mean-mu_n)**2/(2*tau_n**2)))                        
         plot_data.append(posterior)
-    cascading_arrow(plot_data)
+    cascading_arrow(plot_data,0,15)
     plt.show()
     
 def figure_generation(data):
