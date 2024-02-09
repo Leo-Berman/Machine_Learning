@@ -29,7 +29,7 @@ def cascading_arrow(data,ylower=-2,yhigher=2):
 
     # set bounds
     plt.ylim(ylower,yhigher)
-    plt.xlim(1,10**7)
+    plt.xlim(0,10**7)
 
     #iterate through 1,5,10,50,100,500...5*10^5,10**6
     index = 1
@@ -153,6 +153,7 @@ def figure_generation(data):
     plt.xlim(10**5,10**6)
     plt.ylim(.8,1.2)
     plt.savefig('SeparateMeans_Zoomed.png')
+
 def main():
     # number of elements
     nelem = 10**6

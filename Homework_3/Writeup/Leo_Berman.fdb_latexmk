@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1707492841 "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_3/Writeup/Leo_Berman.tex" "Leo_Berman.pdf" "Leo_Berman" 1707492843
+["pdflatex"] 1707493053 "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_3/Writeup/Leo_Berman.tex" "Leo_Berman.pdf" "Leo_Berman" 1707493054
   "../Q2a.png" 1707237327 40645 9f1159c9482c7b5f79ec6923d465369a ""
   "../Q2b.png" 1707237328 38485 913f993ebfeb77adb0b22393094ad02e ""
   "../Q3a.png" 1707237330 35145 6bcff6710cfa068bc675466507369bc9 ""
-  "../Q4a.png" 1707492025 38539 0dbfca42817b9d0aa1b8682ef2cca7ac ""
+  "../Q4a.png" 1707493052 39072 5705043ab7f5cdcbd1d93d9e38af8c0c ""
   "../SeparateMeans.png" 1707243894 48716 53cba47abe5c34c579005df1563fd758 ""
   "../SeparateMeans_Zoomed.png" 1707243896 27747 10310dfcf86a7dcae5b18cbad0cd1a8c ""
   "/etc/texmf/web2c/texmf.cnf" 1706967794 475 c0e671620eb5563b2130f56340a5fde8 ""
@@ -162,7 +162,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706967917 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1706967960 2801640 63bd288feec3bcad878f0f63118ad514 ""
-  "Leo_Berman.aux" 1707492842 1578 3eec74efe7904c1e02ecfb751d620616 "pdflatex"
+  "Leo_Berman.aux" 1707493054 1578 3eec74efe7904c1e02ecfb751d620616 "pdflatex"
   "Leo_Berman.tex" 1707492840 10012 3042f4e4b8203a33e56340c20b4f191e ""
   "pythonhighlight.sty" 1707237627 5049 7d7b3349bbd50ed754ccba9c6ec89882 ""
   (generated)
