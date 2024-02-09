@@ -29,7 +29,7 @@ def cascading_arrow(data,ylower=-2,yhigher=2):
 
     # set bounds
     plt.ylim(ylower,yhigher)
-    plt.xlim(0,10**7)
+    plt.xlim(1,10**7)
 
     #iterate through 1,5,10,50,100,500...5*10^5,10**6
     index = 1
@@ -120,18 +120,20 @@ def q4a(data):
     mysum = 0
     
 
-    # find the MLE of the mean of the first 11 sets summed together
+    # find the bayesian estimate of the mean of the first 11 sets summed together
+    # with an initial guess = 2
     for j,x in enumerate(mean_means_data):
         i = j+1
         mysum+=x
         mean = mysum/(i)
         #prior=numpy.log(    (2*numpy.pi*variance**2)**-(.5)     *      numpy.exp(   -1*(mean-guess)**2/(2*variance**2)))
-        tau_n=(i/1+1)**-1
-        mu_n = tau_n* ( i * mean+2)
-        posterior=numpy.log(    (2*numpy.pi*tau_n**2)**-(.5)     *      numpy.exp(   -1*(mean-mu_n)**2/(2*tau_n**2)))                        
-        plot_data.append(posterior)
-    cascading_arrow(plot_data,0,15)
-    plt.show()
+        tau_n=(   (i)/ (variance**2)+1/(variance**2))**-1
+        mu_n = tau_n* (i/(variance**2) * mean + (guess)/(variance**2))
+        #posterior=numpy.log(    (2*numpy.pi*tau_n**2)**-(.5)     *      numpy.exp(   -1*(mean-mu_n)**2/(2*tau_n**2)))                        
+        plot_data.append(mu_n)
+        #guess = posterior
+    cascading_arrow(plot_data,0,2)
+    plt.savefig('Q4a.png')
     
 def figure_generation(data):
     # generate x_axis
