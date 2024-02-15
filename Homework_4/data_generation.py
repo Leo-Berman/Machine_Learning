@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import sklearn as skl
+from sklearn import mixture
 import sys
 import os
 from scipy.stats import norm
@@ -15,9 +15,26 @@ def plot_histogram(data,name):
     plt.ylabel('Frequency')
     plt.title('Basic Histogram')
     
-    # Display the plot
-    #plt.savefig(name+".png")
-    #print("saved")
+
+def plot_pdf(data,name):
+
+    # sort the data
+    data.sort()
+
+    # calculate the pdf
+    mu,sigma = norm.fit(data)
+    pdf = norm.pdf(data, loc=mu, scale=sigma)
+
+    # plot normalized histogram of the data
+    plt.hist(data,bins = 60, density = True)
+
+    # plot the pdf of the data
+    plt.plot(data, pdf, label='Normal Distribution')
+    plt.title('PDF of the Normal Distribution')
+    plt.xlabel('Value')
+    plt.ylabel('Probability')
+    plt.legend()
+
 def generate_data(means,variances,nelems):
     ret = []
     [ret.append(np.random.normal(loc = x,scale = y,size = nelems)) for x,y in zip(means,variances)]
@@ -35,17 +52,14 @@ def main():
     # concatentae all vectors into 30,000 element list
     total_points = []
     [total_points.extend(x) for x in vectors]
-    print(len(total_points))
 
-    # calculate the pdf
-    pdf = norm.pdf(total_points, np.mean(total_points), np.mean(variances))
-    plot_histogram(total_points,"q1")
-    plt.plot(total_points, pdf, label='Distribuzione Normale')
-    plt.title('PDF of the Normal Distribution')
-    plt.xlabel('Value')
-    plt.ylabel('Probability')
-    plt.legend()
-    plt.show()
+
+    #plot_pdf(total_points,"q1")
+    #plt.cla()
+
+    # single mixture
+    GM_1 = mixture.GaussianMixture(1)
+    print(GM_1.fit(total_points))
     
 
 main()
