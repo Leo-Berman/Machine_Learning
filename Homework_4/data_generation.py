@@ -30,15 +30,23 @@ def plot_pdf(data,name):
 
     # plot the pdf of the data
     plt.plot(data, pdf, label='Normal Distribution')
-    plt.title('PDF of the Normal Distribution')
-    plt.xlabel('Value')
-    plt.ylabel('Probability')
-    plt.legend()
+    
 
 def generate_data(means,variances,nelems):
     ret = []
     [ret.append(np.random.normal(loc = x,scale = y,size = nelems)) for x,y in zip(means,variances)]
     return ret
+
+def generate_Gaussian_Mixture(data, components = 1,color = 'black'):
+    GM_1 = mixture.GaussianMixture(components)
+    GM_1.fit(data)
+    weights = GM_1.weights_
+    means = GM_1.means_
+    covars = GM_1.covariances_
+    plt.hist(data, color = 'gray', bins=30, density=True, alpha = 0.5)
+    for i in range(len(means)):
+        plt.plot(sorted(data),weights[i]*norm.pdf(sorted(data),means[i],np.sqrt(covars[i])), c=color)
+    
 
 def main():
     # number of elements, means and variances
@@ -52,14 +60,18 @@ def main():
     # concatentae all vectors into 30,000 element list
     total_points = []
     [total_points.extend(x) for x in vectors]
+    total_points = np.array(total_points).reshape(-1,1)
 
-
+    #Q1
     #plot_pdf(total_points,"q1")
     #plt.cla()
 
     # single mixture
-    GM_1 = mixture.GaussianMixture(1)
-    print(GM_1.fit(total_points))
     
 
+    generate_Gaussian_Mixture(total_points,1,'red')
+    generate_Gaussian_Mixture(total_points,2,'green')
+    generate_Gaussian_Mixture(total_points,3,'blue')
+    generate_Gaussian_Mixture(total_points,4,'yellow')
+    plt.show()
 main()
