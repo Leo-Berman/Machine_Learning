@@ -37,7 +37,7 @@ def generate_data(means,variances,nelems):
     [ret.append(np.random.normal(loc = x,scale = y,size = nelems)) for x,y in zip(means,variances)]
     return ret
 
-def generate_Gaussian_Mixture(data, components = 1,color = 'black'):
+def generate_Gaussian_Mixture_pdf(data, components = 1,color = 'black'):
     GM_1 = mixture.GaussianMixture(components)
     GM_1.fit(data)
     weights = GM_1.weights_
@@ -47,6 +47,51 @@ def generate_Gaussian_Mixture(data, components = 1,color = 'black'):
     for i in range(len(means)):
         plt.plot(sorted(data),weights[i]*norm.pdf(sorted(data),means[i],np.sqrt(covars[i])), c=color)
     
+def generate_Gaussian_Mixture_logpdf(data, components = 1, color = 'black'):
+    GM_1 = mixture.GaussianMixture(components)
+    GM_1.fit(data)
+    weights = GM_1.weights_
+    means = GM_1.means_
+    covars = GM_1.covariances_
+    #plt.hist(data, color = 'gray', bins=30, density=True, alpha = 0.5)
+    for i in range(len(means)):
+        plt.plot(sorted(data),weights[i]*norm.logpdf(sorted(data),means[i],np.sqrt(covars[i])), c=color)
+    plt.xscale('log')
+
+def q1(total_points):
+    generate_Gaussian_Mixture_pdf(total_points,1,'red')
+    plt.savefig("q1.png")
+    plt.cla()
+
+def q2(total_points):
+    # 1 mixture
+    generate_Gaussian_Mixture_pdf(total_points,1,'red')
+    # 2 mixture
+    generate_Gaussian_Mixture_pdf(total_points,2,'green')
+    # 3 mixture
+    generate_Gaussian_Mixture_pdf(total_points,3,'blue')
+    plt.savefig("q2.png")
+    plt.cla()
+
+def q3(total_points):
+    # 1 mixture
+    generate_Gaussian_Mixture_pdf(total_points,1,'red')
+    # 2 mixture
+    generate_Gaussian_Mixture_pdf(total_points,2,'green')
+    # 4 mixture
+    generate_Gaussian_Mixture_pdf(total_points,4,'yellow')
+    plt.savefig("q3.png")
+    plt.cla()
+
+def q4(total_points):
+    # 1 mixture
+    generate_Gaussian_Mixture_logpdf(total_points,1,'red')
+    # 2 mixture
+    generate_Gaussian_Mixture_logpdf(total_points,2,'green')
+    # 4 mixture
+    generate_Gaussian_Mixture_logpdf(total_points,4,'yellow')
+    plt.savefig("q4.png")
+
 
 def main():
     # number of elements, means and variances
@@ -62,16 +107,11 @@ def main():
     [total_points.extend(x) for x in vectors]
     total_points = np.array(total_points).reshape(-1,1)
 
-    #Q1
-    #plot_pdf(total_points,"q1")
-    #plt.cla()
 
-    # single mixture
+    q1(total_points)
+    q2(total_points)
+    q3(total_points)
+    q4(total_points)
+
     
-
-    generate_Gaussian_Mixture(total_points,1,'red')
-    generate_Gaussian_Mixture(total_points,2,'green')
-    generate_Gaussian_Mixture(total_points,3,'blue')
-    generate_Gaussian_Mixture(total_points,4,'yellow')
-    plt.show()
 main()
