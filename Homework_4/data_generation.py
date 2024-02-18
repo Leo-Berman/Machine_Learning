@@ -74,7 +74,7 @@ def generate_1d_Gaussian_Mixture_logprob(data, components = 1, color = 'black'):
     likelihood = -(GM_1.score(data))
     return likelihood
 
-def generate_1d_Gaussian_Mixture_logprob(data, components = 1, color = 'black'):
+def generate_2d_Gaussian_Mixture_logprob(data, components = 1, color = 'black'):
     GM_1 = mixture.GaussianMixture(components)
     GM_1.fit(data)
     likelihood = -(GM_1.score(data))
@@ -135,8 +135,8 @@ def q5():
     dogslogprobs = []
     catslogprobs = []
     for i in range(10):
-        dogslogprobs.append(generate_1d_Gaussian_Mixture_logprob(traindogs,i+1))
-        catslogprobs.append(generate_1d_Gaussian_Mixture_logprob(traincats,i+1))
+        dogslogprobs.append(generate_2d_Gaussian_Mixture_logprob(traindogs,i+1))
+        catslogprobs.append(generate_2d_Gaussian_Mixture_logprob(traincats,i+1))
     x = np.linspace(1,10,10)
     plt.scatter(x,dogslogprobs)
     plt.scatter(x,catslogprobs)
