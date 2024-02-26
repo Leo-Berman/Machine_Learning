@@ -101,6 +101,7 @@ def q3(total_points):
 
 def q4(total_points):
     logprobs = []
+    print(total_points)
     for i in range(10):
         logprobs.append(generate_Gaussian_Mixture_logprob(total_points,i+1))
     print(logprobs)
@@ -153,11 +154,11 @@ def main():
     total_points = np.array(total_points).reshape(-1,1)
 
 
-    #q1(total_points)
-    #q2(total_points)
-    #q3(total_points)
+    q1(total_points)
+    q2(total_points)
+    q3(total_points)
     q4(total_points)
     plt.cla()
-    q5()
+    # q5()
     
 main()

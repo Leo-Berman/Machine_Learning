@@ -36,12 +36,12 @@ def generate_weighted_data(x1=0,x2=1,y1=0,y2=1):
     ypoints2 = []
 
     # w1        
-    for i in range(750):
+    for i in range(990):
         xpoints1.append(random.uniform(x1,x2))
         ypoints1.append(random.uniform(x1,x2))
 
     #w2
-    for i in range(250):
+    for i in range(10):
         xpoints2.append(random.uniform(y1,y2))
         ypoints2.append(random.uniform(y1,y2))
     
@@ -103,7 +103,7 @@ def main():
     xaxis = []
 
     # resolution
-    iterations = 32
+    iterations = 120
 
     # remove frames from previous
     os.system("rm this*.png")
@@ -134,8 +134,12 @@ def main():
         # set the priors
         model.priors=[.75,.25]
 
+        extra1,extra2 = generate_data(0,1,-2+(i/(iterations/4)),-1+(i/(iterations/4)))
+        extra1.extend(extra2)
+        extra1 = np.array(extra1)
+        extralabels = [0]*1000 + [1]*1000
         # calculate the probability of error
-        probability_error.append(1-model.score(data1,labels))
+        probability_error.append(1-model.score(extra1,extralabels))
 
         # append to the axis
         xaxis.append(-2 + i/(iterations/4))
@@ -146,22 +150,24 @@ def main():
         yes1 = []
         xes2 = []
         yes2 = []
-        for x in range(len(test1)):
-            xes1.append(test1[x][0])
-            yes1.append(test1[x][1])
-        for x in range(len(test2)):
-            xes2.append(test2[x][0])
-            yes2.append(test2[x][1])
+        for x in range(len(extra1)-len(extra2)):
+            xes1.append(extra1[x][0])
+            yes1.append(extra1[x][1])
+        for x in range(len(extra2)):
+            xes2.append(extra2[x][0])
+            yes2.append(extra2[x][1])
         
         # plot the lda decision surfaces
         # plot_lda_decision_surfaces(data1,model)
-        
+
         #plot the qda decision surfaces
-        plot_qda_decision_surfaces(data1,model)
+        plot_qda_decision_surfaces(extra1,model)
 
         # plot the two datasets
         plt.scatter(xes1,yes1,color = "green")
         plt.scatter(xes2,yes2,color = "blue")
+
+        plt.title("Alpha = " + str(-2 + i/(iterations/4)))
 
         # save the plots as images
         plt.savefig("this"+str(i)+".png")
@@ -178,7 +184,7 @@ def main():
 
     # label the middle point
     plt.text(xaxis[iterations//2],probability_error[iterations//2],str(xaxis[iterations//2]) + "," + str(probability_error[iterations//2]))
-    
+    plt.text(xaxis[iterations//4*3],probability_error[iterations//4*3],str(xaxis[iterations//4*3]) + "," + str(probability_error[iterations//4*3]))
     # save the file
     plt.savefig("results.png")
 
