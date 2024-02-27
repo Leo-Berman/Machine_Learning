@@ -68,7 +68,7 @@ def generate_2d_Gaussian_Mixture_pdf(data, components = 1,color = 'black'):
     
     
 def generate_Gaussian_Mixture_logprob(data, components = 1, color = 'black'):
-    GM_1 = mixture.GaussianMixture(components)
+    GM_1 = mixture.GaussianMixture(components,tol=1e-7)
     GM_1.fit(data)
     data = np.array(data[0]).reshape(-1,1)
     likelihood = -(GM_1.score(data))
@@ -138,7 +138,49 @@ def q5():
     plt.legend(["dogs","cats"])
     plt.savefig("q5.png")
 
+def q7():
+    # read in the data from the csv files
+    train = pd.read_csv("train.csv",comment = "#").to_numpy()
+    eval = pd.read_csv("eval.csv", comment = "#").to_numpy()
     
+    traindogs,traincats = separate_classes(train)
+    evaldogs,evalcats = separate_classes(eval)
+
+    train_labels = train[:,0]
+    eval_labels = eval[:,0]
+
+    train_coords = np.vstack((train[:,1],train[:,2])).T
+    eval_coords = np.vstack((eval[:,1],eval[:,2])).T
+
+    for i in range(10):
+        gm_traindogs = mixture.GaussianMixture(i+1,tol=1e-7)
+        gm_traindogs.fit(traindogs)
+        gm_traincats = mixture.GaussianMixture(i+1,tol=1e-7)
+        gm_traincats.fit(traincats)
+        train_correct = 0
+        eval_correct = 0
+        for j in range(len(train_coords)):
+            datapoint = train_coords[j].reshape(1,-1)
+            dog = gm_traindogs.score_samples(datapoint)
+            cat = gm_traincats.score_samples(datapoint)
+            if (dog > cat and train_labels[j] == "dogs") or (dog < cat and train_labels[j] != "dogs"):
+                train_correct+=1
+
+        for j in range(len(eval_coords)):
+            datapoint = eval_coords[j].reshape(1,-1)
+            dog = gm_traindogs.score_samples(datapoint)
+            cat = gm_traincats.score_samples(datapoint)
+            if (dog > cat and eval_labels[j] == "dogs") or (dog < cat and eval_labels[j] != "dogs"):
+                eval_correct+=1
+
+
+        str1 = "N = " + str(i+1) + "Train error = " + str(1-train_correct/len(train_labels)) + "\n"
+        str2 = "N = " + str(i+1) + "Eval error = " + str(1-eval_correct/len(eval_labels)) + "\n"
+        with open('scores.txt', 'a') as fd:
+            fd.write(str1)
+            fd.write(str2)
+        
+
 def main():
     # number of elements, means and variances
     nelems = 10000
@@ -154,11 +196,11 @@ def main():
     total_points = np.array(total_points).reshape(-1,1)
 
 
-    q1(total_points)
-    q2(total_points)
-    q3(total_points)
-    q4(total_points)
-    plt.cla()
+    # q1(total_points)
+    # q2(total_points)
+    # q3(total_points)
+    # q4(total_points)
+    # plt.cla()
     # q5()
-    
+    q7()
 main()
