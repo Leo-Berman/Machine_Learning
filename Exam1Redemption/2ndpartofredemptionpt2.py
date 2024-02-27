@@ -17,7 +17,7 @@ def generate_data(x1=0,x2=1,y1=0,y2=1):
     ypoints1 = []
     xpoints2 = []
     ypoints2 = []
-    for i in range(1000):
+    for i in range(5000):
         xpoints1.append(random.uniform(x1,x2))
         ypoints1.append(random.uniform(x1,x2))
         xpoints2.append(random.uniform(y1,y2))
@@ -79,17 +79,19 @@ def main():
             model = QDA(tol=1e-7)
 
             # set the priors
-            model.priors=[1-i/100,i/100]
-            xaxis.append(1-i/100)
+            model.priors=[i/100,1-i/100]
+            xaxis.append(i/100)
             #
-            weights = [model.priors[0]]*len(class1)+[model.priors[1]]*len(class2)
+            # weights = [model.priors[0]]*len(class1)+[model.priors[1]]*len(class2)
             print(model.priors)
             # fit model to the data
             model.fit(data,labels)
 
-            
+            model.priors=[i/100,1-i/100]
 
-            errors.append(1-model.score(data,labels,weights))
+            # errors.append(1-model.score(data,labels,weights))
+
+            errors.append(1-model.score(data,labels))
 
         
 
@@ -112,7 +114,7 @@ def main():
             plt.scatter(class2_x,class2_y,color = "blue")
 
             
-            plt.title("Alpha = " + str(x) + "P[w1] = "+str(model.priors[0]))
+            plt.title("Alpha = " + str(x) + " P[w1] = "+str(model.priors[0]))
 
 
             figurename = "Alpha = " + str(x) + " P[w1] = "+str(model.priors[0])+".png"
@@ -135,7 +137,7 @@ def main():
         # save the file
         plt.title("Alpha = " + str(x))
         
-        plt.savefig("Alpha = " + str(x) + ".png")
+        plt.savefig("Plot_Alpha = " + str(x) + ".png")
         plt.cla()
 
 

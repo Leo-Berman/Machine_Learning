@@ -17,7 +17,7 @@ def generate_data(x1=0,x2=1,y1=0,y2=1):
     ypoints1 = []
     xpoints2 = []
     ypoints2 = []
-    for i in range(1000):
+    for i in range(5000):
         xpoints1.append(random.uniform(x1,x2))
         ypoints1.append(random.uniform(x1,x2))
         xpoints2.append(random.uniform(y1,y2))
@@ -64,11 +64,10 @@ def main():
         xaxis = []
 
         # resolution
-        iterations = 400
-        k = 1
+        iterations = 8
         # iterate through the resolutions
         for i in range(iterations):
-            k+=1
+            k = i+1
             # print(i)
             # generate the data
             class1,class2 = generate_data(0,1,-2+(i/(iterations/4)),-1+(i/(iterations/4)))
@@ -92,10 +91,14 @@ def main():
             # fit model to the data
             model.fit(data,labels)
 
+            model.priors=[1-(j*.25),j*.25]
             
 
-            probability_error.append(1-model.score(data,labels,weights))
+            # probability_error.append(1-model.score(data,labels,weights))
 
+
+            probability_error.append(1-model.score(data,labels))
+                                                   
             # append to the axis
             xaxis.append(-2 + i/(iterations/4))
 
@@ -118,7 +121,7 @@ def main():
             plt.scatter(class2_x,class2_y,color = "blue")
 
             
-            plt.title("Alpha = " + str(-2 + k/(iterations/4))+"P[w1] = "+str(1-(j*.25)))
+            plt.title("Alpha = " + str(-2 + (k)/(iterations/4))+"P[w1] = "+str(1-(j*.25)))
 
 
             figurename = str(round(1-(j*.25),3))+"_"+str(k)+".png"
