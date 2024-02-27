@@ -68,10 +68,10 @@ def generate_2d_Gaussian_Mixture_pdf(data, components = 1,color = 'black'):
     
     
 def generate_Gaussian_Mixture_logprob(data, components = 1, color = 'black'):
-    GM_1 = mixture.GaussianMixture(components,tol=1e-7)
+    GM_1 = mixture.GaussianMixture(components,tol=1e-5)
     GM_1.fit(data)
     data = np.array(data[0]).reshape(-1,1)
-    likelihood = -(GM_1.score(data))
+    likelihood = (GM_1.score(data))
     return likelihood
 
 def q1(total_points):
@@ -199,8 +199,8 @@ def main():
     # q1(total_points)
     # q2(total_points)
     # q3(total_points)
-    # q4(total_points)
+    q4(total_points)
     # plt.cla()
     # q5()
-    q7()
+    # q7()
 main()

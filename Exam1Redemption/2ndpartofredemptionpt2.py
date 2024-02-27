@@ -65,7 +65,7 @@ def main():
         errors = []
         
         for i in range(101):
-            class1,class2 = generate_data(0,1,-2+x,-1+x)
+            class1,class2 = generate_data(0,1,x,s1+x)
 
             # generate the labels
             labels = [0]*len(class1) + [1]*len(class1)

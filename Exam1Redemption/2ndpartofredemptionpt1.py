@@ -64,13 +64,13 @@ def main():
         xaxis = []
 
         # resolution
-        iterations = 8
+        iterations = 9
         # iterate through the resolutions
         for i in range(iterations):
             k = i+1
             # print(i)
             # generate the data
-            class1,class2 = generate_data(0,1,-2+(i/(iterations/4)),-1+(i/(iterations/4)))
+            class1,class2 = generate_data(0,1,-2+(i/(iterations//4)),-1+(i/(iterations//4)))
 
             # generate the labels
             labels = [0]*len(class1) + [1]*len(class1)
@@ -100,7 +100,7 @@ def main():
             probability_error.append(1-model.score(data,labels))
                                                    
             # append to the axis
-            xaxis.append(-2 + i/(iterations/4))
+            xaxis.append(-2 + i/(iterations//4))
 
             # create lists for each x and y for each data set
             # for plotting the scatter
@@ -121,15 +121,16 @@ def main():
             plt.scatter(class2_x,class2_y,color = "blue")
 
             
-            plt.title("Alpha = " + str(-2 + (k)/(iterations/4))+"P[w1] = "+str(1-(j*.25)))
+            plt.title("Alpha = " + str(-2 + (k-1)/(iterations//4))+"P[w1] = "+str(1-(j*.25)))
 
 
-            figurename = str(round(1-(j*.25),3))+"_"+str(k)+".png"
+            figurename = "P[w1] = " + str(j*.25) + " ls
+            Alpha = " + str(-2 + (k-1)/(iterations//4))+"_"+str(k)+".png"
             # print(figurename)
             # save the plots as images
             plt.savefig(figurename)
 
-            # clear plots
+            # clear plots 
             plt.cla()
 
         # plot the probability of errors
