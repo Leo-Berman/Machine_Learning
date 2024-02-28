@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.3)  27 FEB 2024 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.3)  28 FEB 2024 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,6 +498,107 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 )
 \everycr=\toks40
 \minrowclearance=\skip126
+) (/usr/share/texlive/texmf-dist/tex/latex/tabularray/tabularray.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count306
+\l__pdf_internal_box=\box92
+))
+Package: tabularray 2021-12-01 v2021Q Typeset tabulars and arrays with LaTeX3
+ (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+\l__tblr_a_int=\count307
+\l__tblr_c_int=\count308
+\l__tblr_r_int=\count309
+\l__tblr_d_dim=\dimen274
+\l__tblr_h_dim=\dimen275
+\l__tblr_o_dim=\dimen276
+\l__tblr_p_dim=\dimen277
+\l__tblr_q_dim=\dimen278
+\l__tblr_r_dim=\dimen279
+\l__tblr_s_dim=\dimen280
+\l__tblr_t_dim=\dimen281
+\l__tblr_v_dim=\dimen282
+\l__tblr_w_dim=\dimen283
+\l__tblr_a_box=\box93
+\l__tblr_b_box=\box94
+\l__tblr_c_box=\box95
+\l__tblr_d_box=\box96
+\g__tblr_table_count_int=\count310
+\c@rownum=\count311
+\c@colnum=\count312
+\c@rowcount=\count313
+\c@colcount=\count314
+\abovesep=\dimen284
+\belowsep=\dimen285
+\leftsep=\dimen286
+\rightsep=\dimen287
+\g_tblr_level_int=\count315
+\g__tblr_data_row_key_count_int=\count316
+\g__tblr_data_column_key_count_int=\count317
+\g__tblr_data_cell_key_count_int=\count318
+\g__tblr_array_int=\count319
+\l__tblr_key_count_int=\count320
+\l__tblr_key_quotient_int=\count321
+\l__tblr_key_quotient_two_int=\count322
+\l__tblr_key_remainder_int=\count323
+\g__tblr_data_str_value_count_int=\count324
+\rulewidth=\dimen288
+\l__multicolumn_cell_number_int=\count325
+\l__tblr_strut_ht_box=\box97
+\l__tblr_strut_dp_box=\box98
+\g__tblr_cell_wd_dim=\dimen289
+\g__tblr_cell_ht_dim=\dimen290
+\g__tblr_cell_head_dim=\dimen291
+\g__tblr_cell_foot_dim=\dimen292
+\l__column_target_dim=\dimen293
+\l__tblr_caption_box=\box99
+\l__tblr_caption_left_box=\box100
+\l__tblr_row_head_box=\box101
+\l__tblr_row_foot_box=\box102
+\l__tblr_row_head_foot_dim=\dimen294
+\tablewidth=\dimen295
+\l__tblr_table_firsthead_box=\box103
+\l__tblr_table_middlehead_box=\box104
+\l__tblr_table_lasthead_box=\box105
+\l__tblr_table_firstfoot_box=\box106
+\l__tblr_table_middlefoot_box=\box107
+\l__tblr_table_lastfoot_box=\box108
+\l__tblr_remain_height_dim=\dimen296
+\l__tblr_long_from_int=\count326
+\l__tblr_long_to_int=\count327
+\l__tblr_curr_i_int=\count328
+\l__tblr_prev_i_int=\count329
+\l__tblr_table_page_int=\count330
+\l__tblr_table_head_box=\box109
+\l__tblr_table_foot_box=\box110
+\l__tblr_table_head_foot_dim=\dimen297
+\l__tblr_table_head_body_foot_dim=\dimen298
+\l__tblr_table_box=\box111
+\l__tblr_table_hlines_box=\box112
+\l__tblr_hline_box=\box113
+\l__tblr_row_box=\box114
+\l__tblr_col_o_wd_dim=\dimen299
+\l__tblr_col_b_wd_dim=\dimen300
+\l__tblr_hline_leftskip_dim=\dimen301
+\l__tblr_hline_rightskip_dim=\dimen302
+\l__tblr_row_ht_dim=\dimen303
+\l__tblr_row_dp_dim=\dimen304
+\l__tblr_row_abovesep_dim=\dimen305
+\l__tblr_row_belowsep_dim=\dimen306
+\l__tblr_row_vlines_box=\box115
+\l__tblr_vline_box=\box116
+\l__tblr_cell_box=\box117
+\l__row_upper_dim=\dimen307
+\l__row_lower_dim=\dimen308
+\l__row_vpace_dim=\dimen309
+\l__tblr_vline_aboveskip_dim=\dimen310
+\l__tblr_vline_belowskip_dim=\dimen311
+\l__tblr_cell_wd_dim=\dimen312
+\l__tblr_cell_ht_dim=\dimen313
+\l__tblr_diag_box=\box118
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -505,51 +606,47 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count306
-\Gm@cntv=\count307
-\c@Gm@tempcnt=\count308
-\Gm@bindingoffset=\dimen274
-\Gm@wd@mp=\dimen275
-\Gm@odd@mp=\dimen276
-\Gm@even@mp=\dimen277
-\Gm@layoutwidth=\dimen278
-\Gm@layoutheight=\dimen279
-\Gm@layouthoffset=\dimen280
-\Gm@layoutvoffset=\dimen281
+\Gm@cnth=\count331
+\Gm@cntv=\count332
+\c@Gm@tempcnt=\count333
+\Gm@bindingoffset=\dimen314
+\Gm@wd@mp=\dimen315
+\Gm@odd@mp=\dimen316
+\Gm@even@mp=\dimen317
+\Gm@layoutwidth=\dimen318
+\Gm@layoutheight=\dimen319
+\Gm@layouthoffset=\dimen320
+\Gm@layoutvoffset=\dimen321
 \Gm@dimlist=\toks41
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count309
-\l__pdf_internal_box=\box92
 ) (./Leo_Berman.aux)
 \openout1 = `Leo_Berman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
-\scratchdimen=\dimen282
-\scratchbox=\box93
-\nofMPsegments=\count311
-\nofMParguments=\count312
+\scratchcounter=\count334
+\scratchdimen=\dimen322
+\scratchbox=\box119
+\nofMPsegments=\count335
+\nofMParguments=\count336
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count313
-\MPscratchDim=\dimen283
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
+\MPscratchCnt=\count337
+\MPscratchDim=\dimen323
+\MPnumerator=\count338
+\makeMPintoPDFobject=\count339
 \everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -559,9 +656,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 56.
-\c@lstlisting=\count316
-
+(lastpage)             ! on input line 58.
+\c@lstlisting=\count340
+ (/usr/share/texlive/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+Package: ninecolors 2021/05/24 v2021C Select colors with proper color contrast
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -600,56 +699,87 @@ Package lastpage Info: Please have a look at the pageslts package at
 
 ]
 
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 109.
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 111.
 
 
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 110.
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 112.
 
 
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 111.
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 113.
 
 
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 112.
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 114.
 
 <../q1to6pics/q1.png, id=12, 462.528pt x 346.896pt>
 File: ../q1to6pics/q1.png Graphic file (type png)
 <use ../q1to6pics/q1.png>
-Package pdftex.def Info: ../q1to6pics/q1.png  used on input line 121.
+Package pdftex.def Info: ../q1to6pics/q1.png  used on input line 123.
 (pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
 [1 <../q1to6pics/q1.png>]
 <../q1to6pics/q2.png, id=19, 462.528pt x 346.896pt>
 File: ../q1to6pics/q2.png Graphic file (type png)
 <use ../q1to6pics/q2.png>
-Package pdftex.def Info: ../q1to6pics/q2.png  used on input line 132.
+Package pdftex.def Info: ../q1to6pics/q2.png  used on input line 134.
 (pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
  [2 <../q1to6pics/q2.png>]
 <../q1to6pics/q3.png, id=24, 462.528pt x 346.896pt>
 File: ../q1to6pics/q3.png Graphic file (type png)
 <use ../q1to6pics/q3.png>
-Package pdftex.def Info: ../q1to6pics/q3.png  used on input line 143.
+Package pdftex.def Info: ../q1to6pics/q3.png  used on input line 145.
 (pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
  [3 <../q1to6pics/q3.png>]
 <../q1to6pics/q4.png, id=29, 462.528pt x 346.896pt>
 File: ../q1to6pics/q4.png Graphic file (type png)
 <use ../q1to6pics/q4.png>
-Package pdftex.def Info: ../q1to6pics/q4.png  used on input line 154.
+Package pdftex.def Info: ../q1to6pics/q4.png  used on input line 156.
 (pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
- 
+ [4 <../q1to6pics/q4.png>]
+Overfull \hbox (8.63739pt too wide) in paragraph at lines 161--161
+[]\OT1/cmr/bx/n/14.4 PLOT THE LOG PROB-A-BIL-ITY OF DATA SET 13 AS FUNC-
+ []
+
+<../q1to6pics/q5.png, id=34, 462.528pt x 346.896pt>
+File: ../q1to6pics/q5.png Graphic file (type png)
+<use ../q1to6pics/q5.png>
+Package pdftex.def Info: ../q1to6pics/q5.png  used on input line 167.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+[5 <../q1to6pics/q5.png>]
+<../q1to6pics/q6_hist.png, id=39, 462.528pt x 346.896pt>
+File: ../q1to6pics/q6_hist.png Graphic file (type png)
+<use ../q1to6pics/q6_hist.png>
+Package pdftex.def Info: ../q1to6pics/q6_hist.png  used on input line 179.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+<../q1to6pics/q6_1.png, id=40, 462.528pt x 346.896pt>
+File: ../q1to6pics/q6_1.png Graphic file (type png)
+<use ../q1to6pics/q6_1.png>
+Package pdftex.def Info: ../q1to6pics/q6_1.png  used on input line 185.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+<../q1to6pics/q6_2.png, id=41, 462.528pt x 346.896pt>
+File: ../q1to6pics/q6_2.png Graphic file (type png)
+<use ../q1to6pics/q6_2.png>
+Package pdftex.def Info: ../q1to6pics/q6_2.png  used on input line 191.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+<../q1to6pics/q6_4.png, id=42, 462.528pt x 346.896pt>
+File: ../q1to6pics/q6_4.png Graphic file (type png)
+<use ../q1to6pics/q6_4.png>
+Package pdftex.def Info: ../q1to6pics/q6_4.png  used on input line 197.
+(pdftex.def)             Requested size: 231.2979pt x 173.47403pt.
+ [6 <../q1to6pics/q6_hist.png> <../q1to6pics/q6_1.png> <../q1to6pics/q6_2.png> <../q1to6pics/q6_4.png>] 
 AED: lastpage setting LastPage
-[4 <../q1to6pics/q4.png>] (./Leo_Berman.aux) ) 
+[7] (./Leo_Berman.aux) ) 
 Here is how much of TeX's memory you used:
- 18116 strings out of 478287
- 387370 string characters out of 5849290
- 684580 words of memory out of 5000000
- 35992 multiletter control sequences out of 15000+600000
+ 20078 strings out of 478287
+ 437050 string characters out of 5849290
+ 751215 words of memory out of 5000000
+ 37935 multiletter control sequences out of 15000+600000
  471530 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,16n,118p,542b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,16n,118p,946b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Leo_Berman.pdf (5 pages, 173540 bytes).
+Output written on Leo_Berman.pdf (8 pages, 532486 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,6 +19,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{multirow}
 \usepackage{colortbl}
+\usepackage{array}
+\usepackage{tabularray}
 
 \usepackage[
   top=2cm,
@@ -155,5 +157,85 @@ As can be seen, the log likelihood of the data set peaks when the Gaussian mixtu
 			\caption{Log likelihood as a function of Gaussian mixture model components}
 	\end{minipage}\hfill
 \end{figure}
+\pagebreak
+\section{\MakeUppercase{Plot the log probability of data set 13 as function of n component Gaussian mixture models}}
+When we plot the log probability of the two individual classes we can see that both plots have a similar shape in a different place. As expected, the more components we add to our Gaussian Mixture model, the better the performance of the model. Logically, a lack of knowledge of the dataset should mean that the more components there are, the better outliers are handled as well as the regular dataset.
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../q1to6pics/q5.png}
+			\caption{Log likelihood as a function of Gaussian mixture model components}
+	\end{minipage}\hfill
+\end{figure}
+\pagebreak
+\section{\MakeUppercase{Plot data set 13 using histogram techniques and 3 dimensional Gaussian mixture models}}
+In the first plot, we can see a pretty well defined peak in the center of the data. There also seems to be some more local peaks surrounding the center, but this model could be relatively well modeled by a single component Gaussian mixture model. In the single component Gaussian mixture model, we can see that the looks similar to the histogram technique, but converges slightly more steeply. We can see this happening due to a loss of resolution with only a single component. For the two and four component models, we begin to see more of the shape of the histogram. The two component Gaussian mixture model builds peaks aroudn the gap in the center of the data, and while this is clearly a better representation, the four component mixture model begins to build a better representation by building a sort of well around the gap in the data.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../q1to6pics/q6_hist.png}
+			\caption{Represent the data with a histogram technique.}
+	\end{minipage}\hfill
+	\centering
+	\begin{minipage}{0.49\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../q1to6pics/q6_1.png}
+			\caption{Represent the data as a single component Gaussian mixture model}
+	\end{minipage}\hfill
+	\centering
+	\begin{minipage}{0.49\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../q1to6pics/q6_2.png}
+			\caption{Represent the data as a two component Gaussian mixture model}
+	\end{minipage}\hfill
+	\centering
+	\begin{minipage}{0.49\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../q1to6pics/q6_4.png}
+			\caption{Represent the data as a four component Gaussian mixture model}
+	\end{minipage}\hfill
+\end{figure}
+
+\section{\MakeUppercase{Plot data set 13 using histogram techniques and 3 dimensional Gaussian mixture models}}
+
+\centering
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\rowcolor{gray!20}
+	Algorithm & Data & Train & Eval\\
+	\hline 
+	IMLD - QDA   & Set No. 13 & 11.39 & 20.49\\
+	\hline
+	Python - QDA & Set No. 13 & 11.12 & 20.83\\
+	\hline
+	GMM (N = 01) & Set No. 13 & 11.40 & 19.91\\
+	\hline
+	GMM (N = 02) & Set No. 13 & 11.29 & 18.89\\
+	\hline
+	GMM (N = 03) & Set No. 13 & 11.11 & 19.88\\
+	\hline
+	GMM (N = 04) & Set No. 13 & 11.08 & 20.19\\
+	\hline
+	GMM (N = 05) & Set No. 13 & 10.98 & 20.17\\
+	\hline
+	GMM (N = 06) & Set No. 13 & 11.12 & 19.76\\
+	\hline
+	GMM (N = 07) & Set No. 13 & 11.09 & 19.98\\
+	\hline
+	GMM (N = 08) & Set No. 13 & 11.08 & 19.80\\
+	\hline
+	GMM (N = 09) & Set No. 13 & 11.02 & 20.36\\
+	\hline
+	GMM (N = 10) & Set No. 13 & 10.91 & 20.11\\
+	\hline
+	\end{tabular}
+\end{table}
+
 \section{\MakeUppercase{Summary}}
 \end{document}
