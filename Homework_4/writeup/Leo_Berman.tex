@@ -200,8 +200,7 @@ In the first plot, we can see a pretty well defined peak in the center of the da
 \end{figure}
 
 \section{\MakeUppercase{Plot data set 13 using histogram techniques and 3 dimensional Gaussian mixture models}}
-
-\centering
+\flushleft{What we can see in the table, is that for the evaluation data, since our data seems to be fit to a Gaussian, the Gaussian mixture model does a better job. The statistical significance of that can be called to question. More importantly, we can see that the Gaussian mixture model almost consistently gets better with more components on the training model, but for the evaluation model it does better being trained on less components. This highlights the effects of over training because on a one or two component Gaussian, since the model is more generalized it does better on the evaluation set. What this essentially demonstrates is the fact that the more components you add to a Gaussian mixture model, the more specified to the training dataset it becomes, and the less applicable it is to a slightly different dataset.}
 \begin{table}[ht]
 \centering
 \renewcommand{\arraystretch}{1.5}
@@ -238,4 +237,5 @@ In the first plot, we can see a pretty well defined peak in the center of the da
 \end{table}
 
 \section{\MakeUppercase{Summary}}
+Overall, we can see that Gaussian mixture models can be fit very accurately to data by adding more and more components. However, when they are overfitted to the data their ability to generalize other datasets lessens. In application, this means that on a single dataset, the more components the better, but if you are trying to use it as a algorithm for multiple datasets, it's important to get the balance of the components correct. This helps improve the model's ability to generalize data while maintaing accuracy for a single dataset.
 \end{document}

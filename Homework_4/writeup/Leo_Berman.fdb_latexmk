@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1709135455 "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_4/writeup/Leo_Berman.tex" "Leo_Berman.pdf" "Leo_Berman" 1709135457
+["pdflatex"] 1709142258 "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_4/writeup/Leo_Berman.tex" "Leo_Berman.pdf" "Leo_Berman" 1709142260
   "../q1to6pics/q1.png" 1709045371 19448 3e0eb903421400b7b107b33607c58196 ""
   "../q1to6pics/q2.png" 1709045379 45552 19bd3d75800d8d253ed9beb153462751 ""
   "../q1to6pics/q3.png" 1709045395 46511 7a9d9d8b20b37812cff3be471ce558c2 ""
@@ -10,7 +10,7 @@
   "../q1to6pics/q6_4.png" 1709052007 117592 d9473edae3e17d6451b97c6b19a44f95 ""
   "../q1to6pics/q6_hist.png" 1709052005 60088 b108eec8d71917fae3317e9e2220ffb5 ""
   "/etc/texmf/web2c/texmf.cnf" 1706967794 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_4/writeup/Leo_Berman.tex" 1709135455 9367 0ee4f4bb406330208e51ce6002078643 ""
+  "/home/leo/Desktop/Github_Repos/Machine_Learning/Homework_4/writeup/Leo_Berman.tex" 1709142257 10730 e6cc7480b2a49a9da50c6dac32778774 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -149,8 +149,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706967917 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1706967960 2801640 63bd288feec3bcad878f0f63118ad514 ""
-  "Leo_Berman.aux" 1709135457 2936 8cded5b32e101d9c47a736ecb5d35a72 "pdflatex"
-  "Leo_Berman.tex" 1709135455 9367 0ee4f4bb406330208e51ce6002078643 ""
+  "Leo_Berman.aux" 1709142260 2936 8cded5b32e101d9c47a736ecb5d35a72 "pdflatex"
+  "Leo_Berman.tex" 1709142257 10730 e6cc7480b2a49a9da50c6dac32778774 ""
   "pythonhighlight.sty" 1709070270 5049 7d7b3349bbd50ed754ccba9c6ec89882 ""
   (generated)
   "Leo_Berman.aux"
