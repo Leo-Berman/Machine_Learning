@@ -27,10 +27,10 @@ def generate_data(x1=0,x2=1,y1=0,y2=1):
     return list(map(list, zip(xpoints1, ypoints1))),list(map(list, zip(xpoints2, ypoints2)))
     
 def plot_decision_surface(model):
-    min1 = -2
-    max1 = 3
-    min2 = -2
-    max2 = 3
+    min1 = -3
+    max1 = 4
+    min2 = -3
+    max2 = 4
     # define the x and y scale
     x1grid = np.arange(min1, max1, 0.1)
     x2grid = np.arange(min2, max2, 0.1)
@@ -64,7 +64,7 @@ def main():
         xaxis = []
 
         # resolution
-        iterations = 9
+        iterations = 200
         # iterate through the resolutions
         for i in range(iterations):
             k = i+1
@@ -124,8 +124,7 @@ def main():
             plt.title("Alpha = " + str(-2 + (k-1)/(iterations//4))+"P[w1] = "+str(1-(j*.25)))
 
 
-            figurename = "P[w1] = " + str(j*.25) + " ls
-            Alpha = " + str(-2 + (k-1)/(iterations//4))+"_"+str(k)+".png"
+            figurename = "P[w1] = " + str(1-(j*.25)) + " Alpha = " + str(-2 + (k-1)/(iterations//4))+"_"+str(k)+".png"
             # print(figurename)
             # save the plots as images
             plt.savefig(figurename)
@@ -145,6 +144,7 @@ def main():
         plt.text(xaxis[iterations//4*3],probability_error[iterations//4*3],str(xaxis[iterations//4*3]) + "," + str(probability_error[iterations//4*3]))
         # save the file
         plt.title("P[w1] = "+str(1-(j*.25)))
+        plt.ylim((0,1))
         plt.savefig("resultsprior1_"+str(1-(j*.25))+".png")
         plt.cla()
 

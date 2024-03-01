@@ -27,10 +27,10 @@ def generate_data(x1=0,x2=1,y1=0,y2=1):
     return list(map(list, zip(xpoints1, ypoints1))),list(map(list, zip(xpoints2, ypoints2)))
     
 def plot_decision_surface(model):
-    min1 = -2
-    max1 = 3
-    min2 = -2
-    max2 = 3
+    min1 = -3
+    max1 = 4
+    min2 = -3
+    max2 = 4
     # define the x and y scale
     x1grid = np.arange(min1, max1, 0.1)
     x2grid = np.arange(min2, max2, 0.1)
@@ -56,7 +56,7 @@ def main():
 
     # remove frames from previous
     # os.system("rm this*.png")
-    alphas = [0,.5,.75,1]
+    alphas = [-1,-.75,-.5,-.25,0,.25,.5,.75,1]
     
     
     for x in alphas:
@@ -65,7 +65,7 @@ def main():
         errors = []
         
         for i in range(101):
-            class1,class2 = generate_data(0,1,x,s1+x)
+            class1,class2 = generate_data(0,1,x,1+x)
 
             # generate the labels
             labels = [0]*len(class1) + [1]*len(class1)
@@ -136,7 +136,7 @@ def main():
         iterations = 100
         # save the file
         plt.title("Alpha = " + str(x))
-        
+        plt.ylim((0,1))
         plt.savefig("Plot_Alpha = " + str(x) + ".png")
         plt.cla()
 
