@@ -1,0 +1,32 @@
+
+Section3
+Unique states:
+[0 2 1]
+
+Section4
+
+Start probabilities:
+[1.00000000e+00 3.27494764e-45 9.10550524e-26]
+
+Section5
+
+Transition matrix:
+[[0.90377517 0.00115619 0.09506864]
+ [0.00274375 0.6610414  0.33621485]
+ [0.1589667  0.10934194 0.73169136]]
+
+Section6
+
+Gaussian distribution means:
+[[0.30522947]
+ [0.09988041]
+ [0.22802271]]
+
+Section7
+
+Gaussian distribution covariances:
+[[[ 35.82198269]]
+
+ [[533.61402872]]
+
+ [[131.17083162]]]
