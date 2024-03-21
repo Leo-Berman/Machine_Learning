@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 from sklearn.neighbors import KNeighborsClassifier as KNN
 from sklearn.ensemble import RandomForestClassifier as RNF
@@ -45,8 +46,43 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
     #
     print(name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
 
+def plot_knn(x_axis:list,y_axis:list,name:str):
+    plt.plot(x_axis,y_axis)
+    plt.ylim((0,1))
+    plt.ylabel("Accuracy")
+    plt.xlabel("Number of nearest neighbors")
+    plt.title(name)
+    plt.savefig("KNN_"+name+".png")
+    plt.cla()
+
 def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
+    train_classes,train_features = get_classes_features(train)
+    dev_classes,dev_features = get_classes_features(dev)
+    eval_classes,eval_features = get_classes_features(eval)
+    
+    train_scores = []
+    dev_scores = []
+    eval_scores = []
+    x_axis = range(1,50)
+    
+    for i in x_axis:
+        model = KNN(n_neighbors = i)
+        model.fit(train_features,train_classes)
+        
+        train_scores.append(model.score(train_features,train_classes))
+        dev_scores.append(model.score(dev_features,dev_classes))
+        eval_scores.append(model.score(eval_features,eval_classes))
+    
+    
+    plot_knn(x_axis,train_scores,"Training")
+    plot_knn(x_axis,dev_scores,"Development")
+    plot_knn(x_axis,eval_scores,"Evaluation")
+    
     pass
+
+def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
+    pass
+
 def get_parent_dir():
 
     # get the filepath of the driver function
@@ -61,6 +97,11 @@ def get_parent_dir():
     # 
     parent_folder = path.parent.absolute()
     return parent_folder
+
+def get_data(file_path:str):
+    df = pd.read_csv(file_path)
+    df.columns = ["Classes","x1","x2"]
+    return df
 
 def get_csv(path:str):
 
@@ -100,9 +141,9 @@ def main():
 
     # score the lda for each set
     #
-    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "KNN")
-    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "KNN")
-    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "KNN")
+    score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08")
+    score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09")
+    score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10")
 
     # score the lda for each set
     #
