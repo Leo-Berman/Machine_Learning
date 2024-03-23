@@ -1,0 +1,166 @@
+picone_test_0.txt	11 0 2 13							11 0 2 13
+picone_test_1.txt	10 6 0 16							10 6 0 16
+picone_test_2.txt	6 0 0 6								6 0 0 6
+picone_test_3.txt	8 0 1 9								8 0 1 9
+picone_test_4.txt	3 1 4 8								3 1 4 8
+picone_test_5.txt	4 0 1 5								4 0 1 5
+picone_test_6.txt	4 0 1 5								4 0 1 5
+picone_test_7.txt	12 0 6 18							12 0 6 18
+picone_test_8.txt	5 0 2 7								5 0 2 7
+picone_test_9.txt	7 5 1 13							7 5 1 13
+picone_test_10.txt	11 3 1 15							11 3 1 15
+picone_test_11.txt	5 1 1 7								5 1 1 7
+picone_test_12.txt	9 2 0 11						      |	5 4 2 11
+picone_test_13.txt	21 0 0 21						      |	19 1 1 21
+picone_test_14.txt	8 0 3 11							8 0 3 11
+picone_test_15.txt	0 0 2 2								0 0 2 2
+picone_test_16.txt	11 2 1 14							11 2 1 14
+picone_test_17.txt	9 1 2 12							9 1 2 12
+picone_test_18.txt	7 3 0 10						      |	5 4 1 10
+picone_test_19.txt	17 0 2 19							17 0 2 19
+picone_test_20.txt	5 3 0 8								5 3 0 8
+picone_test_21.txt	15 7 0 22						      |	13 8 1 22
+picone_test_22.txt	6 7 0 13							6 7 0 13
+picone_test_23.txt	2 6 0 8								2 6 0 8
+picone_test_24.txt	2 16 0 18							2 16 0 18
+picone_test_25.txt	1 4 0 5								1 4 0 5
+picone_test_26.txt	14 0 0 14						      |	10 2 2 14
+picone_test_27.txt	4 4 0 8								4 4 0 8
+picone_test_28.txt	8 3 0 11							8 3 0 11
+picone_test_29.txt	12 3 0 15							12 3 0 15
+picone_test_30.txt	2 13 0 15							2 13 0 15
+picone_test_31.txt	10 3 0 13							10 3 0 13
+picone_test_32.txt	7 13 0 20							7 13 0 20
+picone_test_33.txt	3 2 0 5								3 2 0 5
+picone_test_34.txt	2 6 0 8								2 6 0 8
+picone_test_35.txt	10 10 0 20							10 10 0 20
+picone_test_36.txt	5 6 0 11							5 6 0 11
+picone_test_37.txt	9 0 1 10							9 0 1 10
+picone_test_38.txt	10 9 0 19							10 9 0 19
+picone_test_39.txt	8 7 0 15							8 7 0 15
+picone_test_40.txt	6 14 0 20							6 14 0 20
+picone_test_41.txt	4 9 0 13							4 9 0 13
+picone_test_42.txt	9 5 0 14							9 5 0 14
+picone_test_43.txt	7 1 2 10							7 1 2 10
+picone_test_44.txt	6 7 1 14							6 7 1 14
+picone_test_45.txt	6 7 0 13							6 7 0 13
+picone_test_46.txt	12 2 1 15						      |	8 4 3 15
+picone_test_47.txt	4 0 3 7								4 0 3 7
+picone_test_48.txt	14 0 5 19							14 0 5 19
+picone_test_49.txt	2 0 2 4								2 0 2 4
+picone_test_50.txt	6 3 0 9								6 3 0 9
+picone_test_51.txt	12 1 1 14							12 1 1 14
+picone_test_52.txt	7 0 3 10						      |	3 2 5 10
+picone_test_53.txt	5 6 3 14							5 6 3 14
+picone_test_54.txt	3 10 0 13							3 10 0 13
+picone_test_55.txt	6 9 0 15							6 9 0 15
+picone_test_56.txt	12 7 0 19						      |	10 8 1 19
+picone_test_57.txt	4 7 0 11							4 7 0 11
+picone_test_58.txt	1 1 1 3								1 1 1 3
+picone_test_59.txt	8 0 2 10						      |	6 1 3 10
+picone_test_60.txt	12 3 0 15						      |	10 4 1 15
+picone_test_61.txt	2 0 0 2								2 0 0 2
+picone_test_62.txt	11 0 4 15						      |	9 1 5 15
+picone_test_63.txt	3 0 2 5								3 0 2 5
+picone_test_64.txt	5 3 4 12							5 3 4 12
+picone_test_65.txt	9 0 3 12						      |	7 1 4 12
+picone_test_66.txt	17 0 1 18						      |	13 2 3 18
+picone_test_67.txt	5 0 1 6								5 0 1 6
+picone_test_68.txt	13 0 5 18							13 0 5 18
+picone_test_69.txt	2 1 2 5								2 1 2 5
+picone_test_70.txt	10 6 1 17							10 6 1 17
+picone_test_71.txt	3 0 3 6								3 0 3 6
+picone_test_72.txt	2 0 2 4								2 0 2 4
+picone_test_73.txt	8 2 0 10						      |	4 4 2 10
+picone_test_74.txt	12 0 1 13							12 0 1 13
+picone_test_75.txt	2 0 3 5								2 0 3 5
+picone_test_76.txt	3 0 2 5								3 0 2 5
+picone_test_77.txt	6 0 4 10							6 0 4 10
+picone_test_78.txt	3 0 4 7								3 0 4 7
+picone_test_79.txt	8 0 2 10							8 0 2 10
+picone_test_80.txt	11 0 6 17							11 0 6 17
+picone_test_81.txt	8 1 1 10							8 1 1 10
+picone_test_82.txt	4 11 1 16							4 11 1 16
+picone_test_83.txt	4 0 3 7								4 0 3 7
+picone_test_84.txt	7 3 1 11							7 3 1 11
+picone_test_85.txt	6 4 2 12							6 4 2 12
+picone_test_86.txt	7 0 4 11							7 0 4 11
+picone_test_87.txt	7 2 1 10							7 2 1 10
+picone_test_88.txt	13 0 7 20							13 0 7 20
+picone_test_89.txt	6 1 2 9							      |	4 2 3 9
+picone_test_90.txt	4 0 3 7								4 0 3 7
+picone_test_91.txt	4 0 4 8								4 0 4 8
+picone_test_92.txt	6 1 3 10							6 1 3 10
+picone_test_93.txt	10 3 0 13							10 3 0 13
+picone_test_94.txt	6 0 4 10							6 0 4 10
+picone_test_95.txt	5 1 2 8								5 1 2 8
+picone_test_96.txt	14 6 1 21							14 6 1 21
+picone_test_97.txt	6 1 2 9								6 1 2 9
+picone_test_98.txt	3 1 3 7								3 1 3 7
+picone_test_99.txt	5 0 3 8							      |	3 1 4 8
+picone_test_100.txt	4 0 4 8								4 0 4 8
+picone_test_101.txt	10 0 0 10							10 0 0 10
+picone_test_102.txt	11 0 5 16							11 0 5 16
+picone_test_103.txt	10 0 0 10							10 0 0 10
+picone_test_104.txt	10 3 0 13							10 3 0 13
+picone_test_105.txt	7 0 3 10							7 0 3 10
+picone_test_106.txt	8 0 4 12							8 0 4 12
+picone_test_107.txt	5 2 1 8							      |	3 3 2 8
+picone_test_108.txt	7 0 0 7							      |	5 1 1 7
+picone_test_109.txt	6 1 5 12							6 1 5 12
+picone_test_110.txt	0 0 2 2								0 0 2 2
+picone_test_111.txt	1 0 3 4								1 0 3 4
+picone_test_112.txt	11 0 2 13							11 0 2 13
+picone_test_113.txt	6 0 3 9								6 0 3 9
+picone_test_114.txt	10 0 0 10						      |	6 2 2 10
+picone_test_115.txt	7 2 0 9								7 2 0 9
+picone_test_116.txt	4 1 0 5							      |	2 2 1 5
+picone_test_117.txt	10 0 2 12							10 0 2 12
+picone_test_118.txt	7 1 0 8							      |	3 3 2 8
+picone_test_119.txt	14 2 1 17						      |	12 3 2 17
+picone_test_120.txt	3 0 3 6								3 0 3 6
+picone_test_121.txt	11 4 4 19							11 4 4 19
+picone_test_122.txt	8 1 0 9								8 1 0 9
+picone_test_123.txt	4 0 2 6								4 0 2 6
+picone_test_124.txt	10 5 0 15							10 5 0 15
+picone_test_125.txt	4 2 0 6								4 2 0 6
+picone_test_126.txt	13 1 0 14							13 1 0 14
+picone_test_127.txt	10 4 0 14							10 4 0 14
+picone_test_128.txt	14 2 0 16							14 2 0 16
+picone_test_129.txt	18 0 0 18						      |	16 1 1 18
+picone_test_130.txt	16 2 0 18						      |	12 4 2 18
+picone_test_131.txt	22 0 9 31							22 0 9 31
+picone_test_132.txt	8 3 2 13							8 3 2 13
+picone_test_133.txt	10 1 0 11							10 1 0 11
+picone_test_134.txt	6 1 2 9								6 1 2 9
+picone_test_135.txt	14 3 1 18							14 3 1 18
+picone_test_136.txt	13 0 8 21							13 0 8 21
+picone_test_137.txt	13 4 2 19							13 4 2 19
+picone_test_138.txt	15 6 0 21							15 6 0 21
+picone_test_139.txt	5 5 0 10							5 5 0 10
+picone_test_140.txt	14 4 0 18							14 4 0 18
+picone_test_141.txt	7 1 4 12							7 1 4 12
+picone_test_142.txt	9 0 1 10						      |	7 1 2 10
+picone_test_143.txt	6 3 1 10							6 3 1 10
+picone_test_144.txt	3 21 0 24							3 21 0 24
+picone_test_145.txt	12 6 0 18							12 6 0 18
+picone_test_146.txt	11 8 0 19							11 8 0 19
+picone_test_147.txt	13 7 0 20							13 7 0 20
+picone_test_148.txt	10 15 0 25							10 15 0 25
+picone_test_149.txt	3 13 0 16							3 13 0 16
+picone_test_150.txt	2 5 0 7								2 5 0 7
+picone_test_151.txt	2 8 0 10							2 8 0 10
+picone_test_152.txt	7 9 0 16							7 9 0 16
+picone_test_153.txt	2 2 0 4								2 2 0 4
+picone_test_154.txt	8 6 0 14							8 6 0 14
+picone_test_155.txt	8 0 1 9								8 0 1 9
+picone_test_156.txt	5 15 0 20							5 15 0 20
+picone_test_157.txt	8 8 0 16							8 8 0 16
+picone_test_158.txt	2 4 0 6								2 4 0 6
+picone_test_159.txt	3 12 0 15							3 12 0 15
+picone_test_160.txt	10 7 0 17							10 7 0 17
+picone_test_161.txt	1 18 0 19							1 18 0 19
+picone_test_162.txt	1 20 0 21							1 20 0 21
+picone_test_163.txt	11 11 0 22							11 11 0 22
+picone_test_164.txt	8 6 0 14							8 6 0 14
+picone_test_165.txt	7 5 0 12							7 5 0 12
