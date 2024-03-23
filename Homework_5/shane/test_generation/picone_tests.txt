@@ -1,0 +1,995 @@
+id: (440c020a)
+Scores: (#C #S #D #I) 6 11 0 2
+REF:  * DESPITE THE JULY DECLINE DURABLE GOODS ORDERS  REMAINED seven point seven percent ABOVE THE year earlier ***** LEVEL 
+HYP:  A ROLE    IN  LINE WHO     IS      ONE   HUNDRED MILLION  seven point seven percent OF    A   year earlier WHILE HER   
+Eval: I S       S   S    S       S       S     S       S                                  S     S                I     S     
+
+id: (440c0207)
+Scores: (#C #S #D #I) 7 10 6 0
+REF:  the agency ISN'T LIKELY TO TAKE ANY ACTION UNTIL THE  union's rank and FILE VOTES on the CONTRACT IN TWO TO       THREE WEEKS 
+HYP:  the agency ***** ****** ** IS   IN  LONDON AND   WHEN union's rank and LOAN LOSS  on the ******** ** *** INDUSTRY ONLY  A     
+Eval:            D     D      D  S    S   S      S     S                     S    S            D        D  D   S        S     S     
+
+id: (440c0201)
+Scores: (#C #S #D #I) 6 6 0 0
+REF:  AT  n. e. c. THE need for international MANAGERS WILL KEEP RISING 
+HYP:  THE n. e. c. WHO need for international LENDING  TO   GO   INTO   
+Eval: S            S                          S        S    S    S      
+
+id: (440c020g)
+Scores: (#C #S #D #I) 1 8 0 1
+REF:  *** analysts TOO GENERALLY PLAYED  DOWN THE  EFFECT ON  BANKS 
+HYP:  THE analysts TO  A         GENERAL IN   LATE IN     THE ERA   
+Eval: I            S   S         S       S    S    S      S   S     
+
+id: (440c020h)
+Scores: (#C #S #D #I) 16 3 1 4
+REF:  *** *** IN  A  fundamental sense ** the equity markets have very little to do WITH what goes ON    in the commercial banks ** 
+HYP:  AND THE END OF fundamental sense OF the equity markets have very little to do **** what goes ALONG in the commercial banks TO 
+Eval: I   I   S   S                    I                                            D              S                             I  
+
+id: (440c020y)
+Scores: (#C #S #D #I) 7 4 0 1
+REF:  *** ESTIMATES FOR the gain ranged from two percent to THREE   PERCENT 
+HYP:  THE ESTIMATE  OF  the gain ranged from two percent to REVERSE HER     
+Eval: I   S         S                                       S       S       
+
+id: (440c020t)
+Scores: (#C #S #D #I) 3 4 0 1
+REF:  *** RATES FELL ON    short term treasury BILLS 
+HYP:  THE RATE  IS   GOING short term treasury DATA  
+Eval: I   S     S    S                         S     
+
+id: (440c0210)
+Scores: (#C #S #D #I) 6 12 0 6
+REF:  ** yesterday MOODY'S investors service ** ***** RAISED LILCO'S CREDIT RATINGS  IN   RECOGNITION OF        THE improved outlook for *** ******* ** STEADY FINANCIAL RECOVERY 
+HYP:  M. yesterday WHOSE   investors service TO RAISE HOME   LOANS   FROM   ENTERING THIS HUMAN       CONDITION AND improved outlook for THE DECLINE IN SHORT  COVERING  HER      
+Eval: I            S                         I  I     S      S       S      S        S    S           S         S                        I   I       I  S      S         S        
+
+id: (440c0209)
+Scores: (#C #S #D #I) 3 5 0 2
+REF:  A   P. B. G. c. spokeswoman DECLINED comment ** *** 
+HYP:  THE E. D. T. c. spokeswoman WOULDN'T comment ON HER 
+Eval: S   S  S  S                 S                I  I   
+
+id: (440c020f)
+Scores: (#C #S #D #I) 10 7 5 1
+REF:  ** the average rate on new TWENTY SIX WEEK BILLS ROSE to SIX POINT ONE SIX  PERCENT FROM   six point one two PERCENT 
+HYP:  TO the average rate on new ****** *** **** ***** ONES to *** CLOSE THE ONCE THE     FIRM'S six point one two TO      
+Eval: I                          D      D   D    D     S       D   S     S   S    S       S                        S       
+
+id: (440c020i)
+Scores: (#C #S #D #I) 10 11 3 1
+REF:  THERE shouldn't be any RISK   to THE BANKS IN THIS SORT OF      STUFF SAID LAWRENCE   COHN A    banking analyst at merrill lynch and ** COMPANY 
+HYP:  HER   shouldn't be any REASON to *** ***** ** IRAN WAS  AWARDED TO    A    SETTLEMENT HOME LOAN banking analyst at merrill lynch and IN HER     
+Eval: S                      S         D   D     D  S    S    S       S     S    S          S    S                                         I  S       
+
+id: (440c0211)
+Scores: (#C #S #D #I) 4 5 1 1
+REF:  ** about three point FIVE BILLION dollars OF SECURITIES ARE AFFECTED 
+HYP:  TO about three point ONE  MILLION dollars ** DURING     THE IRAN     
+Eval: I                    S    S               D  S          S   S        
+
+id: (440c020k)
+Scores: (#C #S #D #I) 9 5 4 2
+REF:  THE transaction requires approval of a majority of * ***** THE SHARES of the HOLDERS NOT AFFILIATED WITH MR.   ICAHN   
+HYP:  A   transaction requires approval of a majority of A SHARE A   LOT    of the ******* *** ********** **** LATIN AMERICA 
+Eval: S                                                  I I     S   S             D       D   D          D    S     S       
+
+id: (440c020n)
+Scores: (#C #S #D #I) 3 19 1 1
+REF:  IT CAN SIGN ONTO the **** PLAN FILE A   COMPETING PLAN OR  TAKE A    completely PASSIVE  ROLE THAT  neither ENDORSES NOR OPPOSES A  PLAN 
+HYP:  ** THE OIL  AND  the LAND THE  OIL  AND YOUNG     MAN  WHO HAD  BEEN completely INVESTOR WHO  WOULD neither ANALYST  WHO VOTED   TO HER  
+Eval: D  S   S    S        I    S    S    S   S         S    S   S    S               S        S    S             S        S   S       S  S    
+
+id: (440c020w)
+Scores: (#C #S #D #I) 3 8 0 3
+REF:  * *** ***** DURABLE GOODS    REPORTS FREQUENTLY ARE highly volatile from MONTH TO    MONTH 
+HYP:  A NEW LOANS AND     WARRANTS TO      BRING      A   highly volatile from ONE   AMONG HER   
+Eval: I I   I     S       S        S       S          S                        S     S     S     
+
+id: (440c0205)
+Scores: (#C #S #D #I) 7 0 0 2
+REF:  the company previously traded over the counter *** *** 
+HYP:  the company previously traded over the counter WHO OWN 
+Eval:                                                I   I   
+
+id: (440c020d)
+Scores: (#C #S #D #I) 5 11 2 1
+REF:  *** interest RATES ROSE  ON short term treasury BILLS SOLD  BY  THE GOVERNMENT yesterday AT ITS       REGULAR WEEKLY AUCTION 
+HYP:  THE interest RATE  MOVES IN short term treasury ***** NOTES DUE IN  LONDON     yesterday ** AFTERNOON WHEN    OR     A       
+Eval: I            S     S     S                      D     S     S   S   S                    D  S         S       S      S       
+
+id: (440c020j)
+Scores: (#C #S #D #I) 13 9 1 2
+REF:  ** the independent committee will recommend THAT HOLDERS ACCEPT the OFFER AT   A   meeting expected to be held in december ** T.   W. A. SAID 
+HYP:  TO the independent committee will recommend THE  HOLDER  TO     the ***** OVER WHO meeting expected to be held in december TO GIVE US TO HER  
+Eval: I                                           S    S       S          D     S    S                                           I  S    S  S  S    
+
+id: (440c0206)
+Scores: (#C #S #D #I) 1 5 4 1
+REF:  TWO OTHER ISSUES BEGAN TRADING RECENTLY ON the ********* BIG     BOARD 
+HYP:  *** ***** ****** ***** A       TOTAL    OF the AFTERNOON TRADING AREA  
+Eval: D   D     D      D     S       S        S      I         S       S     
+
+id: (440c020c)
+Scores: (#C #S #D #I) 4 17 0 2
+REF:  the rise in THAT CATEGORY IN JULY WAS  LED  BY     INCREASED ORDERS FOR AIRCRAFT AND PARTS NONELECTRICAL MACHINERY LUMBER and ** *** FURNITURE 
+HYP:  the rise in THE  I.       O. M.   LINE WITH BOEING HAS       WON    A   HARD     TO  AN    IOWA          A         NINE   and ON THE ERA       
+Eval:             S    S        S  S    S    S    S      S         S      S   S        S   S     S             S         S          I  I   S         
+
+id: (441c0207)
+Scores: (#C #S #D #I) 0 5 3 0
+REF:  IN JAPAN IT'S ALL GREEK SO  TO SPEAK 
+HYP:  ** ***** **** THE IRAN  AND A  ROW   
+Eval: D  D     D    S   S     S   S  S     
+
+id: (441c0212)
+Scores: (#C #S #D #I) 3 13 8 1
+REF:  *** volume WAS MODEST AS THREE HUNDRED TWENTY SIX POINT SEVEN MILLION SHARES CHANGED HANDS COMPARED WITH THREE  HUNDRED NINETY SIX    point five MILLION FRIDAY 
+HYP:  THE volume *** ****** ** ***** ******* ****** *** ***** AND   NOT     A      REVENUE IN    THE      AREA AROUND THE     IRAN   CONTRA point five IN      IOWA   
+Eval: I          D   D      D  D     D       D      D   D     S     S       S      S       S     S        S    S      S       S      S                 S       S      
+
+id: (441c020b)
+Scores: (#C #S #D #I) 1 6 7 0
+REF:  GRAND AUTO SLID THREE to FIFTEEN AND ONE EIGHTH ON THE AMERICAN STOCK EXCHANGE 
+HYP:  ***** THE  IRAN ARE   to ******* *** *** ****** ** *** IRAN     LATIN AMERICA  
+Eval: D     S    S    S        D       D   D   D      D  D   S        S     S        
+
+id: (441c020s)
+Scores: (#C #S #D #I) 0 2 6 0
+REF:  ANALYSTS HAVEN'T FOCUSED ON WHAT HAPPENED TO  THEM 
+HYP:  ******** ******* ******* ** **** ******** THE IOWA 
+Eval: D        D       D       D  D    D        S   S    
+
+id: (441c020e)
+Scores: (#C #S #D #I) 0 2 16 0
+REF:  ELDERS BREWING WILL BE BASED OUTSIDE AUSTRALIA BECAUSE SEVENTY PERCENT OF ITS ASSETS ARE IN BRITAIN AND CANADA 
+HYP:  ****** ******* **** ** ***** ******* ********* ******* ******* ******* ** *** ****** *** ** ******* THE IOWA   
+Eval: D      D       D    D  D     D       D         D       D       D       D  D   D      D   D  D       S   S      
+
+id: (441c0205)
+Scores: (#C #S #D #I) 1 1 4 0
+REF:  the LANGUAGE IS A BIG PROBLEM 
+HYP:  the ******** ** * *** IOWA    
+Eval:     D        D  D D   S       
+
+id: (441c020y)
+Scores: (#C #S #D #I) 2 10 2 2
+REF:  * REPUBLIC NEW YORK ROSE one ****** and ONE QUARTER TO   FORTY FIVE  AND  SEVEN EIGHTHS 
+HYP:  A SHARE    OR  MORE THAN one LAWYER and *** ******* WHAT I     DON'T HAVE A     LONG    
+Eval: I S        S   S    S        I          D   D       S    S     S     S    S     S       
+
+id: (441c0209)
+Scores: (#C #S #D #I) 3 4 4 0
+REF:  the earlier RISE WAS PREVIOUSLY reported AS FOUR POINT THREE PERCENT 
+HYP:  the earlier **** I.  A.         reported ** **** ***** A     FORMULA 
+Eval:             D    S   S                   D  D    D     S     S       
+
+id: (441c020f)
+Scores: (#C #S #D #I) 0 8 3 0
+REF:  ALSO A MOVE TO    BASE IT ABROAD WILL HAVE TAX   ADVANTAGES 
+HYP:  **** * **** GOING OUT  OF THE    I.   R.   IDAHO IOWA       
+Eval: D    D D    S     S    S  S      S    S    S     S          
+
+id: (441c020d)
+Scores: (#C #S #D #I) 1 12 3 0
+REF:  IT RECEIVED NO PROPOSALS THAT WERE      IN     THE BEST INTEREST OF   THE SHAREHOLDERS the COMPANY SAID 
+HYP:  ** ******** ** IN        AN   UNRELATED MATTER HOW TO   OUR      DATA ARE ALL          the N.      Y.   
+Eval: D  D        D  S         S    S         S      S   S    S        S    S   S                S       S    
+
+id: (441c0215)
+Scores: (#C #S #D #I) 0 2 13 0
+REF:  HE SAID SUCH PRODUCTS WOULD BE MARKETED BY OTHER COMPANIES WITH EXPERIENCE IN THAT BUSINESS 
+HYP:  ** **** **** ******** ***** ** ******** ** ***** ********* **** ********** ** THE  IOWA     
+Eval: D  D    D    D        D     D  D        D  D     D         D    D          D  S    S        
+
+id: (441c0210)
+Scores: (#C #S #D #I) 2 10 3 0
+REF:  AFTER the OFFERING REPUBLIC NEW YORK WILL HOLD about FORTY NINE PERCENT OF THE AFFILIATE 
+HYP:  ***** the ******** IRAN     TO  A    YEAR OR   about ***** FOUR TO      A  NEW ERA       
+Eval: D         D        S        S   S    S    S          D     S    S       S  S   S         
+
+id: (441c020m)
+Scores: (#C #S #D #I) 1 7 13 0
+REF:  UNLESS OTHERWISE NOTED CHANGES INVOLVED DIRECT HOLDINGS OF COMMON STOCK AND   TOOK PLACE IN SEPTEMBER and OCTOBER OF NINETEEN EIGHTY  SEVEN 
+HYP:  ****** ********* ***** ******* ******** ****** ******** ** ****** ***** AMONG THE  I.    R. OREGON    and ******* ** ******** ANOTHER IDEA  
+Eval: D      D         D     D       D        D      D        D  D      D     S     S    S     S  S             D       D  D        S       S     
+
+id: (441c020t)
+Scores: (#C #S #D #I) 0 3 2 0
+REF:  HAS EXPOSURE REALLY BEEN    REDUCED 
+HYP:  *** ******** A      RELATED AREA    
+Eval: D   D        S      S       S       
+
+id: (441c0203)
+Scores: (#C #S #D #I) 0 2 6 0
+REF:  FIRST COMMODITY OFFICIALS COULDN'T BE REACHED FOR COMMENT 
+HYP:  ***** ********* ********* ******** ** ******* THE IDEA    
+Eval: D     D         D         D        D  D       S   S       
+
+id: (441c020k)
+Scores: (#C #S #D #I) 2 10 10 0
+REF:  THE FOLLOWING OFFICERS DIRECTORS AND LARGE STOCKHOLDERS OF COMPANIES REPORTED CHANGES in HOLDINGS UNDER the SECURITIES EXCHANGE ACT OF NINETEEN THIRTY FOUR 
+HYP:  *** ********* A        FILING    A   VERY  HARD         TO REPORT    A        ROLE    in ******** ***** the ********** ******** *** ** ******** ****** AREA 
+Eval: D   D         S        S         S   S     S            S  S         S        S          D        D         D          D        D   D  D        D      S    
+
+id: (441c0201)
+Scores: (#C #S #D #I) 2 5 6 0
+REF:  FIRST COMMODITY APPEALED the EXPULSION and FINE TO THE C. F.    T. C.   
+HYP:  ***** ********* AMONG    the IOWA      and **** ** *** ** OWNER OF IOWA 
+Eval: D     D         S            S             D    D  D   D  S     S  S    
+
+id: (441c0206)
+Scores: (#C #S #D #I) 1 9 0 1
+REF:  *** IN  EUROPE an AMERICAN CAN AT      LEAST READ STREET SIGNS 
+HYP:  THE AIR AT     an ERROR    TO  OPERATE THE   I.   N.     Y.    
+Eval: I   S   S         S        S   S       S     S    S      S     
+
+id: (441c020j)
+Scores: (#C #S #D #I) 2 10 9 0
+REF:  TODAY NINETY PERCENT of THE four BILLION DOLLARS OF B. A. S. F. SALES IN THE     U.     S. IS  PRODUCED THERE 
+HYP:  A     GUY    OUT     of A   four ******* ******* ** ** ** ** ** ***** ** MILLION DOLLAR TO ADD AN       ERA   
+Eval: S     S      S          S        D       D       D  D  D  D  D  D     D  S       S      S  S   S        S     
+
+id: (441c020l)
+Scores: (#C #S #D #I) 0 8 7 0
+REF:  THOSE IDENTIFIED AS BENEFICIAL OWNERS HOLD AT LEAST TEN  PERCENT OF     A   COMPANY'S EQUITY SECURITIES 
+HYP:  ***** ********** ** ********** ****** **** ** THE   OHIO ARE     HAVING HER HANDLING  THE    AREA       
+Eval: D     D          D  D          D      D    D  S     S    S       S      S   S         S      S          
+
+id: (441c0213)
+Scores: (#C #S #D #I) 0 6 14 0
+REF:  THE ONE HUNDRED SHARE INDEX CLOSED SIX POINT EIGHT POINTS LOWER AT ONE THOUSAND SEVEN HUNDRED FIFTY NINE POINT NINE 
+HYP:  *** *** ******* ***** ***** ****** *** ***** ***** ****** ***** ** *** ******** I     WANTED  THE   I.   R.    IOWA 
+Eval: D   D   D       D     D     D      D   D     D     D      D     D  D   D        S     S       S     S    S     S    
+
+id: (442c0202)
+Scores: (#C #S #D #I) 2 4 9 0
+REF:  ACCEPTED bids ranged FROM SIX POINT TWO PERCENT TO SIX POINT TWO TWO     FIVE PERCENT 
+HYP:  THE      bids ranged **** *** ***** *** ******* ** *** ***** *** BETWEEN THE  IOWA    
+Eval: S                    D    D   D     D   D       D  D   D     D   S       S    S       
+
+id: (442c020z)
+Scores: (#C #S #D #I) 1 9 5 0
+REF:  HE SAID SUCH PRODUCTS WOULD BE MARKETED BY    OTHER COMPANIES WITH  EXPERIENCE in THAT BUSINESS 
+HYP:  ** **** **** ******** ***** TO EIGHTY   SEVEN CENTS A         MONEY MARKET     in THE  AREA     
+Eval: D  D    D    D        D     S  S        S     S     S         S     S             S    S        
+
+id: (442c020e)
+Scores: (#C #S #D #I) 13 7 1 2
+REF:  UNDER tokyo trading rules the **** MAXIMUM one day DROP FOR SONY   IS  five hundred yen ** about three dollars and FIFTY CENTS 
+HYP:  A     tokyo trading rules the NEXT TO      one day **** TO  PURSUE ITS five hundred yen AT about three dollars and A     SANTA 
+Eval: S                             I    S               D    S   S      S                    I                          S     S     
+
+id: (442c0204)
+Scores: (#C #S #D #I) 8 6 7 1
+REF:  *** m. i. c. c. INVESTMENTS HAS three series OF PUBLICLY TRADED PREFERRED SHARES AND   TEN series of PRIVATELY HELD PREFERRED STOCK 
+HYP:  THE m. i. c. c. INVESTMENT  AS  three series ** ******** ****** ********* A      SHARE A   series of ********* **** ********* IOWA  
+Eval: I               S           S                D  D        D      D         S      S     S             D         D    D         S     
+
+id: (442c020u)
+Scores: (#C #S #D #I) 7 6 7 0
+REF:  THE one hundred share INDEX CLOSED SIX POINT EIGHT POINTS LOWER at one thousand seven HUNDRED FIFTY NINE POINT NINE 
+HYP:  A   one hundred share ***** ****** *** IN    A     LITTLE OR    at one thousand seven ******* ***** **** ***** TO   
+Eval: S                     D     D      D   S     S     S      S                           D       D     D    D     S    
+
+id: (442c020f)
+Scores: (#C #S #D #I) 7 8 4 3
+REF:  ** THIS MORNING THE asking price ** *** for the STOCK WAS FOUR THOUSAND eight hundred fifty BUT THERE WERE   NO  BUYERS 
+HYP:  IN HIS  MONEY   AND asking price IS NOT for the ***** *** **** PAST     eight hundred fifty *** AND   DURING THE AREA   
+Eval: I  S    S       S                I  I           D     D   D    S                            D   S     S      S   S      
+
+id: (442c020p)
+Scores: (#C #S #D #I) 23 4 0 3
+REF:  * THE COMPANY   SAID it would ** BEGIN a dutch auction later this week for as many as forty million shares or twenty six percent of its shares outstanding ** 
+HYP:  A BIG COMPANIES THAT it would BE IN    a dutch auction later this week for as many as forty million shares or twenty six percent of its shares outstanding TO 
+Eval: I S   S         S             I  S                                                                                                                         I  
+
+id: (442c020m)
+Scores: (#C #S #D #I) 1 14 0 5
+REF:  * **** *** ******* EVEN SOME  BIGGER COMPANIES CAUTION THAT THEY ARE     LEERY OF  PAYING TOO BIG A   premium ** 
+HYP:  A YEAR AND SEVENTY TO   RAISE HIS    SON       AND     A    YEAR EARLIER IN    THE NAME   TO  THE NEW premium TO 
+Eval: I I    I   I       S    S     S      S         S       S    S    S       S     S   S      S   S   S           I  
+
+id: (442c0201)
+Scores: (#C #S #D #I) 10 2 0 2
+REF:  **** BIDS TOTALING five hundred twenty five point five million dollars were submitted ** 
+HYP:  WHAT IT   ONLY     five hundred twenty five point five million dollars were submitted TO 
+Eval: I    S    S                                                                           I  
+
+id: (442c020h)
+Scores: (#C #S #D #I) 5 6 3 0
+REF:  WE  JUST    received THE suit AND the document is MASSIVE IT'S TWO HUNDRED PAGES 
+HYP:  THE LEADERS received A   suit IN  the document is ******* **** *** THE     IDEA  
+Eval: S   S                S        S                   D       D    D   S       S     
+
+id: (442c020a)
+Scores: (#C #S #D #I) 11 12 1 1
+REF:  UNDER TERMS PREVIOUSLY REPORTED the ***** ITALIAN AGRICULTURAL CONCERN ASSUMED about one hundred ninety five million dollars IN  subordinated debt AS PART OF the TRANSACTION 
+HYP:  TO    AN    INTERVIEW  IS       the WORLD WIDE    INDUSTRY     HAS     EARNED  about one hundred ninety five million dollars AND subordinated debt ** AND  IN the IDEA        
+Eval: S     S     S          S            I     S       S            S       S                                                     S                     D  S    S      S           
+
+id: (442c020d)
+Scores: (#C #S #D #I) 16 3 2 5
+REF:  ** *** ** SONY corporation FOR EXAMPLE closed at FOUR thousand nine hundred FIFTY yen ** thirty four dollars and fifty cents a share yesterday **** 
+HYP:  IN THE N. E.   corporation *** A       closed at ONE  thousand nine hundred ***** yen TO thirty four dollars and fifty cents a share yesterday DATA 
+Eval: I  I   I  S                D   S                 S                          D         I                                                        I    
+
+id: (442c020y)
+Scores: (#C #S #D #I) 12 5 6 3
+REF:  * HE also said THAT THE COMPANY FOR the first time was developing drugs *** *** SPECIFICALLY for the over the COUNTER CONSUMER HEALTH CARE MARKET 
+HYP:  A T. also said **** *** ******* IN  the first time was developing drugs AND THE ONLY         for the over the ******* ******** ****** SAME AREA   
+Eval: I S            D    D   D       S                                       I   I   S                             D       D        D      S    S      
+
+id: (442c0207)
+Scores: (#C #S #D #I) 1 3 10 0
+REF:  GRAND AUTO SLID THREE TO FIFTEEN AND ONE EIGHTH ON     the AMERICAN STOCK EXCHANGE 
+HYP:  ***** **** **** ***** ** ******* *** *** A      HANDLE the ******** ***** AREA     
+Eval: D     D    D    D     D  D       D   D   S      S          D        D     S        
+
+id: (442c020i)
+Scores: (#C #S #D #I) 2 6 9 0
+REF:  BUT ON the first READ THROUGH THE CASE IS WITHOUT MERIT AND   WE      INTEND TO FIGHT IT   
+HYP:  *** ** the first **** ******* *** **** ** ******* ***** THREE HUNDRED CASES  IN THE   AREA 
+Eval: D   D            D    D       D   D    D  D       D     S     S       S      S  S     S    
+
+id: (442c020l)
+Scores: (#C #S #D #I) 6 10 8 1
+REF:  the **** MAY SLUMP REPORTED june TWENTY SECOND CAME AS A BIG       SURPRISE TO MOST analysts AND HELPED TRIGGER A  POWERFUL bond rally that DAY  
+HYP:  the RACE TO  PUT   IN       june ****** ****** **** ** * TWENTIETH THE      U. S.   analysts *** ****** ******* IN THE      bond rally that DATA 
+Eval:     I    S   S     S             D      D      D    D  D S         S        S  S             D   D      D       S  S                        S    
+
+id: (442c0214)
+Scores: (#C #S #D #I) 3 4 7 0
+REF:  A   change in the FIRM'S OWNERSHIP ALSO SHOULD TURN ON A BRIGHT     WARNING LIGHT 
+HYP:  THE change in the ****** ********* **** ****** **** ** * ADDITIONAL THE     AREA  
+Eval: S                 D      D         D    D      D    D  D S          S       S     
+
+id: (442c0210)
+Scores: (#C #S #D #I) 4 1 1 1
+REF:  ******** he declined to name SPECIFIC PRODUCTS 
+HYP:  ALTHOUGH he declined to name ******** TO       
+Eval: I                            D        S        
+
+id: (442c020g)
+Scores: (#C #S #D #I) 3 6 1 3
+REF:  *** *** a MONSANTO spokesman said ** THERE'S VERY LITTLE WE   CAN SAY 
+HYP:  DUN AND a ******** spokesman said IT HAS     BEEN DONE   SAID IN  A   
+Eval: I   I     D                       I  S       S    S      S    S   S   
+
+id: (442c020r)
+Scores: (#C #S #D #I) 11 10 4 1
+REF:  the company THEN ACCEPTS THE shares tendered AT  the lowest ****** PRICE NEEDED to REACH ITS GOAL THEN PAYS      that amount FOR all shares IT  PURCHASES 
+HYP:  the company RAN  INTO    ITS shares tendered AND the lowest PRICED BELOW THREE  to ***** *** **** **** ELIMINATE that amount OF  all shares THE AREA      
+Eval:             S    S       S                   S              I      S     S         D     D   D    D    S                     S              S   S         
+
+id: (442c0213)
+Scores: (#C #S #D #I) 0 2 0 0
+REF:  THAT'S FINE 
+HYP:  THE    IDEA 
+Eval: S      S    
+
+id: (443c020p)
+Scores: (#C #S #D #I) 12 9 1 5
+REF:  * in addition *** u. s. WEST'S data solutions business * APPLIED communications incorporated *** IS   working out * WELL   and PERFORMING AHEAD   OF ALL    OUR   SCHEDULES 
+HYP:  A in addition THE u. s. WEST   data solutions business A WIDE    communications incorporated HAS BEEN working out A TWELVE and ********** WARNING TO HANDLE LARGE DATA      
+Eval: I             I         S                              I S                                   I   S                I S          D          S       S  S      S     S         
+
+id: (443c0211)
+Scores: (#C #S #D #I) 5 3 0 2
+REF:  *** estimated AND actual results involving losses ** ARE OMITTED 
+HYP:  THE estimated IN  actual results involving losses IN THE IDEA    
+Eval: I             S                                   I  S   S       
+
+id: (443c0214)
+Scores: (#C #S #D #I) 16 5 3 4
+REF:  *** NISSAN   LOST thirty to one thousand five hundred twenty **** ****** AND   TOYOTA was down thirty TO END THE day AT two thousand six hundred twenty ** 
+HYP:  WHO RESIGNED LAST thirty to one thousand five hundred twenty NINE MONTHS WHILE IT     was down thirty ** *** *** day TO two thousand six hundred twenty TO 
+Eval: I   S        S                                               I    I      S     S                      D  D   D       S                                  I  
+
+id: (443c0201)
+Scores: (#C #S #D #I) 21 7 1 4
+REF:  the labor department said non farm payroll employment increased A  robust three hundred thirty seven thousand last month * **** AFTER a **** REVISED three hundred ** NINETEEN THOUSAND GAIN the MONTH BEFORE 
+HYP:  the labor department said non farm payroll employment increased TO robust three hundred thirty seven thousand last month A HALF TO    a HIGH AND     three hundred TO A        ONE      HALF the ***** IOWA   
+Eval:                                                                 S                                                        I I    S       I    S                     I  S        S        S        D     S      
+
+id: (443c020f)
+Scores: (#C #S #D #I) 2 13 2 3
+REF:  SONY WHICH LOST POINTS   in ***** PREVIOUS SESSIONS THIS WEEK   REBOUNDED EIGHTY   to **** *** FIVE THOUSAND ONE HUNDRED THIRTY 
+HYP:  **** ***** THE  FACILITY in WHICH WAS      WILLING  TO   REDUCE THE       INDUSTRY to READ AND E.   D.       A.  I.      DATA   
+Eval: D    D     S    S           I     S        S        S    S      S         S           I    I   S    S        S   S       S      
+
+id: (443c0202)
+Scores: (#C #S #D #I) 9 5 0 1
+REF:  the department previously said jobs rose BY  FOUR hundred forty eight ** THOUSAND IN JANUARY 
+HYP:  the department previously said jobs rose ONE ONE  hundred forty eight TO ARRANGE  AN ERA     
+Eval:                                          S   S                        I  S        S  S       
+
+id: (443c020t)
+Scores: (#C #S #D #I) 6 13 0 5
+REF:  * visa ** ** AND MASTERCARD FEES VARY BECAUSE THEY ARE SET    BY  the banks OR other institutions THAT     ISSUE the ******* *** CARDS 
+HYP:  A visa U. S. D.  R.         HE'S VERY LOW     AS   A   REASON WHY the banks TO other institutions DIVISION IN    the ARTISTS WHO LONG  
+Eval: I      I  I  S   S          S    S    S       S    S   S      S             S                     S        S         I       I   S     
+
+id: (443c0213)
+Scores: (#C #S #D #I) 7 2 1 2
+REF:  *** HONDA was down TEN TO  one thousand nine hundred thirty ** 
+HYP:  THE IDEA  was down *** AND one thousand nine hundred thirty TO 
+Eval: I   S              D   S                                    I  
+
+id: (443c020g)
+Scores: (#C #S #D #I) 6 10 6 1
+REF:  ** the following officers directors AND LARGE STOCKHOLDERS OF    COMPANIES REPORTED changes in HOLDINGS UNDER THE SECURITIES EXCHANGE ACT     OF NINETEEN THIRTY FOUR 
+HYP:  IN the following officers directors *** ***** IN           MARCH ON        THE      changes in ******** ***** *** ********** A        HOLDING A  CHANGE   THE    IOWA 
+Eval: I                                   D   D     S            S     S         S                   D        D     D   D          S        S       S  S        S      S    
+
+id: (443c020y)
+Scores: (#C #S #D #I) 15 3 0 3
+REF:  ** * THERE WERE two hundred fifty six issues advancing ** three hundred three declining AND two hundred ninety two unchanged 
+HYP:  IN A YEAR  WHEN two hundred fifty six issues advancing TO three hundred three declining TO  two hundred ninety two unchanged 
+Eval: I  I S     S                                           I                                S                                    
+
+id: (443c020b)
+Scores: (#C #S #D #I) 4 2 0 2
+REF:  *** THAT WAS certainly true last week ** 
+HYP:  THE N.   IS  certainly true last week TO 
+Eval: I   S    S                            I  
+
+id: (443c020v)
+Scores: (#C #S #D #I) 2 4 4 2
+REF:  IN CERTAIN CASES the CARDS ARE           GIVEN FREE to ****** *** SUBSCRIBERS 
+HYP:  ** ******* ***** the ***** UNCERTAINTIES IN    HARD to REDUCE THE IDEA        
+Eval: D  D       D         D     S             S     S       I      I   S           
+
+id: (443c020u)
+Scores: (#C #S #D #I) 7 12 0 1
+REF:  ** FEES range UP TO  ABOUT FORTY   dollars annually FOR BASIC CARDS  AND sixty dollars a year FOR GOLD CARDS 
+HYP:  TO EASE range OF TWO NINE  MILLION dollars annually TO  A     SINGLE A   sixty dollars a year OLD AND  SAID  
+Eval: I  S          S  S   S     S                        S   S     S      S                        S   S    S     
+
+id: (443c020n)
+Scores: (#C #S #D #I) 16 2 0 3
+REF:  *** ** the official declined to elaborate on projections for non telephone operations ** BUT cited several indicators of recent GAINS 
+HYP:  AND IN the official declined to elaborate on projections for non telephone operations TO THE cited several indicators of recent DATA  
+Eval: I   I                                                                                 I  S                                      S     
+
+id: (443c020r)
+Scores: (#C #S #D #I) 18 3 0 2
+REF:  ** as part of the marketing plan THE company will begin airing television commercials during prime time on election night * NEXT TUESDAY 
+HYP:  TO as part of the marketing plan AND company will begin airing television commercials during prime time on election night A TWO  TO      
+Eval: I                                S                                                                                        I S    S       
+
+id: (443c0210)
+Scores: (#C #S #D #I) 15 6 0 4
+REF:  the companies are followed by at least three analysts AND had a minimum ******* FIVE CENT change in ******** ACTUAL EARNINGS PER share ** * 
+HYP:  the companies are followed by at least three analysts WHO had a minimum HIGHEST IN   A    change in NATIONAL OVER   INTO     A   share ON A 
+Eval:                                                       S                 I       S    S              I        S      S        S         I  I 
+
+id: (443c020x)
+Scores: (#C #S #D #I) 15 3 0 4
+REF:  ***** *** volume was EIGHTEEN million one hundred ninety thousand shares COMPARED with ten million * five hundred fifty thousand *** MONDAY 
+HYP:  AMONG THE volume was EIGHTY   million one hundred ninety thousand shares ENDED    with ten million A five hundred fifty thousand ONE DATA   
+Eval: I     I              S                                                   S                         I                             I   S      
+
+id: (443c020e)
+Scores: (#C #S #D #I) 2 8 0 2
+REF:  *** KYOCERA WAS UP   SIXTY AT  FIVE THOUSAND two hundred ******* SIXTY 
+HYP:  THE U.      S.  IRAN WAS   THE I.   TO       two hundred NURSING HOME  
+Eval: I   S       S   S    S     S   S    S                    I       S     
+
+id: (443c020a)
+Scores: (#C #S #D #I) 6 11 0 6
+REF:  IN THE efforts to restore *** ** MARKET  CONFIDENCE ADMINISTRATION officials ** HAVE  EMPHASIZED THAT the ********* ** ECONOMY'S FUNDAMENTALS REMAIN  sound ** 
+HYP:  TO ANY efforts to restore ONE TO FINANCE AND        INDUSTRY       officials IN OTHER SIDE       TO   the ECONOMIES IN LONDON    METALS       REMAINS sound TO 
+Eval: S  S                      I   I  S       S          S                        I  S     S          S        I         I  S         S            S             I  
+
+id: (443c0208)
+Scores: (#C #S #D #I) 11 8 1 1
+REF:  * LOCAL membership JUMPED twenty two percent BUT  the union HAS ALREADY LOST twenty eight OF THE     seventy three new MEMBERS 
+HYP:  A TOTAL membership TO     twenty two percent WITH the union THE STORY   LAST twenty eight ** HUNDRED seventy three new ERA     
+Eval: I S                S                         S              S   S       S                 D  S                         S       
+
+id: (444c020c)
+Scores: (#C #S #D #I) 5 4 11 1
+REF:  *** senate finance chairman lloyd bentsen D. TEXAS SAID HE WOULD SPEED UP WORK ON THE PACKAGE BECAUSE OF   THE CRASH 
+HYP:  THE senate finance chairman lloyd bentsen ** ***** **** ** ***** ***** ** **** ** *** ******* WHO     SEEM TO  HER   
+Eval: I                                         D  D     D    D  D     D     D  D    D  D   D       S       S    S   S     
+
+id: (444c020n)
+Scores: (#C #S #D #I) 0 4 0 3
+REF:  * ***** **** WE  DIDN'T LIKE THAT 
+HYP:  I DON'T READ AND WHITE  MAN  WHO  
+Eval: I I     I    S   S      S    S    
+
+id: (444c020u)
+Scores: (#C #S #D #I) 5 7 3 1
+REF:  *** M.  C.  i. PLANS TO      BEGIN offering THE SERVICE AT the end of THIS MONTH 
+HYP:  THE END THE i. AND   LANDING IN    offering *** ******* OF the end of **** IOWA  
+Eval: I   S   S      S     S       S              D   D       S             D    S     
+
+id: (444c020y)
+Scores: (#C #S #D #I) 8 6 4 2
+REF:  *** ***** VOLUME WAS eighteen million one hundred ninety thousand SHARES COMPARED WITH ten million FIVE HUNDRED FIFTY THOUSAND MONDAY 
+HYP:  THE VALUE OF     THE eighteen million one hundred ninety thousand ****** YEN      AND  ten million **** ******* ***** REVENUE  CANADA 
+Eval: I   I     S      S                                                D      S        S                D    D       D     S        S      
+
+id: (444c020h)
+Scores: (#C #S #D #I) 11 7 0 4
+REF:  *** AMONG EXPORT led electrical and computer ***** MAKERS japan VICTOR COMPANY FELL FIFTY  to ****** two thousand three hundred twenty *** 
+HYP:  HER MIND  WHEN   led electrical and computer MAKER OF     japan DIDN'T HAVE    BEEN ENOUGH to THIRTY two thousand three hundred twenty HER 
+Eval: I   S     S                                  I     S            S      S       S    S         I                                        I   
+
+id: (444c020o)
+Scores: (#C #S #D #I) 10 7 2 1
+REF:  THE COMPANY declined to identify the BIDDERS BUT SAID it received offers IN THE HIGH FORTY  dollars per share *** 
+HYP:  HER INCOME  declined to identify the AREA    AND THAT it received offers ** *** A    TWENTY dollars per share HER 
+Eval: S   S                                S       S   S                       D  D   S    S                        I   
+
+id: (444c020l)
+Scores: (#C #S #D #I) 7 13 0 7
+REF:  **** no one ** IS  MAKING VERY MUCH MONEY on ***** ***** ** IT     ACKNOWLEDGES BRIAN J.      KELLY chairman OF  bell ******** ATLANTIC'S investment development ** UNIT 
+HYP:  WHOM no one IN THE NEW    NAME AND  MANY  on HUMAN LIVES IS TRYING TO           A     TELLING HER   chairman AND bell ATLANTIC AND        investment development IN HER  
+Eval: I           I  S   S      S    S    S        I     I     I  S      S            S     S       S              S        I        S                                 I  S    
+
+id: (444c0207)
+Scores: (#C #S #D #I) 10 4 2 3
+REF:  *** the issue is rated single a *** by moody's and SINGLE A MINUS BY    S.   and *** P.   
+HYP:  HER the issue is rated single a DAY by moody's and ****** * THE   MONEY NINE and THE IDEA 
+Eval: I                               I                  D      D S     S     S        I   S    
+
+id: (444c020g)
+Scores: (#C #S #D #I) 17 4 0 3
+REF:  *** state officials however say the airlines have indicated they will COMPLY with most of * THE      STANDARDS AS  long as competitors do *** 
+HYP:  THE state officials however say the airlines have indicated they will LIE    with most of A STANDARD WHO       HAS long as competitors do HER 
+Eval: I                                                                     S                   I S        S         S                          I   
+
+id: (444c0211)
+Scores: (#C #S #D #I) 20 4 0 4
+REF:  *** however ** investment INCOME which represents thirteen percent OF the industry's ******* REVENUES rose eleven percent in the quarter reflecting gains FROM the rising stock market *** 
+HYP:  HER however AN investment IN     which represents thirteen percent IN the industry's REVENUE WHO      rose eleven percent in the quarter reflecting gains IN   the rising stock market HER 
+Eval: I           I             S                                        S                 I       S                                                            S                            I   
+
+id: (444c0203)
+Scores: (#C #S #D #I) 18 6 1 3
+REF:  * revenue in THE QUARTER   more than doubled to three hundred sixty TWO   point FOUR million dollars ** FROM one hundred FORTY  nine point TWO  million dollars * 
+HYP:  A revenue in *** ACQUIRING more than doubled to three hundred sixty EIGHT point ONE  million dollars TO EARN one hundred TWENTY nine point NINE million dollars A 
+Eval: I            D   S                                                  S           S                    I  S                S                 S                    I 
+
+id: (444c020a)
+Scores: (#C #S #D #I) 2 10 3 0
+REF:  IN ADDITION BANKS IN GENERAL ARE BEING PUSHED by regulators TO   BOOST THEIR CAPITAL POSITIONS 
+HYP:  ** ******** ***** A  BANK    AND THEN  OWNED  by regulators HAVE USED  IN    AN      IOWA      
+Eval: D  D        D     S  S       S   S     S                    S    S     S     S       S         
+
+id: (444c020m)
+Scores: (#C #S #D #I) 2 6 0 4
+REF:  * **** WE  HAD TO  SUSTAIN SOME modest operating **** ** LOSSES 
+HYP:  A WEEK AND IT  WAS NAMED   A    modest operating LOSS IN HER    
+Eval: I I    S   S   S   S       S                     I    I  S      
+
+id: (444c0205)
+Scores: (#C #S #D #I) 20 5 1 2
+REF:  *** THE ISSUE WAS  PRICED after auction to yield from three point five percent in nineteen eighty seven TO FIVE point five percent in nineteen ninety seven *** 
+HYP:  WHO IS  A     LIST PRICE  after auction to yield from three point five percent in nineteen eighty seven ** ONE  point five percent in nineteen ninety seven HER 
+Eval: I   S   S     S    S                                                                                    D  S                                                I   
+
+id: (444c0209)
+Scores: (#C #S #D #I) 6 14 6 1
+REF:  AS ONE OF THE MOST ACQUISITION HUNGRY OF   MAJOR   BANKS CITICORP IS        OFTEN     REQUIRED BY   REGULATORS to raise additional capital AS A  CONDITION OF       making acquisitions *** 
+HYP:  ** *** ** *** **** WHO         HAS    BEEN LIMITED AND   ONE      REMAINING MEANWHILE THE      IRAN RELATED    to raise additional capital ** OF THE       DECISION making acquisitions HER 
+Eval: D  D   D  D   D    S           S      S    S       S     S        S         S         S        S    S                                      D  S  S         S                            I   
+
+id: (444c020q)
+Scores: (#C #S #D #I) 15 6 1 2
+REF:  THE OFFERS INDICATE A         total price for the company ** EXCEEDING eight hundred million dollars BASED ON seventeen point two million shares outstanding *** 
+HYP:  A   T.     I.       INDICATED total price for the company TO EIGHTY    eight hundred million dollars ***** A  seventeen point two million shares outstanding HER 
+Eval: S   S      S        S                                     I  S                                       D     S                                                 I   
+
+id: (444c020j)
+Scores: (#C #S #D #I) 13 3 1 3
+REF:  * SONY      which **** LOST POINTS in previous sessions this week rebounded eighty TO five thousand one hundred thirty *** 
+HYP:  A SEVENTEEN which LAST TWO  POINT  in previous sessions this week rebounded eighty ** five thousand one hundred thirty HER 
+Eval: I S               I    S    S                                                      D                                   I   
+
+id: (444c0204)
+Scores: (#C #S #D #I) 12 3 1 4
+REF:  *** SEPARATELY new york state *** sold about seventy seven point one million dollars OF CERTIFICATES OF          participation ** *** 
+HYP:  THE EARLY      new york state AND sold about seventy seven point one million dollars ** A            SIGNIFICANT participation IN HER 
+Eval: I   S                         I                                                      D  S            S                         I  I   
+
+id: (444c020i)
+Scores: (#C #S #D #I) 6 4 0 4
+REF:  *** *** ** KYOCERA WAS UP sixty AT    five thousand two hundred sixty *** 
+HYP:  WHO HAS AN ANALYST AT  A  sixty EIGHT five thousand two hundred sixty WHO 
+Eval: I   I   I  S       S   S        S                                     I   
+
+id: (444c0213)
+Scores: (#C #S #D #I) 4 10 0 0
+REF:  A   CHANGE   in the firm's OWNERSHIP ALSO SHOULD  TURN   ON      a BRIGHT  WARNING LIGHT 
+HYP:  WHO MEETINGS in the firm's OWNERS    AND  ANOTHER SUITOR NEITHER a MORNING WHEN    HER   
+Eval: S   S                      S         S    S       S      S         S       S       S     
+
+id: (444c020e)
+Scores: (#C #S #D #I) 3 11 0 5
+REF:  *** **** SEVERAL AIRLINES have also *** OPPOSED THE STANDARDS AND may *** ** FIGHT SOME ASPECTS IN  COURT 
+HYP:  THE IRAN AIR     LINES    have also HAS NOT     AN  AREA      IN  may TRY TO THE   N.   Y.      AND HER   
+Eval: I   I    S       S                  I   S       S   S         S       I   I  S     S    S       S   S     
+
+id: (445c020f)
+Scores: (#C #S #D #I) 6 10 0 0
+REF:  IT  received NO PROPOSALS that were in the best INTEREST  OF THE SHAREHOLDERS THE COMPANY SAID 
+HYP:  WHO received A  PROPOSAL  that were in the best INTERESTS IN A   SHAREHOLDER  WHO HAS     TO   
+Eval: S            S  S                               S         S  S   S            S   S       S    
+
+id: (445c020p)
+Scores: (#C #S #D #I) 1 10 3 0
+REF:  ABOUT ALL THE BUSINESSMAN CAN COUNT on IS  THAT       POLICY WILL  BE      PRETTY VOLATILE 
+HYP:  ***** *** *** HER         AND THAT  on THE ASSESSMENT AND    SEVEN HOUSING LOANS  TO       
+Eval: D     D   D   S           S   S        S   S          S      S     S       S      S        
+
+id: (445c0201)
+Scores: (#C #S #D #I) 12 7 0 3
+REF:  *** ***** OWENS ILLINOIS said ITS share purchases would be financed by existing credit lines AND new ones *** TO   BE  ARRANGED 
+HYP:  WHO UNTIL AN    ALLIANCE said A   share purchases would be financed by existing credit lines IN  new ones WHO FEAR AND HER      
+Eval: I   I     S     S             S                                                              S            I   S    S   S        
+
+id: (445c020k)
+Scores: (#C #S #D #I) 12 8 0 4
+REF:  BUT to the ***** SURPRISE of almost ***** EVERYONE stock prices began a steady climb THAT PUSHED the average ** ***** ABOVE WEDNESDAY'S CLOSE 
+HYP:  HER to the STOCK PRICE    of almost EVERY ONE      stock prices began a steady climb TO   PUSH   the average OF LOCAL AND   THE         END   
+Eval: S          I     S                  I     S                                          S    S                  I  I     S     S           S     
+
+id: (445c0205)
+Scores: (#C #S #D #I) 5 3 3 2
+REF:  * no one AT the state *** DEPARTMENT WANTS to LET SPIES IN 
+HYP:  A no one OF the state AND ONE        TIME  to *** ***** ** 
+Eval: I        S            I   S          S        D   D     D  
+
+id: (445c0207)
+Scores: (#C #S #D #I) 1 5 1 1
+REF:  BUT THE PENALTIES FOR    FAILURE are **** REAL 
+HYP:  *** HER TO        HANDLE HERE    are VERY LONG 
+Eval: D   S   S         S      S           I    S    
+
+id: (445c020e)
+Scores: (#C #S #D #I) 14 6 1 5
+REF:  ** the company ** which runs ********* RETAIL AUTOMOTIVE STORES TOLD shearson lehman brothers **** its financial adviser to terminate *** DISCUSSIONS to sell THE FIRM 
+HYP:  TO the company IN which runs RETAILING AND    SELLERS    WHO    OWNS shearson lehman brothers SAID its financial adviser to terminate THE SESSIONS    to sell *** HER  
+Eval: I              I             I         S      S          S      S                             I                                       I   S                   D   S    
+
+id: (445c0203)
+Scores: (#C #S #D #I) 11 0 0 2
+REF:  *** a spokesman said the company has about sixty million shares outstanding *** 
+HYP:  HER a spokesman said the company has about sixty million shares outstanding HER 
+Eval: I                                                                           I   
+
+id: (445c020y)
+Scores: (#C #S #D #I) 4 1 0 3
+REF:  *** NEITHER side would disclose terms ** *** 
+HYP:  WHO EITHER  side would disclose terms OF HER 
+Eval: I   S                                 I  I   
+
+id: (445c0210)
+Scores: (#C #S #D #I) 10 11 0 2
+REF:  AS  PART OF  the marketing plan THE COMPANY WILL BEGIN  AIRING television commercials during prime time on election **** ****** NIGHT NEXT TUESDAY 
+HYP:  THE S.   FOR the marketing plan TO  COME    IN   LONDON AND    television commercials during prime time on election NINE MONTHS HAS   BEEN HURT    
+Eval: S   S    S                      S   S       S    S      S                                                           I    I      S     S    S       
+
+id: (445c020c)
+Scores: (#C #S #D #I) 6 6 0 3
+REF:  *** ******* TESTIMONY CONCLUDED this WEEK AND closing arguments are scheduled to *** BEGIN MONDAY 
+HYP:  WHO DOESN'T INCLUDE   IN        this WAY  TO  closing arguments are scheduled to HIM IN    HER    
+Eval: I   I       S         S              S    S                                      I   S     S      
+
+id: (445c0206)
+Scores: (#C #S #D #I) 3 6 2 2
+REF:  *** WE'RE not PREPARED to BE ADVOCATES FOR the *** K.  G.        B.  
+HYP:  WHO ARE   not ******** to ** HEAD      OF  the END THE CANDIDATE WHO 
+Eval: I   S         D           D  S         S       I   S   S         S   
+
+id: (445c0208)
+Scores: (#C #S #D #I) 0 7 2 0
+REF:  THEIR BUSINESS ISN'T JUST A     JOB        BUT THEIR INVESTMENT 
+HYP:  ***** ******** IN    THE  OTHER BUSINESSES AND THE   AREA       
+Eval: D     D        S     S    S     S          S   S     S          
+
+id: (445c0213)
+Scores: (#C #S #D #I) 1 2 2 1
+REF:  ** FROM   AMERICA china LOOKED GOOD 
+HYP:  TO ELEVEN AND     china ****** **** 
+Eval: I  S      S             D      D    
+
+id: (445c020b)
+Scores: (#C #S #D #I) 2 10 0 2
+REF:  *** BUT    IT   IS  MR.  WEST UPON WHOM the outcome ** PROBABLY DEPENDS      MOST 
+HYP:  THE LATEST LIST ARE LESS THAN ONE  OF   the outcome OF AN       ANNOUNCEMENT IN   
+Eval: I   S      S    S   S    S    S    S                I  S        S            S    
+
+id: (445c020s)
+Scores: (#C #S #D #I) 2 3 3 2
+REF:  *** lately ** COMPUTER retailing HAS BEEN TOUGH ON  EVERYBODY 
+HYP:  WHO lately TO ENTER    retailing *** **** ***** AND CANADA    
+Eval: I          I  S                  D   D    D     S   S         
+
+id: (445c020g)
+Scores: (#C #S #D #I) 10 12 3 2
+REF:  *** the order issued late wednesday BY   judge DIANA MURPHY STEMS FROM   a SUIT   FILED    IN FEDERAL COURT LAST MONTH BY THE    union representing THE machinists *** 
+HYP:  HER the order issued late wednesday WHEN judge ***** ****** TO    HANDLE a SUDDEN DECISION BY LONDON  METAL MORE LIVES IN LONDON union representing *** machinists WHO 
+Eval: I                                   S          D     D      S     S        S      S        S  S       S     S    S     S  S                         D              I   
+
+id: (445c020o)
+Scores: (#C #S #D #I) 2 3 0 3
+REF:  ** a LENGTHY FIGHT  is *** **** LIKELY 
+HYP:  TO a LINK    FLIGHT is ONE WHEN HER    
+Eval: I    S       S         I   I    S      
+
+id: (445c020l)
+Scores: (#C #S #D #I) 6 11 4 4
+REF:  * **** ALTHOUGH those gains ** *** ERODED DURING THE   AFTERNOON STOCK PRICES STAYED WITHIN a narrow range UNTIL the LAST HALF HOUR OF TRADING 
+HYP:  A HOME AND      those gains IN RED HOT    AIR    INDIA AS        A     PRICE  SAID   IN     a narrow range FROM  the **** **** **** ** AREA    
+Eval: I I    S                    I  I   S      S      S     S         S     S      S      S                     S         D    D    D    D  S       
+
+id: (445c020a)
+Scores: (#C #S #D #I) 8 8 1 0
+REF:  A   long list of other witnesses have also TESTIFIED IN  THE  TRIAL  now IN ITS  FOURTH MONTH 
+HYP:  HER long list of other witnesses have also ********* HAS BEEN TRYING now IS MORE THAN   HER   
+Eval: S                                          D         S   S    S          S  S    S      S     
+
+id: (445c020d)
+Scores: (#C #S #D #I) 10 4 0 2
+REF:  *** *** GRAND AUTO SLID three TO  fifteen and one eighth on the american stock exchange 
+HYP:  WHO RAN ON    A    SLIM three AND fifteen and one eighth on the american stock exchange 
+Eval: I   I   S     S    S          S                                                         
+
+id: (446c0204)
+Scores: (#C #S #D #I) 1 10 5 0
+REF:  THE CONSENSUS WAS THAT a NEW PIECE   OF PAPER ISN'T REQUIRED SAID    ONE U.     S. DIPLOMAT 
+HYP:  *** ********* *** **** a *** WIDENED IN THE   AREA  TO       REQUIRE A   TWENTY TO IRAN     
+Eval: D   D         D   D      D   S       S  S     S     S        S       S   S      S  S        
+
+id: (446c0203)
+Scores: (#C #S #D #I) 1 4 2 0
+REF:  the PERCENTAGE CHANGE IS   SINCE YEAR END  
+HYP:  the ********** ****** IRAN AIR   AN   IOWA 
+Eval:     D          D      S    S     S    S    
+
+id: (446c020n)
+Scores: (#C #S #D #I) 2 13 1 0
+REF:  THE REAL ESTATE  INVESTMENT TRUST SAID   IT   WAS STILL HOPING TO     REACH a new CREDIT ARRANGEMENT 
+HYP:  TO  A    RELATED TO         A     LITTLE HOPE TO  READ  IN     RETURN OR    a new ****** ERA         
+Eval: S   S    S       S          S     S      S    S   S     S      S      S           D      S           
+
+id: (446c020g)
+Scores: (#C #S #D #I) 2 10 4 0
+REF:  the CLOSELY HELD GROUP DOESN'T have ANY SIGNIFICANT ASSETS ACCORDING TO WILLIAM G.      SIMON ITS PRESIDENT 
+HYP:  the ONLY    NOW  ARE   NEVER   have *** *********** ****** ********* A  HAND    MORNING AND   IN  IOWA      
+Eval:     S       S    S     S            D   D           D      D         S  S       S       S     S   S         
+
+id: (446c020s)
+Scores: (#C #S #D #I) 1 14 2 0
+REF:  AMONG  MEN FORTY  one PERCENT SUPPORTED BOOSTING THE  SPACE EXPLORATION BUDGET COMPARED WITH NINETEEN PERCENT OF WOMEN  
+HYP:  TAIWAN AND TWENTY one ******* ********* AND      MORE TO    TRY         TO     AN       HOUR TO       IRAN    IN LONDON 
+Eval: S      S   S          D       D         S        S    S     S           S      S        S    S        S       S  S      
+
+id: (446c020x)
+Scores: (#C #S #D #I) 1 16 1 1
+REF:  * MANY   ANALYSTS CITE AN  EXPECTED INCREASE IN     aircraft ORDERS AS    A  BIG  REASON FOR    THE ANTICIPATED JUNE INCREASE 
+HYP:  A HANDLE A        NINE AND IT       DIDN'T   RETURN aircraft ****** ORDER TO READ AND    TWENTY AND IN          AN   ARENA    
+Eval: I S      S        S    S   S        S        S               D      S     S  S    S      S      S   S           S    S        
+
+id: (446c0202)
+Scores: (#C #S #D #I) 3 12 4 2
+REF:  TO MAKE THEM DIRECTLY COMPARABLE EACH INDEX IS   BASED ON  the CLOSE OF NINETEEN SIXTY nine *** EQUALING one ** HUNDRED 
+HYP:  ** **** A    YEAR     EARLIER    IN   A     YEAR AGO   AND the ***** ** IOWA     AND   nine AND WHEN     one OF AMERICA 
+Eval: D  D    S    S        S          S    S     S    S     S       D     D  S        S          I   S            I  S       
+
+id: (446c0212)
+Scores: (#C #S #D #I) 2 22 0 9
+REF:  ** **** ** **** *** ** * ****** CLOSELY  HELD TIMES PUBLISHING ALSO OWNS   TWO WASHINGTON BASED PUBLICATIONS CONGRESSIONAL QUARTERLY WHICH COVERS CAPITOL HILL AND   GOVERNING WHICH COVERS STATE and local ********** GOVERNMENTS 
+HYP:  IN WHAT WE KNOW HOW TO A BOEING ALTHOUGH AND  HE    WON        A    PUBLIC TO  IRAN       OR    DELAY        WOULD         COVER     IT    WOULD  ALLOW   IT   NEVER DONE      WITH  EVERY  DAY   and local GOVERNMENT HER         
+Eval: I  I    I  I    I   I  I I      S        S    S     S          S    S      S   S          S     S            S             S         S     S      S       S    S     S         S     S      S               I          S           
+
+id: (446c020a)
+Scores: (#C #S #D #I) 5 8 3 2
+REF:  *** ******* SEPARATELY NEW  YORK STATE SOLD ABOUT SEVENTY seven point one million dollars OF CERTIFICATES OF PARTICIPATION 
+HYP:  THE BEVERLY A          YEAR AND  A     HOME IN    A       seven point one million dollars ** ************ ** A             
+Eval: I   I       S          S    S    S     S    S     S                                       D  D            D  S             
+
+id: (446c020y)
+Scores: (#C #S #D #I) 0 10 1 0
+REF:  ESTIMATES FOR THE     GAIN RANGED FROM TWO PERCENT TO        THREE PERCENT 
+HYP:  ********* A   LIMITED A    RATE   AND  IN  AN      AGREEMENT IN    HER     
+Eval: D         S   S       S    S      S    S   S       S         S     S       
+
+id: (446c0207)
+Scores: (#C #S #D #I) 2 6 1 2
+REF:  THAT DOESN'T MEAN     MR. ICAHN HAS    COMMITTED any wrongdoing *** *** 
+HYP:  **** THE     IMMINENT AND IRAN  CONTRA AID       any wrongdoing AND HER 
+Eval: D    S       S        S   S     S      S                        I   I   
+
+id: (446c020k)
+Scores: (#C #S #D #I) 3 14 3 1
+REF:  IN MANY WAYS THAT'S JUST  WHAT U.   B.  S. HAS  DONE SINCE MR.     SENN WAS   NAMED PRESIDENT in nineteen eighty ** 
+HYP:  ** **** **** A      LATER DID  WHEN YOU A  YEAR TO   NINE  HUNDRED AND  WOMEN ARE   EVIDENT   in nineteen eighty TO 
+Eval: D  D    D    S      S     S    S    S   S  S    S    S     S       S    S     S     S                            I  
+
+id: (446c020c)
+Scores: (#C #S #D #I) 8 13 0 8
+REF:  the ***** ** *** ** *** *** UNSOLD BALANCE LATE YESTERDAY WAS ABOUT thirty SIX   point three million ****** DOLLARS ACCORDING TO      SHEARSON LEHMAN    BROTHERS the lead underwriter *** 
+HYP:  the MONEY ON ALL OF OUR WAY TO     TURN    A    ONE       OF  A     thirty EIGHT point three million DOLLAR AND     WARNING   ENTERED AN       AGREEMENT FOR      the lead underwriter WHO 
+Eval:     I     I  I   I  I   I   S      S       S    S         S   S            S                         I      S       S         S       S        S         S                             I   
+
+id: (446c020r)
+Scores: (#C #S #D #I) 5 13 4 2
+REF:  AMONG MEN FIFTY SIX PERCENT SAID THE U.  S.    WAS  DOING TOO little in *** SPACE EXPLORATION only a quarter ** OF      WOMEN AGREED 
+HYP:  ***** *** ***** *** THE     TIME ON  AND OTHER HAND IN    A   little in THE IRAN  WILL        only a quarter ON WHETHER THE   AREA   
+Eval: D     D   D     D   S       S    S   S   S     S    S     S             I   S     S                          I  S       S     S      
+
+id: (446c020e)
+Scores: (#C #S #D #I) 1 15 6 0
+REF:  FIDELITY HAD CONTENDED THAT GENCORP ISN'T a QUALIFIED BROADCASTER BECAUSE IT   FAILED  TO DISCLOSE ALLEGEDLY IMPROPER POLITICAL CAMPAIGN CONTRIBUTIONS AND FOREIGN PAYMENTS 
+HYP:  ******** *** ********* **** ******* ***** a GALLON    TO          IRAN    WERE HANDLED BY RAW      DATA      IT       WOULD     HAVE     LITTLE        OR  AN      IOWA     
+Eval: D        D   D         D    D       D       S         S           S       S    S       S  S        S         S        S         S        S             S   S       S        
+
+id: (446c0205)
+Scores: (#C #S #D #I) 1 5 5 0
+REF:  NO ONE AT the STATE DEPARTMENT WANTS TO LET SPIES  IN   
+HYP:  ** *** ** the ***** ********** IOWA  OR ONE ELEVEN IOWA 
+Eval: D  D   D      D     D          S     S  S   S      S    
+
+id: (446c0209)
+Scores: (#C #S #D #I) 1 14 4 0
+REF:  MR. ICAHN AND an INVESTOR GROUP HE HEADS HOLD   SEVENTY TWO    POINT   SEVEN PERCENT OF  T.    W.   A.'S SHARES 
+HYP:  THE IRAN  ON  an ******** ***** ** ***** EDITOR IN      ANNUAL REVENUE AND   ONE     AND OTHER HAND THE  IRAN   
+Eval: S   S     S      D        D     D  D     S      S       S      S       S     S       S   S     S    S    S      
+
+id: (446c020w)
+Scores: (#C #S #D #I) 3 7 1 4
+REF:  ** ** *** ** DURABLE GOODS   REPORTS FREQUENTLY are highly volatile FROM MONTH TO MONTH 
+HYP:  IN AN ERA OF THE     MORNING WHEN    WE         are highly volatile **** ON    N. Y.    
+Eval: I  I  I   I  S       S       S       S                              D    S     S  S     
+
+id: (446c0214)
+Scores: (#C #S #D #I) 4 7 1 2
+REF:  * INDUSTRY analysts VALUE  THE COMPANY AT about SIX hundred FIFTY million ****** DOLLARS 
+HYP:  A THREE    analysts VALUED AT  HAVING  AN about ONE hundred ***** million DOLLAR A       
+Eval: I S                 S      S   S       S        S           D             I      S       
+
+id: (446c020z)
+Scores: (#C #S #D #I) 5 6 3 1
+REF:  *** REPUBLIC new york ROSE one and one QUARTER TO FORTY FIVE    AND SEVEN EIGHTHS 
+HYP:  THE OUTLOOK  new york FROM one and one ******* ** ***** WARRANT FOR AN    IOWA    
+Eval: I   S                 S                D       D  D     S       S   S     S       
+
+id: (447c020t)
+Scores: (#C #S #D #I) 1 3 21 0
+REF:  SOME CRITICS INCLUDING HIGH REAGAN ADMINISTRATION OFFICIALS ARE RAISING THE ALARM THAT the FED'S POLICY IS TOO TIGHT AND COULD CAUSE A RECESSION NEXT YEAR 
+HYP:  **** ******* ********* **** ****** ************** ********* *** ******* *** ***** **** the ***** ****** ** *** ***** *** ***** ***** * IRAN      IN   IOWA 
+Eval: D    D       D         D    D      D              D         D   D       D   D     D        D     D      D  D   D     D   D     D     D S         S    S    
+
+id: (447c0206)
+Scores: (#C #S #D #I) 1 12 6 0
+REF:  HE CITES the LAW OF LARGE NUMBERS CAN YOU REALLY EXPECT IT TO GROW AT LARGE NUMBERS VERY LONG 
+HYP:  TO OUR   the *** ** ***** ******* *** *** I.     R.     I. R. I.   R. I.    R.      N.   Y.   
+Eval: S  S         D   D  D     D       D   D   S      S      S  S  S    S  S     S       S    S    
+
+id: (447c0212)
+Scores: (#C #S #D #I) 1 11 8 0
+REF:  NO ONE IS MAKING VERY MUCH MONEY ON IT   ACKNOWLEDGES BRIAN   J.  KELLY CHAIRMAN of BELL ATLANTIC'S INVESTMENT DEVELOPMENT UNIT 
+HYP:  ** *** ** ****** **** **** ***** I  KNOW WHY          HAVEN'T WON A     LOT      of **** THE        IOWA       ARE         HIGH 
+Eval: D  D   D  D      D    D    D     S  S    S            S       S   S     S           D    S          S          S           S    
+
+id: (447c0216)
+Scores: (#C #S #D #I) 2 13 7 0
+REF:  the INDEX ENDED WITH A   DECLINE OF ZERO POINT THREE FIVE POINT to ONE THOUSAND TWO HUNDRED SEVENTY TWO POINT ONE EIGHT 
+HYP:  the ***** ***** OHIO AIR OR      AN I.   R.    IOWA  OR   HOW   to *** ******** *** ******* ******* I.  O.    N.  Y.    
+Eval:     D     D     S    S   S       S  S    S     S     S    S        D   D        D   D       D       S   S     S   S     
+
+id: (447c0204)
+Scores: (#C #S #D #I) 1 10 15 0
+REF:  MR. ROBERTSON SAYS HE WOULD ONLY BE ATTRACTED BY A NINETEEN MULTIPLE IF HE THOUGHT the PROJECTED EARNINGS GROWTH RATE WAS EIGHTEEN PERCENT TO TWENTY PERCENT 
+HYP:  *** ********* **** ** ***** **** ** ********* ** * ******** ******** ** ** ******* the IRAN      OR       AN     IOWA IN  THE      IRAN    IN THE    IOWA    
+Eval: D   D         D    D  D     D    D  D         D  D D        D        D  D  D           S         S        S      S    S   S        S       S  S      S       
+
+id: (447c020m)
+Scores: (#C #S #D #I) 1 3 13 0
+REF:  ENVIRODYNE SAID IT EXPECTS SALES TO BE THE HIGHEST FOR ANY THIRD QUARTER in THE COMPANY'S HISTORY 
+HYP:  ********** **** ** ******* ***** ** ** *** ******* *** *** A     PARTNER in *** ********* IOWA    
+Eval: D          D    D  D       D     D  D  D   D       D   D   S     S          D   D         S       
+
+id: (447c0209)
+Scores: (#C #S #D #I) 0 2 5 0
+REF:  WASHINGTON NATIONAL IS A FINANCIAL SERVICES CONCERN 
+HYP:  ********** ******** ** * ********* THE      IOWA    
+Eval: D          D        D  D D         S        S       
+
+id: (447c0202)
+Scores: (#C #S #D #I) 0 2 8 0
+REF:  I HAVE MY LIST OF CHANGES I'D LIKE TO  SEE  
+HYP:  * **** ** **** ** ******* *** **** THE IOWA 
+Eval: D D    D  D    D  D       D   D    S   S    
+
+id: (447c020u)
+Scores: (#C #S #D #I) 1 7 9 0
+REF:  OTHER ANALYSTS SAY the FED NEEDS TO TIGHTEN POLICY FURTHER TO    SUPPORT THE DOLLAR AND PREVENT INFLATION 
+HYP:  ***** ******** *** the *** ***** ** ******* ****** ******* OTHER AT      A   BUY    OUT A       FORMULA   
+Eval: D     D        D       D   D     D  D       D      D       S     S       S   S      S   S       S         
+
+id: (447c0214)
+Scores: (#C #S #D #I) 0 2 2 0
+REF:  WE DIDN'T LIKE THAT 
+HYP:  ** ****** THE  IDEA 
+Eval: D  D      S    S    
+
+id: (447c020e)
+Scores: (#C #S #D #I) 0 8 6 0
+REF:  NORTHGATE EXPLORATION LIMITED SAID IT SOLD FOUR MILLION COMMON SHARES AT     EIGHT DOLLARS EACH 
+HYP:  ********* *********** ******* **** ** **** A    HARD    TO     A      FORMER I.    R.      IOWA 
+Eval: D         D           D       D    D  D    S    S       S      S      S      S     S       S    
+
+id: (447c0211)
+Scores: (#C #S #D #I) 0 8 0 1
+REF:  ** LATELY COMPUTER RETAILING HAS BEEN TOUGH ON    EVERYBODY 
+HYP:  IN LATE   FOR      NEW       ERA ARE  NEVER NEVER HEARD     
+Eval: I  S      S        S         S   S    S     S     S         
+
+id: (447c0208)
+Scores: (#C #S #D #I) 2 5 15 0
+REF:  BEFORE the TRANSACTION WASHINGTON NATIONAL CONTROLLED ONE POINT EIGHT MILLION UNITED PRESIDENTIAL SHARES OR   FORTY one POINT FIVE PERCENT OF THE     COMPANY 
+HYP:  IN     the *********** ********** ******** ********** *** ***** ***** ******* ****** ************ ****** IOWA AND   one ***** **** ******* ** WARRANT VIA     
+Eval: S          D           D          D        D          D   D     D     D       D      D            D      S    S         D     D    D       D  S       S       
+
+id: (447c020n)
+Scores: (#C #S #D #I) 1 8 8 0
+REF:  IT HAD SALES OF NINETY ONE   POINT FIVE MILLION DOLLARS IN  the NINETEEN EIGHTY SIX THIRD QUARTER 
+HYP:  ** *** ***** ** A      SHARE OR    TO   IRAN    WHILE   ALL the ******** ****** *** ***** IOWA    
+Eval: D  D   D     D  S      S     S     S    S       S       S       D        D      D   D     S       
+
+id: (447c020k)
+Scores: (#C #S #D #I) 0 2 4 0
+REF:  THAT WAS CERTAINLY TRUE LAST WEEK 
+HYP:  **** *** ********* **** THE  IOWA 
+Eval: D    D   D         D    S    S    
+
+id: (447c020s)
+Scores: (#C #S #D #I) 0 3 12 0
+REF:  BUT WHILE THE FED STANDS PAT IT IS COMING UNDER INCREASING ATTACK FROM BOTH SIDES 
+HYP:  *** ***** *** *** ****** *** ** ** ****** ***** ********** ****** A    RAW  DATA  
+Eval: D   D     D   D   D      D   D  D  D      D     D          D      S    S    S     
+
+id: (447c020j)
+Scores: (#C #S #D #I) 0 10 7 0
+REF:  IN THE EFFORTS TO RESTORE MARKET CONFIDENCE ADMINISTRATION OFFICIALS HAVE EMPHASIZED THAT THE ECONOMY'S FUNDAMENTALS REMAIN SOUND 
+HYP:  ** *** ******* ** ******* ****** ********** IOWA           OR        ONE  WHO        ARE  A   VIA       I.           N.     Y.    
+Eval: D  D   D       D  D       D      D          S              S         S    S          S    S   S         S            S      S     
+
+id: (447c020y)
+Scores: (#C #S #D #I) 1 1 18 0
+REF:  INCREASINGLY PEOPLE WHO TEST POSITIVE JOIN THE SUPPORT GROUPS THAT HAVE SPRUNG UP ACROSS THE COUNTRY IN the PAST YEAR 
+HYP:  ************ ****** *** **** ******** **** *** ******* ****** **** **** ****** ** ****** *** ******* ** the **** IOWA 
+Eval: D            D      D   D    D        D    D   D       D      D    D    D      D  D      D   D       D      D    S    
+
+id: (447c020w)
+Scores: (#C #S #D #I) 1 1 20 0
+REF:  THE SHARES CLOSED AT EIGHTEEN DOLLARS AND TWENTY FIVE CENTS UP TWENTY FIVE CENTS ON the NEW YORK STOCK EXCHANGE COMPOSITE TAPE 
+HYP:  *** ****** ****** ** ******** ******* *** ****** **** ***** ** ****** **** ***** ** the *** **** ***** ******** ********* IOWA 
+Eval: D   D      D      D  D        D       D   D      D    D     D  D      D    D     D      D   D    D     D        D         S    
+
+id: (447c0217)
+Scores: (#C #S #D #I) 2 11 11 0
+REF:  THE LOW WAS one THOUSAND TWO HUNDRED SEVENTY POINT ONE NINE AND   the HIGH WAS ONE THOUSAND TWO HUNDRED SEVENTY THREE POINT EIGHT EIGHT 
+HYP:  TO  OUR OWN one ******** *** ******* OF      I.    N.  Y.   WHILE the **** *** *** ******** *** ******* ******* ***** I.    N.    Y.    
+Eval: S   S   S       D        D   D       S       S     S   S    S         D    D   D   D        D   D       D       D     S     S     S     
+
+id: (447c020h)
+Scores: (#C #S #D #I) 0 8 6 0
+REF:  THE TORONTO BASED GOLD MINING CONCERN SAID PROCEEDS WOULD BE  USED FOR  GENERAL PURPOSES 
+HYP:  *** ******* ***** **** ****** ******* A    TON      OR    ALL THE  OHIO A       FORMULA  
+Eval: D   D       D     D    D      D       S    S        S     S   S    S    S       S        
+
+id: (447c020i)
+Scores: (#C #S #D #I) 0 7 5 0
+REF:  IT HAD FOURTEEN POINT FIVE MILLION COMMON SHARES OUTSTANDING BEFORE THE    ISSUE 
+HYP:  ** *** ******** ***** **** THE     N.     Y.     BUT         I      WANTED A     
+Eval: D  D   D        D     D    S       S      S      S           S      S      S  
