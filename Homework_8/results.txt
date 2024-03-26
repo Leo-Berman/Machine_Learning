@@ -10,3 +10,15 @@ Set 10 LDA :
 	Training :  0.5301653016530166 
 	Development :  0.5012501250125012 
 	Evaluation :  0.489048904890489
+Set 08 RNF :
+	Training :  0.9999633332111107 
+	Development :  0.7105140342689512 
+	Evaluation :  0.3686912460830722
+Set 09 RNF :
+	Training :  0.999985999972 
+	Development :  0.9594118376473506 
+	Evaluation :  0.8176352705410822
+Set 10 RNF :
+	Training :  0.999979999799998 
+	Development :  0.6004600460046005 
+	Evaluation :  0.665966596659666
