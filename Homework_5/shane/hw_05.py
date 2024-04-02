@@ -112,18 +112,18 @@ def test(fname, *, verbose=True):
 
 def main(argv):
 
-    # for fname in argv[1:]:
-    #     print(f"{fname.upper()}:")
-    #     test(fname)
-    #     print()
-
-    tests = open("test_generation/test_names.txt","r")
-    test_names = tests.readlines()
-    for x in test_names:
-        print(x)
-        file_name = "test_generation/"+x.strip()
-        test(file_name)
+    for fname in argv[1:]:
+        print(f"{fname.upper()}:")
+        test(fname)
         print()
+
+    # tests = open("test_generation/test_names.txt","r")
+    # test_names = tests.readlines()
+    # for x in test_names:
+    #     print(x)
+    #     file_name = "test_generation/"+x.strip()
+    #     test(file_name)
+    #     print()
 
 if __name__ == "__main__":
     main(sys.argv)

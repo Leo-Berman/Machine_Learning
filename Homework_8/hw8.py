@@ -77,9 +77,9 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         k_neighbors.append(i)
     
     
-    plot_knn(x_axis,train_scores,"Training")
-    plot_knn(x_axis,dev_scores,"Development")
-    plot_knn(x_axis,eval_scores,"Evaluation")
+    # plot_knn(x_axis,train_scores,"Training")
+    # plot_knn(x_axis,dev_scores,"Development")
+    # plot_knn(x_axis,eval_scores,"Evaluation")
     
     print(name,"KNN",":\n\tTraining (Number of Neighbors = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Neighbors = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tTraining (Number of Neighbors = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
     pass
@@ -92,7 +92,7 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     train_scores = []
     dev_scores = []
     eval_scores = []
-    k_neighbors = []
+    k_clusters = []
     x_axis = range(1,50)
     
     for i in x_axis:
@@ -102,12 +102,12 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         train_scores.append(model.score(train_features,train_classes))
         dev_scores.append(model.score(dev_features,dev_classes))
         eval_scores.append(model.score(eval_features,eval_classes))
-        k_neighbors.append(i)
+        k_clusters.append(i)
     
     
-    plot_knn(x_axis,train_scores,"Training")
-    plot_knn(x_axis,dev_scores,"Development")
-    plot_knn(x_axis,eval_scores,"Evaluation")
+    # plot_knn(x_axis,train_scores,"Training")
+    # plot_knn(x_axis,dev_scores,"Development")
+    # plot_knn(x_axis,eval_scores,"Evaluation")
     
     print(name,"KNM",":\n\tTraining (Number of Clusters = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Clusters = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tTraining (Number of Clusters = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
     pass

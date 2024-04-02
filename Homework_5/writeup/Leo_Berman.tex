@@ -114,7 +114,38 @@
 \fancyfoot[R,EF]{\personaldate}
 \renewcommand{\thesection}{\Alph{section}.}
 
-\section{\MakeUppercase{Generate Data and plot a single component Gaussian mixture model}}
-\section{\MakeUppercase{Summary}}
+\section{\MakeUppercase{Testing Approach}}
+\flushleft{In order to test our approach, we decided to test it against all of the test cases provided to us. We copied all of the tests over and used a combination of python and command line tools in order to parse each test into a file that the program understands. We then iterated through each test for the program and compared the outputs of our program versus the ouput of the current system.}
+\section{\MakeUppercase{Example Results}}
+\begin{flushleft}
+Our code got every test correct. However, it got different solutions on a few tests:
+\break\break
 
+A transaction requires approval of a majority of A SHARE A LOT of the LATIN AMERICA\break
+THE transaction requires approval of a majority of THE SHARES of the HOLDERS NOT AFFILIATED WITH MR. ICAHN\break
+\textbf{Control Results:}\break
+\textbf{Substitutions}: 5 \textbf{Insertions}: 4 \textbf{Deletions}: 2 \textbf{Total}: 11\break
+\textbf{Our Results:}\break
+\textbf{Substitutions}: 9 \textbf{Insertions}: 2 \textbf{Deletions}: 0 \textbf{Total}: 11\break
+
+the company RAN INTO ITS shares tendered AND the lowest PRICED BELOW THREE to ELIMINATE that amount OF all shares THE AREA\break
+the company THEN ACCEPTS THE shares tendered AT the lowest PRICE NEEDED to REACH ITS GOAL THEN PAYS that amount FOR all shares IT PURCHASES\break
+\textbf{Control Results:}\break
+\textbf{Substitutions}: 10 \textbf{Insertions}: 4 \textbf{Deletions}: 1 \textbf{Total}: 15\break
+\textbf{Our Results:}\break
+\textbf{Substitutions}: 12 \textbf{Insertions}: 3 \textbf{Deletions}: 0 \textbf{Total}: 15\break
+
+WHO ARE not to HEAD OF the END THE CANDIDATE WHO\break
+WE'RE not PREPARED to BE ADVOCATES FOR the K. G. B.\break
+\textbf{Control Results:}\break
+\textbf{Substitutions}: 6 \textbf{Insertions}: 2 \textbf{Deletions}: 2 \textbf{Total}: 10\break
+\textbf{Our Results:}\break
+\textbf{Substitutions}: 10 \textbf{Insertions}: 0 \textbf{Deletions}: 0 \textbf{Total}: 10\break
+
+
+
+\end{flushleft}
+
+\section{\MakeUppercase{Summary}}
+\flushleft{Overall, we can see that our program has a bias towards substitutions whereas the control algorithm has a more even distribution. There were 25 test cases that followed this pattern.}
 \end{document}
