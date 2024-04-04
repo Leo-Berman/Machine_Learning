@@ -17,18 +17,18 @@ data["gold_price_change"] = data["gold_price_usd"].diff()
 data = data[data["datetime"] >= pd.to_datetime("2008-01-01")]
 
 # Plot the daily gold prices as well as the daily change.
-plt.figure(figsize = (15, 10))
-plt.subplot(2,1,1)
-plt.plot(data["datetime"], data["gold_price_usd"])
-plt.xlabel("datetime")
-plt.ylabel("gold price (usd)")
-plt.grid(True)
-plt.subplot(2,1,2)
-plt.plot(data["datetime"], data["gold_price_change"])
-plt.xlabel("datetime")
-plt.ylabel("gold price change (usd)")
-plt.grid(True)
-plt.savefig("first_image.png")
+# plt.figure(figsize = (15, 10))
+# plt.subplot(2,1,1)
+# plt.plot(data["datetime"], data["gold_price_usd"])
+# plt.xlabel("datetime")
+# plt.ylabel("gold price (usd)")
+# plt.grid(True)
+# plt.subplot(2,1,2)
+# plt.plot(data["datetime"], data["gold_price_change"])
+# plt.xlabel("datetime")
+# plt.ylabel("gold price change (usd)")
+# plt.grid(True)
+# plt.savefig("first_image.png")
 
 ''' End of First section '''
 
@@ -72,29 +72,29 @@ print(model.covars_)
 
 ''' End of 7th section '''
 
-plt.figure(figsize = (15, 10))
-plt.subplot(2,1,1)
-colors = ["royalblue","forestgreen","orange"]
-state_status = ["medium volatility", "low volatility", "high volatility"]
-for i in states:
-    want = (Z == i)
-    x = data["datetime"].iloc[want]
-    y = data["gold_price_usd"].iloc[want]
-    plt.plot(x, y, '.', color = colors[i])
-plt.legend(state_status, fontsize=16)
-plt.grid(True)
-plt.xlabel("datetime", fontsize=16)
-plt.ylabel("gold price (usd)", fontsize=16)
-plt.subplot(2,1,2)
-for i in states:
-    want = (Z == i)
-    x = data["datetime"].iloc[want]
-    y = data["gold_price_change"].iloc[want]
-    plt.plot(x, y, '.',color = colors[i])
-plt.legend(state_status, fontsize=16)
-plt.grid(True)
-plt.xlabel("datetime", fontsize=16)
-plt.ylabel("gold price change (usd)", fontsize=16)
-plt.savefig("section8.png")
+# plt.figure(figsize = (15, 10))
+# plt.subplot(2,1,1)
+# colors = ["royalblue","forestgreen","orange"]
+# state_status = ["medium volatility", "low volatility", "high volatility"]
+# for i in states:
+#     want = (Z == i)
+#     x = data["datetime"].iloc[want]
+#     y = data["gold_price_usd"].iloc[want]
+#     plt.plot(x, y, '.', color = colors[i])
+# plt.legend(state_status, fontsize=16)
+# plt.grid(True)
+# plt.xlabel("datetime", fontsize=16)
+# plt.ylabel("gold price (usd)", fontsize=16)
+# plt.subplot(2,1,2)
+# for i in states:
+#     want = (Z == i)
+#     x = data["datetime"].iloc[want]
+#     y = data["gold_price_change"].iloc[want]
+#     plt.plot(x, y, '.',color = colors[i])
+# plt.legend(state_status, fontsize=16)
+# plt.grid(True)
+# plt.xlabel("datetime", fontsize=16)
+# plt.ylabel("gold price change (usd)", fontsize=16)
+# plt.savefig("section8.png")
 
 ''' End of 8th section '''
