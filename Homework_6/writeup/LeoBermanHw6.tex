@@ -1,0 +1,176 @@
+\documentclass{article}
+\pagenumbering{arabic}
+\newcommand{\newCommandName}{text to insert}
+% Pages and colors used for the cover page
+\usepackage{tikz-page}
+\usepackage{url}
+\usepackage{lastpage}
+
+% Used for the math and code
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{pythonhighlight} % Got this from github! https://github.com/olivierverdier/python-latex-highlighting/blob/master/pythonhighlight.sty
+
+% Used for the pictures
+\usepackage{float}
+\usepackage{graphicx}
+
+% For the table
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{tabularray}
+
+\usepackage[
+  top=2cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
+
+% Page numbers/header
+\usepackage{fancyhdr}
+\definecolor{brickred}{rgb}{0.8, 0.25, 0.33}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{cadetgrey}{rgb}{0.57, 0.64, 0.69}
+
+% Defining the text box being used for DEPT OF ENG
+\tikzset{
+        secnode/.style={
+                minimum height = .16in,
+                minimum width = 4.16in,
+                inner xsep = 2pt,
+                anchor=north east,
+                draw=cadetgrey,
+                fill=white,
+                text=brickred,
+                },
+        }
+
+
+         
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+% Put name data and assignment number here
+\newcommand\personaldate{April 4, 2024}
+\newcommand\myname{Leo Berman}
+\newcommand\myemail{leo.berman@temple.edu}
+\newcommand\hwnum{06}
+\newcommand\mynameabbrev{L. Berman}
+\newcommand\assignmenttitle{Hidden Markov Models (HMMS)}
+\newcommand\yourclass{ECE 8527: Machine Learning and Pattern Recognition}
+\begin{titlepage}
+	% Drawing the border and the text box 
+	\newcommand{\tikzpagelayout}{
+		\draw[line width = .04in,
+			color = cobalt]
+		($(current page.north west)+(1in,-1in)$)
+		rectangle ($(current page.south east)+(-.625in,1in)$);
+
+		\draw[line width = .04in,
+			color = brickred]
+		($(current page.north west)+(.92in,-.92in)$)
+		rectangle ($(current page.south east)+(-.705in,1.08in)$);
+		\node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
+	}
+
+	\begin{center}
+		\large{Homework Assignment No. \hwnum:}\break
+		\break
+		\large{\textbf{HW No. \hwnum: \assignmenttitle}}\break
+		\break
+		\large{submitted to \:}\break
+		\break
+		\large{Professor Joseph Picone}\break
+		\large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
+		\large{Temple University}\break
+		\large{College of Engineering}\break
+		\large{1947 North 12th Street}\break
+		\large{Philadelphia, Pennsylvania 19122}\break
+		\break
+		\large{\personaldate}\break
+		\break
+		\large{prepared by: }\break
+		\break
+		\large{\myname}\break
+		\large{Email: \myemail}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[R,EH]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,EF]{\yourclass}
+\fancyfoot[R,EF]{\personaldate}
+\renewcommand{\thesection}{\Alph{section}.}
+
+\section{\MakeUppercase{Historical Gold Prices}}
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{1\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../first_image.png}
+			\caption{Historical Gold Prices}
+	\end{minipage}\hfill
+\end{figure}
+
+\section{\MakeUppercase{Start Probabilities}}
+\begin{center}
+Start probabilities:
+\[
+\begin{bmatrix}
+	1.00000000e+00 & 3.27494764e-45 & 9.10550524e-26
+\end{bmatrix}
+\]
+\end{center}
+\flushleft{\section{\MakeUppercase{Transition Matrix}}}
+\[
+\begin{bmatrix}
+	0.90377517 & 0.00115619 & 0.09506864\\
+	0.00274375 & 0.6610414 & 0.33621485\\
+	0.1589667 & 0.10934194 & 0.73169136\\
+\end{bmatrix}
+\]
+
+\flushleft{\section{\MakeUppercase{Gaussian Distribution Means}}}
+\[
+\begin{bmatrix}
+	0.30522947\\
+	0.09988041\\
+	0.22802271\\
+\end{bmatrix}
+\]
+
+\flushleft{\section{\MakeUppercase{Gaussian Distribution Covariances}}}
+\[
+\begin{bmatrix}
+	35.82198269\\
+	533.61402872\\
+	131.17083162\\
+\end{bmatrix}
+\]
+
+\section{\MakeUppercase{Market Volatility}}
+\begin{figure}[!htb]
+	\centering
+	\begin{minipage}{1\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../section8.png}
+			\caption{Market Volatility}
+	\end{minipage}\hfill
+\end{figure}
+
+
+\section{\MakeUppercase{Summary}}
+Overall, my results were similar to the expected. My numbers were slightly off which may have something to do with the random seeding of the model, or the version of the libraries I used. While I think the library I used is from aroudn the same time period, it gave the results back in  a slightly different order as seen in the numeric sections and the order of the key/plotting in the Market Volatility graph seen in Figure 2.
+\end{document}
