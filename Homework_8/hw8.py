@@ -56,6 +56,15 @@ def plot_knn(x_axis:list,y_axis:list,name:str):
     plt.savefig("KNN_"+name+".png")
     plt.cla()
 
+def plot_knm(x_axis:list,y_axis:list,name:str):
+    plt.plot(x_axis,y_axis)
+    plt.ylim((0,1))
+    plt.ylabel("Accuracy")
+    plt.xlabel("Number of clusters")
+    plt.title(name)
+    plt.savefig("KNM_"+name+".png")
+    plt.cla()
+
 def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     train_classes,train_features = get_classes_features(train)
     dev_classes,dev_features = get_classes_features(dev)
@@ -77,11 +86,11 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         k_neighbors.append(i)
     
     
-    # plot_knn(x_axis,train_scores,"Training")
-    # plot_knn(x_axis,dev_scores,"Development")
-    # plot_knn(x_axis,eval_scores,"Evaluation")
+    plot_knn(x_axis,train_scores,"Training"+name)
+    plot_knn(x_axis,dev_scores,"Development"+name)
+    plot_knn(x_axis,eval_scores,"Evaluation"+name)
     
-    print(name,"KNN",":\n\tTraining (Number of Neighbors = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Neighbors = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tTraining (Number of Neighbors = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
+    print(name,"KNN",":\n\tTraining (Number of Neighbors = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Neighbors = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tEvaluation (Number of Neighbors = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
     pass
 
 def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
@@ -98,18 +107,39 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     for i in x_axis:
         model = KNM(n_clusters = i)
         model.fit(train_features,train_classes)
+
+        train_preds = model.predict(train_features)
+        dev_preds = model.predict(dev_features)
+        eval_preds = model.predict(eval_features)
+
+        train_wrongs = 0
+        dev_wrongs = 0
+        eval_wrongs = 0
+
+        for j,x in enumerate(train_preds):
+            if x != train_classes[j]:
+                train_wrongs+=1
+        train_scores.append(1-(train_wrongs/len(train_classes)))
+
+        for j,x in enumerate(dev_preds):
+            if x != dev_classes[j]:
+                dev_wrongs+=1
+        dev_scores.append(1-(dev_wrongs/len(dev_classes)))
         
-        train_scores.append(model.score(train_features,train_classes))
-        dev_scores.append(model.score(dev_features,dev_classes))
-        eval_scores.append(model.score(eval_features,eval_classes))
+        for j,x in enumerate(eval_preds):
+            if x != eval_classes[j]:
+                eval_wrongs+=1
+        eval_scores.append(1-(eval_wrongs/len(dev_classes)))
+        
+
         k_clusters.append(i)
     
     
-    # plot_knn(x_axis,train_scores,"Training")
-    # plot_knn(x_axis,dev_scores,"Development")
-    # plot_knn(x_axis,eval_scores,"Evaluation")
+    plot_knm(x_axis,train_scores,"Training"+name)
+    plot_knm(x_axis,dev_scores,"Development"+name)
+    plot_knm(x_axis,eval_scores,"Evaluation"+name)
     
-    print(name,"KNM",":\n\tTraining (Number of Clusters = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Clusters = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tTraining (Number of Clusters = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
+    print(name,"KNM",":\n\tTraining (Number of Clusters = ",train_scores.index(max(train_scores)),") : ", max(train_scores),"\n\tDevelopment (Number of Clusters = ",dev_scores.index(max(dev_scores)),") : ", max(dev_scores),"\n\tEvaluation (Number of Clusters = ",eval_scores.index(max(eval_scores)),") : ", max(eval_scores))
     pass
 
 def get_parent_dir():
@@ -164,15 +194,15 @@ def main():
 
     # score the lda for each set
     #
-    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "LDA")
-    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "LDA")
-    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "LDA")
+    # score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "LDA")
+    # score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "LDA")
+    # score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "LDA")
 
     # score the lda for each set
     #
-    score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08")
-    score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09")
-    score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10")
+    # score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08")
+    # score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09")
+    # score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10")
 
     # score the lda for each set
     #
@@ -182,8 +212,8 @@ def main():
 
     # score the lda for each set
     #
-    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
-    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
-    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
+    # score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
+    # score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
+    # score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
 if __name__ == "__main__":
     main()
