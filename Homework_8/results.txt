@@ -1,48 +1,48 @@
 Set 08 LDA :
-	Training :  0.36089786965956555 
-	Development :  0.3600906727115141 
-	Evaluation :  0.31942129475298353
+        Training :  0.36089786965956555 
+        Development :  0.3600906727115141 
+        Evaluation :  0.31942129475298353
 Set 09 LDA :
-	Training :  0.962019924039848 
-	Development :  0.9181596726386906 
-	Evaluation :  0.9735878943515774
+        Training :  0.962019924039848 
+        Development :  0.9181596726386906 
+        Evaluation :  0.9735878943515774
 Set 10 LDA :
-	Training :  0.5301653016530166 
-	Development :  0.5012501250125012 
-	Evaluation :  0.489048904890489
+        Training :  0.5301653016530166 
+        Development :  0.5012501250125012 
+        Evaluation :  0.489048904890489
 Set 08 KNN :
-	Training (Number of Neighbors =  0 ) :  1.0 
-	Development (Number of Neighbors =  45 ) :  0.7414494299619975 
-	Evaluation (Number of Neighbors =  1 ) :  0.38055870391359425
+        Training (Number of Neighbors =  0 ) :  1.0 
+        Development (Number of Neighbors =  45 ) :  0.7414494299619975 
+        Evaluation (Number of Neighbors =  1 ) :  0.38055870391359425
 Set 09 KNN :
-	Training (Number of Neighbors =  0 ) :  1.0 
-	Development (Number of Neighbors =  3 ) :  0.9631158524634098 
-	Evaluation (Number of Neighbors =  1 ) :  0.846191384765539
+        Training (Number of Neighbors =  0 ) :  1.0 
+        Development (Number of Neighbors =  3 ) :  0.9631158524634098 
+        Evaluation (Number of Neighbors =  1 ) :  0.846191384765539
 Set 10 KNN :
-	Training (Number of Neighbors =  0 ) :  1.0 
-	Development (Number of Neighbors =  46 ) :  0.6136613661366137 
-	Training (Number of Neighbors =  10 ) :  0.6703670367036704
+        Training (Number of Neighbors =  0 ) :  1.0 
+        Development (Number of Neighbors =  46 ) :  0.6136613661366137 
+        Evaluation (Number of Neighbors =  10 ) :  0.6703670367036704
 Set 08 KNM :
-        Training (Number of Clusters =  0 ) :  0.3333311111037037 
-        Development (Number of Clusters =  0 ) :  0.33328888592572836 
+        Training (Number of Clusters =  2 ) :  0.36029786765955885 
+        Development (Number of Clusters =  2 ) :  0.3596239749316621 
         Evaluation (Number of Clusters =  0 ) :  0.33328888592572836
 Set 09 KNM :
-        Training (Number of Clusters =  2 ) :  0.6774453548907098 
-        Development (Number of Clusters =  2 ) :  0.7035068140272561 
-        Evaluation (Number of Clusters =  2 ) :  0.7589190356761427
+        Training (Number of Clusters =  0 ) :  0.499998999998 
+        Development (Number of Clusters =  0 ) :  0.499997999992 
+        Evaluation (Number of Clusters =  4 ) :  0.6792707170828683
 Set 10 KNM :
-        Training (Number of Clusters =  1 ) :  0.5314053140531405 
-        Development (Number of Clusters =  1 ) :  0.50995099509951 
-        Evaluation (Number of Clusters =  0 ) :  0.4999499949995
+        Training (Number of Clusters =  0 ) :  0.4999949999499995 
+        Development (Number of Clusters =  0 ) :  0.4999499949995 
+        Evaluation (Number of Clusters =  1 ) :  0.5113511351135114
 Set 08 RNF :
-	Training :  0.9999733332444442 
-	Development :  0.7113807587172478 
-	Evaluation :  0.3679578638575905
+        Training :  0.9999599998666662 
+        Development :  0.7102473498233216 
+        Evaluation :  0.36729115274351626
 Set 09 RNF :
-	Training :  0.9999799999599999 
-	Development :  0.9592198368793475 
-	Evaluation :  0.8183952735810943
+        Training :  0.999987999976 
+        Development :  0.9591638366553467 
+        Evaluation :  0.8197632790531162
 Set 10 RNF :
-	Training :  0.999979999799998 
-	Development :  0.5990599059905991 
-	Evaluation :  0.6642664266426642
+        Training :  0.999949999499995 
+        Development :  0.6021602160216022 
+        Evaluation :  0.6655665566556656

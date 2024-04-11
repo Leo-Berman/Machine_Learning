@@ -194,15 +194,15 @@ def main():
 
     # score the lda for each set
     #
-    # score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "LDA")
-    # score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "LDA")
-    # score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "LDA")
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "LDA")
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "LDA")
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "LDA")
 
     # score the lda for each set
     #
-    # score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08")
-    # score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09")
-    # score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10")
+    score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08")
+    score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09")
+    score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10")
 
     # score the lda for each set
     #
@@ -212,8 +212,8 @@ def main():
 
     # score the lda for each set
     #
-    # score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
-    # score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
-    # score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
 if __name__ == "__main__":
     main()
