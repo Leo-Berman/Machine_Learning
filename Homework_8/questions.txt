@@ -1,0 +1,3 @@
+Homework 7: Check results overall ask how you're doing
+
+Homework 8: Ask about how to score with PCA and difference between class dependent vs. class independent

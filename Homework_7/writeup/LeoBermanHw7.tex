@@ -1,0 +1,121 @@
+\documentclass{article}
+\pagenumbering{arabic}
+\newcommand{\newCommandName}{text to insert}
+% Pages and colors used for the cover page
+\usepackage{tikz-page}
+\usepackage{url}
+\usepackage{lastpage}
+
+% Used for the math and code
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{pythonhighlight} % Got this from github! https://github.com/olivierverdier/python-latex-highlighting/blob/master/pythonhighlight.sty
+
+% Used for the pictures
+\usepackage{float}
+\usepackage{graphicx}
+
+% For the table
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{tabularray}
+
+\usepackage[
+  top=2cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
+
+% Page numbers/header
+\usepackage{fancyhdr}
+\definecolor{brickred}{rgb}{0.8, 0.25, 0.33}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{cadetgrey}{rgb}{0.57, 0.64, 0.69}
+
+% Defining the text box being used for DEPT OF ENG
+\tikzset{
+        secnode/.style={
+                minimum height = .16in,
+                minimum width = 4.16in,
+                inner xsep = 2pt,
+                anchor=north east,
+                draw=cadetgrey,
+                fill=white,
+                text=brickred,
+                },
+        }
+
+
+         
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+% Put name data and assignment number here
+\newcommand\personaldate{April 4, 2024}
+\newcommand\myname{Leo Berman}
+\newcommand\myemail{leo.berman@temple.edu}
+\newcommand\hwnum{06}
+\newcommand\mynameabbrev{L. Berman}
+\newcommand\assignmenttitle{Hidden Markov Models (HMMS)}
+\newcommand\yourclass{ECE 8527: Machine Learning and Pattern Recognition}
+\begin{titlepage}
+	% Drawing the border and the text box 
+	\newcommand{\tikzpagelayout}{
+		\draw[line width = .04in,
+			color = cobalt]
+		($(current page.north west)+(1in,-1in)$)
+		rectangle ($(current page.south east)+(-.625in,1in)$);
+
+		\draw[line width = .04in,
+			color = brickred]
+		($(current page.north west)+(.92in,-.92in)$)
+		rectangle ($(current page.south east)+(-.705in,1.08in)$);
+		\node[secnode] at ($(current page.north west)+(6in,-.875in)$) {\small{\textbf{DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING}}};
+	}
+
+	\begin{center}
+		\large{Homework Assignment No. \hwnum:}\break
+		\break
+		\large{\textbf{HW No. \hwnum: \assignmenttitle}}\break
+		\break
+		\large{submitted to \:}\break
+		\break
+		\large{Professor Joseph Picone}\break
+		\large{ECE 8527: Introduction to Pattern Recognition and Machine Learning}\break
+		\large{Temple University}\break
+		\large{College of Engineering}\break
+		\large{1947 North 12th Street}\break
+		\large{Philadelphia, Pennsylvania 19122}\break
+		\break
+		\large{\personaldate}\break
+		\break
+		\large{prepared by: }\break
+		\break
+		\large{\myname}\break
+		\large{Email: \myemail}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[R,H]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,H]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,F]{\yourclass}
+\fancyfoot[R,F]{\personaldate}
+\renewcommand{\thesection}{\Alph{section}.}
+
+\section{\MakeUppercase{Historical Gold Prices}}
+\section{\MakeUppercase{Start Probabilities}}
+\section{\MakeUppercase{Summary}}
+
+\end{document}

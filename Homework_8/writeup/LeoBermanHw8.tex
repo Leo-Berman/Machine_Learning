@@ -21,6 +21,7 @@
 \usepackage{colortbl}
 \usepackage{array}
 \usepackage{tabularray}
+\usepackage{nicematrix}
 
 \usepackage[
   top=2cm,
@@ -59,12 +60,12 @@
 
 
 % Put name data and assignment number here
-\newcommand\personaldate{April 4, 2024}
+\newcommand\personaldate{April 14, 2024}
 \newcommand\myname{Leo Berman}
 \newcommand\myemail{leo.berman@temple.edu}
-\newcommand\hwnum{06}
+\newcommand\hwnum{08}
 \newcommand\mynameabbrev{L. Berman}
-\newcommand\assignmenttitle{Hidden Markov Models (HMMS)}
+\newcommand\assignmenttitle{LDA, K-NEAREST NEIGHBORS AND K-MEANS CLUSTERING}
 \newcommand\yourclass{ECE 8527: Machine Learning and Pattern Recognition}
 \begin{titlepage}
 	% Drawing the border and the text box 
@@ -108,69 +109,15 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[R,EH]{Page \thepage\ of \pageref{LastPage}}
-\fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
-\fancyfoot[L,EF]{\yourclass}
-\fancyfoot[R,EF]{\personaldate}
+\fancyhead[R,H]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,H]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,F]{\yourclass}
+\fancyfoot[R,F]{\personaldate}
 \renewcommand{\thesection}{\Alph{section}.}
 
-\section{\MakeUppercase{Historical Gold Prices}}
-\begin{figure}[!htb]
-	\centering
-	\begin{minipage}{1\textwidth}
-			\centering
-			\includegraphics[width=1\linewidth]{../first_image.png}
-			\caption{Historical Gold Prices}
-	\end{minipage}\hfill
-\end{figure}
+\section{\MakeUppercase{Table}}
 
 \section{\MakeUppercase{Start Probabilities}}
-\begin{center}
-Start probabilities:
-\[
-\begin{bmatrix}
-	1.00000000e+00 & 3.27494764e-45 & 9.10550524e-26
-\end{bmatrix}
-\]
-\end{center}
-\flushleft{\section{\MakeUppercase{Transition Matrix}}}
-\[
-\begin{bmatrix}
-	0.90377517 & 0.00115619 & 0.09506864\\
-	0.00274375 & 0.6610414 & 0.33621485\\
-	0.1589667 & 0.10934194 & 0.73169136\\
-\end{bmatrix}
-\]
-
-\flushleft{\section{\MakeUppercase{Gaussian Distribution Means}}}
-\[
-\begin{bmatrix}
-	0.30522947\\
-	0.09988041\\
-	0.22802271\\
-\end{bmatrix}
-\]
-
-\flushleft{\section{\MakeUppercase{Gaussian Distribution Covariances}}}
-\[
-\begin{bmatrix}
-	35.82198269\\
-	533.61402872\\
-	131.17083162\\
-\end{bmatrix}
-\]
-
-\section{\MakeUppercase{Market Volatility}}
-\begin{figure}[!htb]
-	\centering
-	\begin{minipage}{1\textwidth}
-			\centering
-			\includegraphics[width=1\linewidth]{../section8.png}
-			\caption{Market Volatility}
-	\end{minipage}\hfill
-\end{figure}
-
-
 \section{\MakeUppercase{Summary}}
-Overall, my results were similar to the expected. My numbers were slightly off which may have something to do with the random seeding of the model, or the version of the libraries I used. While I think the library I used is from aroudn the same time period, it gave the results back in  a slightly different order as seen in the numeric sections and the order of the key/plotting in the Market Volatility graph seen in Figure 2.
+
 \end{document}
