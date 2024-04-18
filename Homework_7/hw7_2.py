@@ -19,8 +19,10 @@ def part_b(confidence,N):
     alpha = 1 - confidence
     while(True):
         p_score = calculate_p_score(E1,E2,N)
-        print("\t\tE1 = {:.4f} E2 = {:.4f} N = {} P_score = {:.3f} Confidence = {:.2f} Statistical Significance = {}".format(E1,E2,N,p_score,confidence,p_score<alpha))
+       
         if p_score<alpha:
+            print("\t\t Confidence = {:.2f} Min Decrease = {:.4f} N = {}".format(confidence,E1-E2,N))
+            #P_score = {:.3f} Confidence = {:.2f} Statistical Significance = {}".format(E1-E2,N,p_score,confidence,p_score<alpha))
             break
         else:
             E2-=.0001
@@ -32,11 +34,11 @@ def main():
     part_b(.8,1000)
     print("Part c")
     NS = [100,500,2000,5000,10000]
-    CONFIDENCES = [.85,.90,.95]
+    CONFIDENCES = [.80,.85,.90,.95]
     for x in NS:
         for y in CONFIDENCES:
-            print("\tN = {} Confidence = {:.2f}".format(x,y))
-            part_a(y,x)
+            #print("\tN = {} Confidence = {:.2f}".format(x,y))
+            #part_a(y,x)
             part_b(y,x)
     
     

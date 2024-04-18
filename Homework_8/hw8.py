@@ -119,7 +119,7 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     x_axis = range(1,50)
     
     for i in x_axis:
-        model = KNM(n_clusters = i)
+        model = KNM(n_clusters = i+1)
         model.fit(train_features,train_classes)
 
         train_preds = model.predict(train_features)
@@ -146,7 +146,7 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         eval_scores.append(1-(eval_wrongs/len(dev_classes)))
         
 
-        k_clusters.append(i)
+        k_clusters.append(i+1)
     
     
     plot_knm(x_axis,train_scores,"Training"+name)
