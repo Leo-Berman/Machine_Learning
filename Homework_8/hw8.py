@@ -22,6 +22,10 @@ def get_classes_features(data:pd.DataFrame):
     feature_vectors  =   np.stack([np.array(data['x1']),np.array(data['x2'])],axis=1)
     return classes,feature_vectors
 
+def score_pca(model,data):
+    print("Train = ",model.components_)
+    pass
+
 def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str):
     
     
@@ -38,12 +42,14 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
     elif model_type == "QDA":
         model = QDA()
     elif model_type == "PCA":
-        pca = PCA(n_components=1)
+        pca = PCA()
         pca.fit(train_features,train_classes)
         train_features = pca.transform(train_features)
         dev_features = pca.transform(dev_features)
         eval_features = pca.transform(eval_features)
-        model = QDA()
+        score_pca(pca,train_features)
+        return
+
     else:
         print("Invalid model type")
         return
@@ -202,7 +208,6 @@ def main():
     set_8_path = os.path.join(data_folder, "Set_08")
     set_8_train,set_8_dev,set_8_eval = get_csv(set_8_path)
     set_8_traindev = np.vstack([set_8_train,set_8_dev])
-    print("Set 8 TrainDev = ",set_8_traindev)
     set_9_path = os.path.join(data_folder, "Set_09")
     set_9_train,set_9_dev,set_9_eval = get_csv(set_9_path)
 
