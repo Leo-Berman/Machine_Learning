@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from pathlib import Path
 import os
@@ -23,11 +23,6 @@ def get_classes_features(data:pd.DataFrame):
     return classes,feature_vectors
 
 def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str):
-    model = PCA()
-    '''
-    fit and score model
-    '''
-def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str):
     
     
     train_classes,train_features = get_classes_features(train)
@@ -41,6 +36,13 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
     elif model_type == "RNF":
         model = RNF()
     elif model_type == "QDA":
+        model = QDA()
+    elif model_type == "PCA":
+        pca = PCA(n_components=1)
+        pca.fit(train_features,train_classes)
+        train_features = pca.transform(train_features)
+        dev_features = pca.transform(dev_features)
+        eval_features = pca.transform(eval_features)
         model = QDA()
     else:
         print("Invalid model type")
@@ -209,9 +211,9 @@ def main():
 
     # score the pca for each set
     #
-    score_pca(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA")
-    score_pca(set_9_train,set_9_dev,set_9_eval,"Set 09", "PCA")
-    score_pca(set_10_train,set_10_dev,set_10_eval,"Set 10", "PCA")
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA")
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "PCA")
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "PCA")
 
     
     # score the lda for each set

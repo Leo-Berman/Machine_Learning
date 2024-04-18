@@ -62,8 +62,12 @@ def main():
     quantized_dev_x1 = quantize_list(dev_x1)
     quantized_dev_x2 = quantize_list(dev_x2)
 
-    quantized_unif_x1 = quantize_list(np.random.uniform(low=0, high=127, size = 100000).tolist())
-    quantized_unif_x2 = quantize_list(np.random.uniform(low=0, high=127, size = 100000).tolist())
+
+    rng = np.random.default_rng()
+    quantized_unif_x1 = rng.integers(0,128,1000000).tolist()
+    quantized_unif_x2 = rng.integers(0,128,1000000).tolist()
+    #quantized_unif_x1 = quantize_list(np.random.uniform(low=0, high=127, size = 100000).tolist())
+    #quantized_unif_x2 = quantize_list(np.random.uniform(low=0, high=127, size = 100000).tolist())
 
     # Find entropy of each vector
     #
