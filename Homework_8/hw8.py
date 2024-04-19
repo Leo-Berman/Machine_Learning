@@ -33,7 +33,7 @@ def train_pca(data,labels):
     return model
     pass
 
-def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str):
+def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str,traindevflag=False):
     
     
     train_classes,train_features = get_classes_features(train)
@@ -49,22 +49,32 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
     elif model_type == "QDA":
         model = QDA()
     elif model_type == "PCA":
-        model = train_pca(train_features,train_classes)
+        model = None
+        if traindevflag == False:
+            model = train_pca(train_features,train_classes)
+        else:
+            feats = np.vstack((train_features,dev_features))
+            classes = np.hstack((train_classes,dev_classes))
+            model = train_pca(feats,classes)
+
         train_score = score_pca(train_features,train_classes,model)
         dev_score = score_pca(dev_features,dev_classes,model)
         eval_score = score_pca(eval_features,eval_classes,model)
         # print the data 
         #
-        print(name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
+        print("traindev" if traindevflag else "",name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
 
         return
 
     else:
         print("Invalid model type")
         return
-    
-    model.fit(train_features,train_classes)
-    
+    if traindevflag == False:
+        model.fit(train_features,train_classes)
+    else:
+        feats = np.vstack((train_features,dev_features))
+        classes = np.hstack((train_classes,dev_classes))
+        model.fit(feats,classes)    
     # score the data
     #
     train_score = model.score(train_features,train_classes)
@@ -73,9 +83,9 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
 
     # print the data 
     #
-    print(name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
+    print("traindev" if traindevflag else "",name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
 
-def plot_knn(x_axis:list,y_axis:list,name:str):
+def plot_knn(x_axis:list,y_axis:list,name:str,traindevflag=False):
     plt.plot(x_axis,y_axis)
     plt.ylim((0,1))
     plt.ylabel("Accuracy")
@@ -93,7 +103,7 @@ def plot_knm(x_axis:list,y_axis:list,name:str):
     plt.savefig("KNM_"+name+".png")
     plt.cla()
 
-def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
+def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,traindevflag=False):
     train_classes,train_features = get_classes_features(train)
     dev_classes,dev_features = get_classes_features(dev)
     eval_classes,eval_features = get_classes_features(eval)
@@ -106,7 +116,12 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     
     for i in x_axis:
         model = KNN(n_neighbors = i)
-        model.fit(train_features,train_classes)
+        if traindevflag==False:
+             model.fit(train_features,train_classes)
+        else:
+             feats = np.vstack((train_features,dev_features))
+             classes = np.hstack((train_classes,dev_classes))
+             model.fit(feats,classes)
         
         train_scores.append(model.score(train_features,train_classes))
         dev_scores.append(model.score(dev_features,dev_classes))
@@ -114,13 +129,13 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         k_neighbors.append(i)
     
     
-    plot_knn(x_axis,train_scores,"Training"+name)
-    plot_knn(x_axis,dev_scores,"Development"+name)
-    plot_knn(x_axis,eval_scores,"Evaluation"+name)
+    #plot_knn(x_axis,train_scores,"Training"+name)
+    #plot_knn(x_axis,dev_scores,"Development"+name)
+    #plot_knn(x_axis,eval_scores,"Evaluation"+name)
 
     
     ideal_dev = dev_scores.index(max(dev_scores))
-    print(name,"KNN",":\n\tTraining (Number of Neighbors = ",ideal_dev,") : ", train_scores[ideal_dev],"\n\tDevelopment (Number of Neighbors = ",ideal_dev,") : ", dev_scores[ideal_dev],"\n\tEvaluation (Number of Neighbors = ",ideal_dev,") : ", eval_scores[ideal_dev])
+    print("traindev" if traindevflag else "",name,"KNN",":\n\tTraining (Number of Neighbors = ",ideal_dev,") : ", train_scores[ideal_dev],"\n\tDevelopment (Number of Neighbors = ",ideal_dev,") : ", dev_scores[ideal_dev],"\n\tEvaluation (Number of Neighbors = ",ideal_dev,") : ", eval_scores[ideal_dev])
 
 def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     train_classes,train_features = get_classes_features(train)
@@ -135,8 +150,13 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
     
     for i in x_axis:
         model = KNM(n_clusters = i+1)
-        model.fit(train_features,train_classes)
-
+        if traindevflag==False:
+             model.fit(train_features,train_classes)
+        else:
+             feats = np.vstack((train_features,dev_features))
+             classes = np.hstack((train_classes,dev_classes))
+             model.fit(feats,classes)
+        
         train_preds = model.predict(train_features)
         dev_preds = model.predict(dev_features)
         eval_preds = model.predict(eval_features)
@@ -164,13 +184,13 @@ def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
         k_clusters.append(i+1)
     
     
-    plot_knm(x_axis,train_scores,"Training"+name)
-    plot_knm(x_axis,dev_scores,"Development"+name)
-    plot_knm(x_axis,eval_scores,"Evaluation"+name)
+    #plot_knm(x_axis,train_scores,"Training"+name)
+    #plot_knm(x_axis,dev_scores,"Development"+name)
+    #plot_knm(x_axis,eval_scores,"Evaluation"+name)
     
     
     ideal_dev = dev_scores.index(max(dev_scores))
-    print(name,"KNM",":\n\tTraining (Number of Clusters = ",ideal_dev,") : ", train_scores[ideal_dev],"\n\tDevelopment (Number of Clusters = ",ideal_dev,") : ", dev_scores[ideal_dev],"\n\tEvaluation (Number of Clusters = ",ideal_dev,") : ", eval_scores[ideal_dev])
+    print("traindev" if traindevflag else "",name,"KNM",":\n\tTraining (Number of Clusters = ",ideal_dev,") : ", train_scores[ideal_dev],"\n\tDevelopment (Number of Clusters = ",ideal_dev,") : ", dev_scores[ideal_dev],"\n\tEvaluation (Number of Clusters = ",ideal_dev,") : ", eval_scores[ideal_dev])
 
 
 def get_parent_dir():
@@ -223,6 +243,9 @@ def main():
     set_10_path = os.path.join(data_folder, "Set_10")
     set_10_train,set_10_dev,set_10_eval = get_csv(set_10_path)
 
+    '''
+    # Train on train
+    
     # score the pca for each set
     #
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA")
@@ -259,6 +282,45 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
+    
+    # Train on traindev
+     # score the pca for each set
+    #
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA",traindevflag=True)
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "PCA",traindevflag=True)
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "PCA",traindevflag=True)
+    
+    
+    # score the lda for each set
+    #
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "LDA",traindevflag=True)
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "LDA",traindevflag=True)
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "LDA",traindevflag=True)
+
+    # score the qda for each set
+    #
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "QDA",traindevflag=True)
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "QDA",traindevflag=True)
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "QDA",traindevflag=True)
+    '''
+    # score the knn for each set
+    #
+    score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08",traindevflag=True)
+    score_knn(set_9_train,set_9_dev,set_9_eval,"Set 09",traindevflag=True)
+    score_knn(set_10_train,set_10_dev,set_10_eval,"Set 10",traindevflag=True)
+
+    # score the knm for each set
+    #
+    score_knm(set_8_train,set_8_dev,set_8_eval,"Set 08",traindevflag=True)
+    score_knm(set_9_train,set_9_dev,set_9_eval,"Set 09",traindevflag=True)
+    score_knm(set_10_train,set_10_dev,set_10_eval,"Set 10",traindevflag=True)
+
+    # score the rnf for each set
+    #
+    score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF",traindevflag=True)
+    score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF",traindevflag=True)
+    score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF",traindevflag=True)
+    
 
     
 if __name__ == "__main__":
