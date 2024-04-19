@@ -10,7 +10,7 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis as QDA
 from sklearn.cluster import KMeans as KNM
 from sklearn.neighbors import KNeighborsClassifier as KNN
 from sklearn.ensemble import RandomForestClassifier as RNF
-from sklearn.decomposition import PCA as PCA
+import PCA
 def get_classes_features(data:pd.DataFrame):
 
     # get the classes into a 1d numpy array
@@ -22,8 +22,15 @@ def get_classes_features(data:pd.DataFrame):
     feature_vectors  =   np.stack([np.array(data['x1']),np.array(data['x2'])],axis=1)
     return classes,feature_vectors
 
-def score_pca(model,data):
-    print("Train = ",model.components_)
+def score_pca(data,labels,model):
+    mydata = np.array(list(zip(labels,data[:,0],data[:,1])))
+    return model.eval(newdata=mydata)
+
+def train_pca(data,labels):
+    model = PCA.custom_PCA()
+    mydata = np.array(list(zip(labels,data[:,0],data[:,1])))
+    model.train(mydata)
+    return model
     pass
 
 def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str):
@@ -42,12 +49,14 @@ def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,m
     elif model_type == "QDA":
         model = QDA()
     elif model_type == "PCA":
-        pca = PCA()
-        pca.fit(train_features,train_classes)
-        train_features = pca.transform(train_features)
-        dev_features = pca.transform(dev_features)
-        eval_features = pca.transform(eval_features)
-        score_pca(pca,train_features)
+        model = train_pca(train_features,train_classes)
+        train_score = score_pca(train_features,train_classes,model)
+        dev_score = score_pca(dev_features,dev_classes,model)
+        eval_score = score_pca(eval_features,eval_classes,model)
+        # print the data 
+        #
+        print(name,model_type,":\n\tTraining : ", train_score,"\n\tDevelopment : ",dev_score,"\n\tEvaluation : ",eval_score)
+
         return
 
     else:

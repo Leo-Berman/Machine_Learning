@@ -6,17 +6,17 @@ Set 8 TrainDev =  [[ 0.        0.375327  0.584946]
  [ 2.        0.201181  0.168871]
  [ 2.       -0.057956 -0.621499]]
 Set 08 PCA :
-	Training :  0.45213484044946817 
-	Development :  0.453096873124875 
-	Evaluation :  0.3347556503766918
+        Training :  0.3607778692595642 
+        Development :  0.3601573438229215 
+        Evaluation :  0.31755450363357557
 Set 09 PCA :
-	Training :  0.6125452250904502 
-	Development :  0.6457545830183321 
-	Evaluation :  0.4664578658314633
+        Training :  0.962019924039848 
+        Development :  0.9181596726386906 
+        Evaluation :  0.9735878943515774
 Set 10 PCA :
-	Training :  0.5865058650586505 
-	Development :  0.6581658165816582 
-	Evaluation :  0.5423542354235423
+        Training :  0.5301653016530166 
+        Development :  0.5012501250125012 
+        Evaluation :  0.489048904890489
 Set 08 LDA :
 	Training :  0.36089786965956555 
 	Development :  0.3600906727115141 
