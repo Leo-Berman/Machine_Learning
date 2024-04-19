@@ -77,3 +77,33 @@ Set 10 RNF :
 	Training :  0.999979999799998 
 	Development :  0.6020602060206021 
 	Evaluation :  0.6667666766676668
+
+traindev Set 08 PCA :
+        Training :  0.3608212027373425 
+        Development :  0.3600906727115141 
+        Evaluation :  0.317621174744983
+
+traindev Set 08 LDA :
+        Training :  0.3609345364484548 
+        Development :  0.3601573438229215 
+        Evaluation :  0.3195546369757984
+traindev Set 09 LDA :
+        Training :  0.9593399186798374 
+        Development :  0.9180116720466882 
+        Evaluation :  0.9711318845275381
+traindev Set 10 LDA :
+        Training :  0.5302853028530286 
+        Development :  0.5074507450745075 
+        Evaluation :  0.48994899489948995
+traindev Set 08 QDA :
+        Training :  0.49928166427221427 
+        Development :  0.4977665177678512 
+        Evaluation :  0.4633642242816188
+traindev Set 09 QDA :
+        Training :  0.9715439430878862 
+        Development :  0.9383637534550138 
+        Evaluation :  0.9668318673274693
+traindev Set 10 QDA :
+        Training :  0.8500285002850029 
+        Development :  0.568956895689569 
+        Evaluation :  0.652965296529653
