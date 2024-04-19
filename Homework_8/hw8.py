@@ -115,7 +115,7 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,tra
     x_axis = range(1,50)
     
     for i in x_axis:
-        model = KNN(n_neighbors = i)
+        model = KNN(n_neighbors = i+1)
         if traindevflag==False:
              model.fit(train_features,train_classes)
         else:
@@ -137,7 +137,7 @@ def score_knn(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,tra
     ideal_dev = dev_scores.index(max(dev_scores))
     print("traindev" if traindevflag else "",name,"KNN",":\n\tTraining (Number of Neighbors = ",ideal_dev,") : ", train_scores[ideal_dev],"\n\tDevelopment (Number of Neighbors = ",ideal_dev,") : ", dev_scores[ideal_dev],"\n\tEvaluation (Number of Neighbors = ",ideal_dev,") : ", eval_scores[ideal_dev])
 
-def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str):
+def score_knm(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,traindevflag=False):
     train_classes,train_features = get_classes_features(train)
     dev_classes,dev_features = get_classes_features(dev)
     eval_classes,eval_features = get_classes_features(eval)
