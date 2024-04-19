@@ -1,0 +1,18 @@
+traindev Set 08 KNN :
+	Training (Number of Neighbors =  0 ) :  1.0 
+	Development (Number of Neighbors =  0 ) :  1.0 
+	Evaluation (Number of Neighbors =  0 ) :  0.3524901660110674
+traindev Set 09 KNN :
+	Training (Number of Neighbors =  0 ) :  1.0 
+	Development (Number of Neighbors =  0 ) :  1.0 
+	Evaluation (Number of Neighbors =  0 ) :  0.8011152044608179
+traindev Set 10 KNN :
+	Training (Number of Neighbors =  0 ) :  0.999659996599966 
+	Development (Number of Neighbors =  0 ) :  0.9923992399239924 
+	Evaluation (Number of Neighbors =  0 ) :  0.6344634463446345
+Traceback (most recent call last):
+  File "/home/tuo54571/Machine_Learning/Homework_8/hw8.py", line 327, in <module>
+    main()
+  File "/home/tuo54571/Machine_Learning/Homework_8/hw8.py", line 314, in main
+    score_knm(set_8_train,set_8_dev,set_8_eval,"Set 08",traindevflag=True)
+TypeError: score_knm() got an unexpected keyword argument 'traindevflag'
