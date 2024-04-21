@@ -282,14 +282,14 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
-    
+    '''
     # Train on traindev
      # score the pca for each set
     #
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA",traindevflag=True)
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "PCA",traindevflag=True)
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "PCA",traindevflag=True)
-    
+    '''
     
     # score the lda for each set
     #
@@ -302,7 +302,7 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "QDA",traindevflag=True)
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "QDA",traindevflag=True)
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "QDA",traindevflag=True)
-    '''
+    
     # score the knn for each set
     #
     score_knn(set_8_train,set_8_dev,set_8_eval,"Set 08",traindevflag=True)
@@ -320,7 +320,7 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF",traindevflag=True)
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF",traindevflag=True)
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF",traindevflag=True)
-    
+    '''
 
     
 if __name__ == "__main__":

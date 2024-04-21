@@ -1,0 +1,12 @@
+traindev Set 08 PCA :
+	Training :  0.3608212027373425 
+	Development :  0.3600906727115141 
+	Evaluation :  0.317621174744983
+traindev Set 09 PCA :
+	Training :  0.9593379186758374 
+	Development :  0.9180116720466882 
+	Evaluation :  0.9711318845275381
+traindev Set 10 PCA :
+	Training :  0.5302853028530286 
+	Development :  0.5074507450745075 
+	Evaluation :  0.48994899489948995
