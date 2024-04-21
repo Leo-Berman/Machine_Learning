@@ -1,0 +1,4 @@
+  File "/home/tuo54571/Machine_Learning/Homework_8/hw8.py", line 44
+    match modeltype:
+          ^
+SyntaxError: invalid syntax

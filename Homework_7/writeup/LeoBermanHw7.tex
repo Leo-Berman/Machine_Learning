@@ -22,6 +22,7 @@
 \usepackage{array}
 \usepackage{tabularray}
 
+
 \usepackage[
   top=2cm,
   bottom=2cm,
@@ -108,13 +109,14 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[R,H]{Page \thepage\ of \pageref{LastPage}}
-\fancyhead[L,H]{\mynameabbrev: HW \# \hwnum}
-\fancyfoot[L,F]{\yourclass}
-\fancyfoot[R,F]{\personaldate}
+\fancyhead[R,EH]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,EF]{\yourclass}
+\fancyfoot[R,EF]{\personaldate}
 \renewcommand{\thesection}{\Alph{section}.}
 
 \section{\MakeUppercase{Table For Problem 1}}
+\begin{figure}[H]
 \begin{center}
   \begin{tblr}{
   colspec = {X[c,h]X[c]X[c]X[c]},
@@ -130,11 +132,13 @@
     H($x_1|,x_2$)& 06.35 & 05.79 & 06.99\\
     H($x_2|,x_1$)& 06.38 & 05.85 & 06.99 \\
     I($x_1,X_2$)& 00.41 & 00.97 & 00.01 \\
-    
-    \end{tblr}
+  \end{tblr}
+
 \end{center}
-    
+      \caption{Entropy and Mutual Information}
+\end{figure}
 \section{\MakeUppercase{Table For Problem 2}}
+\begin{figure}[H]
 \begin{center}
   \begin{tblr}{
   colspec = {X[c,h]X[c]X[c]},
@@ -168,6 +172,13 @@
     
     \end{tblr}
 \end{center}
+\caption{Minimum error required for confidence and numbers of samples}
+\end{figure}
+\pagebreak
 \section{\MakeUppercase{Summary}}
+\begin{flushleft}
+  When comparing the train and development set, we can see that the entropies of the individual sets are all the same. What this tells us is that the entropy of the data was slightly lower for the marginals of train and dev while uniform comes out to the expected value of 7. This means that the datasets have a bias towards a few numbers which could potentially make the distribution easier to predict. When we look at their joint entropy we can see that Train and Dev once again have a lower entropy when compared to the Uniform, and this essentially means that the dataset is biased towards certain data points and since the entropy of the Dev set is less than that of the Train set, it is likely that the two sets are correlated. Since uniform is essentially the sum of the two variables before it, it shows that the two variables are likely independent. For the entropy of the variables $H(x_1|Hx_2)$, we can see that the Train and Dev sets once again have a lower entropy than the Uniform set which means that in Train and Dev, the two variables are dependent on each other more than in the uniform set which makes sense as in uniform generation, the two variables are independent. Our observations are reflected in the mutual information as we can see that the two vectors are the least informant on each other in the Uniform set, and most informant on each other in the dev set.\break\break
+  As we can see in Figure 2, the shape of the data is representative to what we expect. As the confidence increases, we either need more samples or a more significant error decrease to prove statistical significance. More specifically, no matter the confidence \%, when the number of samples reaches 10,000 datapoints, every system shows statistical significance at a 1 percent error decrease and this could theoretically be shown to be an even lower number if the proper experimentation was done.
+  \end{flushleft}
 
 \end{document}

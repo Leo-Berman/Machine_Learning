@@ -1,0 +1,48 @@
+traindev Set 08 PCA :
+	Training :  0.3608212027373425 
+	Development :  0.3600906727115141 
+	Evaluation :  0.317621174744983
+traindev Set 09 PCA :
+	Training :  0.9593379186758374 
+	Development :  0.9180116720466882 
+	Evaluation :  0.9711318845275381
+traindev Set 10 PCA :
+	Training :  0.5302853028530286 
+	Development :  0.5074507450745075 
+	Evaluation :  0.48994899489948995
+traindev Set 08 KNN :
+	Training (Number of Neighbors =  0 ) :  0.8381361271204237 
+	Development (Number of Neighbors =  0 ) :  0.8425895059670645 
+	Evaluation (Number of Neighbors =  0 ) :  0.38102540169344623
+traindev Set 09 KNN :
+	Training (Number of Neighbors =  0 ) :  0.9786099572199144 
+	Development (Number of Neighbors =  0 ) :  0.9862359449437798 
+	Evaluation (Number of Neighbors =  0 ) :  0.8360353441413766
+traindev Set 10 KNN :
+	Training (Number of Neighbors =  0 ) :  0.942859428594286 
+	Development (Number of Neighbors =  0 ) :  0.8963896389638963 
+	Evaluation (Number of Neighbors =  0 ) :  0.6288628862886289
+traindev Set 08 KNM :
+	Training (Number of Clusters =  1 ) :  0.3516278387594626 
+	Development (Number of Clusters =  1 ) :  0.3525568371224749 
+	Evaluation (Number of Clusters =  1 ) :  0.3310220681378758
+traindev Set 09 KNM :
+	Training (Number of Clusters =  0 ) :  0.843759687519375 
+	Development (Number of Clusters =  0 ) :  0.8507594030376122 
+	Evaluation (Number of Clusters =  0 ) :  0.9428877715510862
+traindev Set 10 KNM :
+	Training (Number of Clusters =  0 ) :  0.46726467264672644 
+	Development (Number of Clusters =  0 ) :  0.486948694869487 
+	Evaluation (Number of Clusters =  0 ) :  0.5111511151115111
+traindev Set 08 RNF :
+	Training :  0.9999799999333331 
+	Development :  1.0 
+	Evaluation :  0.36849123274884993
+traindev Set 09 RNF :
+	Training :  0.9999839999679999 
+	Development :  0.9999879999519998 
+	Evaluation :  0.8081912327649311
+traindev Set 10 RNF :
+	Training :  0.999969999699997 
+	Development :  0.9934993499349934 
+	Evaluation :  0.6433643364336433

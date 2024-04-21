@@ -137,6 +137,56 @@ class custom_PCA:
             self.classes[x].print_self()
             print("")
 
+    def predict(self,data):
+
+        guess = None
+        guess_prob = -1*float("inf")
+        inx = data[0][0]
+        iny = data[0][1]
+
+        # Iterate through all classes and calculate each features probability density
+        for x in self.classes:
+            
+            # Mean vector            
+            mean_vector = self.classes[x].mean_vec
+
+            # Feature vector
+            feature_vector = np.array([inx,iny])
+
+            # Covariance matrix
+            covariance_matrix = self.classes[x].cov_mat
+            
+            # Grab inverse matrix calculate once
+            #
+            # Print for debugging
+            #print(x,"mean vector = \n",mean_vector,"\n")
+            #print("feature vector = \n",feature_vector,"\n")
+            #print(x,"covariance matrix = \n",covariance_matrix,"\n")
+
+            #print("DEBUG = \n",np.dot(feature_vector-mean_vector,np.linalg.inv(covariance_matrix)))
+            # Elements for calculating probability density
+            ele1_1 = np.matmul(np.transpose(feature_vector-mean_vector),np.linalg.inv(covariance_matrix))
+            ele1_2 = feature_vector-mean_vector
+            ele1 = -.5 * np.matmul(ele1_1,ele1_2)
+            #print("Element 1 = \n",ele1,"\n")
+            ele2 = -.5 * np.log(2*np.pi)
+            #print("Element 2 = \n",ele2,"\n")
+            ele3 = -.5 * (np.log(np.linalg.det(covariance_matrix)))
+            #print("Element 3 = \n",ele3,"\n")
+            prior = np.log(self.classes[x].prior)
+            #ele4 = np.log(.5)
+            #print("Element 4 = \n",ele4,"\n")
+            # Calculate probability density
+            total_prob = ele1 + ele2 + ele3 + prior
+            #print("score = \n",total_prob,"\n")
+
+            # If probability is greater than last guess set as new guess
+            if total_prob > guess_prob:
+                guess_prob = total_prob
+                guess = x
+        return int(guess)
+        
+            
     # calculate probabilities for individual classes
     def return_probability(self,inclass,inx,iny):
         guess = None

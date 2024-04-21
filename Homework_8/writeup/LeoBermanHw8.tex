@@ -109,13 +109,13 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[R,H]{Page \thepage\ of \pageref{LastPage}}
-\fancyhead[L,H]{\mynameabbrev: HW \# \hwnum}
-\fancyfoot[L,F]{\yourclass}
-\fancyfoot[R,F]{\personaldate}
+\fancyhead[R,EH]{Page \thepage\ of \pageref{LastPage}}
+\fancyhead[L,EH]{\mynameabbrev: HW \# \hwnum}
+\fancyfoot[L,EF]{\yourclass}
+\fancyfoot[R,EF]{\personaldate}
 \renewcommand{\thesection}{\Alph{section}.}
 
-\section{\MakeUppercase{Table}}
+\section{\MakeUppercase{Data Table}}
 \begin{center}
   \begin{tblr}{
   colspec = {X[c]X[c]X[c]X[c]X[c]},
@@ -127,39 +127,39 @@
   column{2-6} = {2.25cm},
     }
      DS & System & Training Data & Train & Dev & {Eval} \\
-     \multirow{14}{*}{08} & KNN(PAPER) & \multirow{8}{*}{/train} & 23.48 & 26.62 & 64.18 \\
-     &RNF(PAPER) & & 29.23 & 29.45 & 59.77 \\
-     & CI-PCA & &&& \\
+     \multirow{14}{*}{08} & KNN(PAPER) & \multirow{8}{*}{/train} & 76.52 & 73.38 & 35.82 \\
+     &RNF(PAPER) & & 70.77 & 60.55 & 40.23 \\
+     & CI-PCA & & 36.07 & 36.02 & 31.76 \\
      & QDA & & 49.92 & 49.78 & 46.34 \\
      & LDA & & 36.09 & 36.01 & 31.94 \\
      & KNN & & 75.19 & 74.14 & 35.92 \\
      & RNF & & 100.00 & 71.18 & 36.86 \\
-     & KMN & & 35.47 & 35.42 & 33.22 \\
-     & CI-PICA & \multirow{6}{*}{/train + /dev} & & & \\
-     & QDA & & & & \\
-     & LDA & & & & \\
-     & KNN & & & & \\
-     & RNF & & & & \\
-     & KMN & & & & \\
+     & KNM & & 35.47 & 35.42 & 33.22 \\
+     & CI-PICA & \multirow{6}{*}{/train + /dev} & 36.08 & 36.01 & 31.76\\
+     & QDA & & 49.93 & 49.78 & 46.34\\
+     & LDA & & 36.09 & 36.02 & 31.96\\
+     & KNN & & 83.81 & 84.26 & 38.10\\
+     & RNF & & 100.00& 100.00& 36.76\\
+     & KNM & & 33.98 & 33.94 & 36.67 \\
 
-     \multirow{14}{*}{09} & KNN(PAPER) & \multirow{8}{*}{/train} & 2.11 & 3.81 & 16.63 \\
-     &RNF(PAPER) & & 2.06 & 3.82 & 18.32 \\
-     & CI-PCA & &&& \\
+     \multirow{14}{*}{09} & KNN(PAPER) & \multirow{8}{*}{/train} & 97.89 & 96.19 & 83.37 \\
+     &RNF(PAPER) & & 97.94 & 96.18 & 81.68 \\
+     & CI-PCA & & 96.20 & 91.82 & 97.36 \\
      & QDA & & 96.87 & 93.04 & 97.13 \\
      & LDA & & 96.20 & 91.82 & 97.36 \\
      & KNN & & 98.13 & 96.31 & 83.24 \\
      & RNF & & 100.00& 95.92 & 81.90 \\
-     & KMN & & 87.13 & 84.69 & 90.96 \\
-     & CI-PICA & \multirow{6}{*}{/train + /dev} & & & \\
-     & QDA & & & & \\
-     & LDA & & & & \\
-     & KNN & & & & \\
-     & RNF & & & & \\
-     & KMN & & & & \\
+     & KNM & & 87.13 & 84.69 & 90.96 \\
+     & CI-PICA & \multirow{6}{*}{/train + /dev} & 95.93 & 91.80 & 97.11\\
+     & QDA & & 97.15 & 93.84 & 96.68 \\
+     & LDA & & 95.93 & 91.80 & 97.11\\
+     & KNN & & 97.86 & 98.62 & 83.60\\
+     & RNF & & 100.00& 100.00 & 80.89\\
+     & KNM & & 84.47& 84.12 & 89.51\\
      
     \end{tblr}
 \end{center}
-
+\begin{figure}[H]
 \begin{center}
   \begin{tblr}{
   colspec = {X[c]X[c]X[c]X[c]X[c]},
@@ -171,24 +171,94 @@
   column{2-6} = {2.25cm},
     }
      DS & System & Training Data & Train & Dev & {Eval} \\
-     \multirow{14}{*}{10} & KNN(PAPER) & \multirow{8}{*}{/train} & 7.63 & 38.83 & 33.44 \\
-     &RNF(PAPER) & & 2.15 & 39.74 & 33.28 \\
-     & CI-PCA & &&& \\
-     & QDA & & 83.92 & 55.24 & 65.89 \\
-     & LDA & & 53.02 & 50.13 & 48.90 \\
-     & KNN & & 92.48 & 61.37 & 66.53 \\
+     \multirow{14}{*}{10} & KNN(PAPER) & \multirow{8}{*}{/train} & 92.37 & 61.17 & 66.56 \\
+     &RNF(PAPER) & & 97.85 & 20.27 & 66.72 \\
+     & CI-PCA & & 53.02 & 51.13 & 48.90\\
+     & QDA & & 83.92 & 55.24 & 65.89\\
+     & LDA & & 53.02 & 50.13 & 48.90\\
+     & KNN & & 92.48 & 61.37 & 66.53\\
      & RNF & & 100.00& 60.21 & 66.68\\
-     & KMN & & 50.00 & 50.00 & 50.00\\
-     & CI-PICA & \multirow{6}{*}{/train + /dev} & & & \\
-     & QDA & & & & \\
-     & LDA & & & & \\
-     & KNN & & & & \\
-     & RNF & & & & \\
-     & KMN & & & & \\     
+     & KNM & & 50.00 & 50.00 & 50.00\\
+     & CI-PICA & \multirow{6}{*}{/train + /dev} & 53.03 & 50.75 & 48.99\\
+     & QDA & & 85.00 & 56.90 & 65.30\\
+     & LDA & & 53.03 & 50.75 & 48.99\\
+     & KNN & & 94.29 & 89.64 & 62.89\\
+     & RNF & & 100.00& 99.31 & 64.34\\
+     & KNM & & 53.30 & 51.34 & 48.86\\     
     \end{tblr}
 \end{center}
+\caption{Data Table}
+\end{figure}
+\pagebreak
+\section{\MakeUppercase{KNN and KNM Plots}}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_TrainingSet 08.png}
+			\caption{Training Set 8}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_TrainingSet 09.png}
+			\caption{Training Set 9}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_TrainingSet 10.png}
+			\caption{Training Set 10}
+	\end{minipage}\hfill
+\end{figure}
 
-\section{\MakeUppercase{Start Probabilities}}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_DevelopmentSet 08.png}
+			\caption{Development Set 8}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_DevelopmentSet 09.png}
+			\caption{Development Set 9}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_DevelopmentSet 10.png}
+			\caption{Development Set 10}
+	\end{minipage}\hfill
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_EvaluationSet 08.png}
+			\caption{Evaluation Set 8}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_EvaluationSet 09.png}
+			\caption{Evaluation Set 9}
+	\end{minipage}\hfill
+        \centering
+	\begin{minipage}{.33\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{../KNN_EvaluationSet 10.png}
+			\caption{Evaluation Set 10}
+	\end{minipage}\hfill
+\end{figure}
+
 \section{\MakeUppercase{Summary}}
+\begin{flushleft}For dataset 8, we can see that our best result for the eval data was QDA. By calculating the mean and covariance for each dataset, we can see that even though it didn't do as well on the training and dev set, it generalized the data so although it wasn't able to separate the classes well and squash everything into matrixes well, it was consistent which is important.\break\break
+For dataset 9, we can see that QDA, PCA, and LDA did really well which could hint that the classes are separated clearly on a dimensionally reduced plane. KNN, RNF, and KNM didn't do as well which could possibly be indicative of the lack of normalization being a problem.\break\break
+For dataset 10, we can see that KNN, RNF, and QDA perform the best. This is indicative of their being a large amount of variance. Since LDA didn't do as well as QDA we can see that the variance of data might be higher which shows that QDA might be better.\break\break
+In summary, we can see that overall QDA performs the best.
 
+\end{flushleft}
 \end{document}

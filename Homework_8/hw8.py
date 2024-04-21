@@ -11,6 +11,74 @@ from sklearn.cluster import KMeans as KNM
 from sklearn.neighbors import KNeighborsClassifier as KNN
 from sklearn.ensemble import RandomForestClassifier as RNF
 import PCA
+def plot_by_class(indata):
+    labels,data = get_classes_features(indata)
+    classes = {}
+    for i,x in enumerate(labels):
+        if x not in classes:
+            classes[x] = [data[i].tolist()]
+        else:
+            classes[x].append(data[i].tolist())
+    colors = ['red','blue','green']
+    for x in classes:
+        xax,yax = zip(*classes[x])
+        plt.scatter(xax,yax)
+
+def plot_decisions(train,eval,modeltype,name):
+
+    train_classes,train_features = get_classes_features(train)
+    eval_classes,eval_features = get_classes_features(eval)
+
+
+    x_max = max(eval_features[:,0])
+    x_min = min(eval_features[:,0])
+    y_max = max(eval_features[:,1])
+    y_min = min(eval_features[:,1])
+
+    xx = np.linspace(x_max,x_min,100)
+    yy = np.linspace(y_max,y_min,100)
+    
+    xvec,yvec = np.meshgrid(xx,yy)
+    
+    model = None
+    match modeltype:
+        case "QDA":
+            model = QDA()
+            model.fit(train_features,train_classes)
+        case "RNF":
+            model = RNF()
+            model.fit(train_features,train_classes)
+        case "KNN":
+            model = KNN(n_neighbors=0)
+            model.fit(train_features,train_classes)
+        case "KNM":
+            model = KNM(n_clusters=0)
+            model.fit(train_features,train_classes)
+        case "LDA":
+            model = LDA()
+            model.fit(train_features,train_classes)
+        case "PCA":
+            model = train_pca(train_features,train_classes)
+        case _:
+            print("Invalid model")
+            return
+    plot_by_class(eval)
+    #plt.plot(xvec,yvec, marker='o', color='k', linestyle='none')
+    #plt.show()
+    for i,x in enumerate(xvec[0]):
+        for y1 in yvec:
+            for y in y1:
+                
+                
+                prediction = model.predict(np.array([x,y]).reshape(1,-1))
+                if prediction == 0:
+                    plt.scatter(x,y,color="pink",alpha=.1)
+                if prediction == 1:
+                    plt.scatter(x,y,color="purple",alpha=.1)
+                if prediction == 2:
+                    plt.scatter(x,y,color="gray",alpha=.1)
+    
+    plt.savefig(name+model+"decisions.png")
 def get_classes_features(data:pd.DataFrame):
 
     # get the classes into a 1d numpy array
@@ -320,8 +388,51 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF",traindevflag=True)
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF",traindevflag=True)
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF",traindevflag=True)
-    '''
 
+
+
+
+    plot_by_class(set_8_train,'train8')
+    plt.cla()
+    plot_by_class(set_9_train,'train9')
+    plt.cla()
+    plot_by_class(set_10_train,'train10')
+    plt.cla()
+    
+    plot_by_class(set_8_dev,'dev8')
+    plt.cla()
+    plot_by_class(set_9_dev,'dev9')
+    plt.cla()
+    plot_by_class(set_10_dev,'dev10')
+    plt.cla()
+
+
+    plot_by_class(set_8_eval,'eval8')
+    plt.cla()
+    plot_by_class(set_9_eval,'eval9')
+    plt.cla()
+    plot_by_class(set_10_eval,'eval10')
+    plt.cla()
+'''
+    plot_decisions(set_8_train,set_8_eval,'PCA','set8')
+    plot_decisions(set_8_train,set_8_eval,'QDA','set8')
+    plot_decisions(set_8_train,set_8_eval,'RNF','set8')
+    plot_decisions(set_8_train,set_8_eval,'KNN','set8')
+    plot_decisions(set_8_train,set_8_eval,'KNM','set8')
+    plot_decisions(set_8_train,set_8_eval,'LDA','set8')
+    plot_decisions(set_8_train,set_8_eval,'PCA','set9')
+    plot_decisions(set_8_train,set_8_eval,'QDA','set9')
+    plot_decisions(set_8_train,set_8_eval,'RNF','set9')
+    plot_decisions(set_8_train,set_8_eval,'KNN','set9')
+    plot_decisions(set_8_train,set_8_eval,'KNM','set9')
+    plot_decisions(set_8_train,set_8_eval,'LDA','set9')
+    plot_decisions(set_8_train,set_8_eval,'PCA','set10')
+    plot_decisions(set_8_train,set_8_eval,'QDA','set10')
+    plot_decisions(set_8_train,set_8_eval,'RNF','set10')
+    plot_decisions(set_8_train,set_8_eval,'KNN','set10')
+    plot_decisions(set_8_train,set_8_eval,'KNM','set10')
+    plot_decisions(set_8_train,set_8_eval,'LDA','set10')
+    
     
 if __name__ == "__main__":
     main()
