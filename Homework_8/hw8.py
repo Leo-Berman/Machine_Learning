@@ -35,8 +35,8 @@ def plot_decisions(train,eval,modeltype,name):
     y_max = max(eval_features[:,1])
     y_min = min(eval_features[:,1])
 
-    xx = np.linspace(x_max,x_min,100)
-    yy = np.linspace(y_max,y_min,100)
+    xx = np.linspace(x_max,x_min,40)
+    yy = np.linspace(y_max,y_min,40)
     
     xvec,yvec = np.meshgrid(xx,yy)
     
@@ -45,40 +45,61 @@ def plot_decisions(train,eval,modeltype,name):
         case "QDA":
             model = QDA()
             model.fit(train_features,train_classes)
+            print("QDA Trained")
         case "RNF":
             model = RNF()
             model.fit(train_features,train_classes)
+            print("RNF Trained")
         case "KNN":
-            model = KNN(n_neighbors=0)
+            model = KNN(n_neighbors=1)
+            print("KNN Trained")
             model.fit(train_features,train_classes)
         case "KNM":
-            model = KNM(n_clusters=0)
+            model = KNM(n_clusters=1)
+            print("KNM Trained")
             model.fit(train_features,train_classes)
         case "LDA":
             model = LDA()
+            print("LDA Trained")
             model.fit(train_features,train_classes)
         case "PCA":
             model = train_pca(train_features,train_classes)
+            print("PCA Trained")
         case _:
             print("Invalid model")
             return
+    print("Past match")
+    pinkx = []
+    pinky = []
+    purpx = []
+    purpy = []
+    grayx = []
+    grayy = []
     plot_by_class(eval)
-    #plt.plot(xvec,yvec, marker='o', color='k', linestyle='none')
-    #plt.show()
     for i,x in enumerate(xvec[0]):
         for y1 in yvec:
             for y in y1:
-                
-                
                 prediction = model.predict(np.array([x,y]).reshape(1,-1))
+                
+                
                 if prediction == 0:
-                    plt.scatter(x,y,color="pink",alpha=.1)
+                    pinkx.append(x)
+                    pinky.append(y)
                 if prediction == 1:
-                    plt.scatter(x,y,color="purple",alpha=.1)
+                    purpx.append(x)
+                    purpy.append(y)
                 if prediction == 2:
-                    plt.scatter(x,y,color="gray",alpha=.1)
-    
-    plt.savefig(name+model+"decisions.png")
+                    grayx.append(x)
+                    grayy.append(y)
+        print(str(i) + "/" + str(len(xvec[0])) + " done")
+    plt.scatter(pinkx,pinky,color="pink",alpha=.01)
+    print("pink plotted")
+    plt.scatter(purpx,purpy,color="purple",alpha=.01)
+    print("purp plotted")
+    plt.scatter(grayx,grayy,color="gray",alpha=.01)
+    print("gray pltoted")
+    plt.savefig(name+modeltype+"decisions.png")
+    print(name+modeltype+"decisions.png has been saved")
 def get_classes_features(data:pd.DataFrame):
 
     # get the classes into a 1d numpy array
@@ -99,7 +120,6 @@ def train_pca(data,labels):
     mydata = np.array(list(zip(labels,data[:,0],data[:,1])))
     model.train(mydata)
     return model
-    pass
 
 def score_model(train:pd.DataFrame,dev:pd.DataFrame,eval:pd.DataFrame,name:str,model_type:str,traindevflag=False):
     
@@ -350,14 +370,14 @@ def main():
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "RNF")
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "RNF")
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "RNF")
-    '''
+    
     # Train on traindev
      # score the pca for each set
     #
     score_model(set_8_train,set_8_dev,set_8_eval,"Set 08", "PCA",traindevflag=True)
     score_model(set_9_train,set_9_dev,set_9_eval,"Set 09", "PCA",traindevflag=True)
     score_model(set_10_train,set_10_dev,set_10_eval,"Set 10", "PCA",traindevflag=True)
-    '''
+    
     
     # score the lda for each set
     #
@@ -391,29 +411,38 @@ def main():
 
 
 
-
-    plot_by_class(set_8_train,'train8')
+'''
+    plot_by_class(set_8_train)
+    plt.savefig('TrainSet 08.png')
     plt.cla()
-    plot_by_class(set_9_train,'train9')
+    plot_by_class(set_9_train)
+    plt.savefig('TrainSet 09.png')
     plt.cla()
-    plot_by_class(set_10_train,'train10')
+    plot_by_class(set_10_train)
+    plt.savefig('TrainSet 10.png')
     plt.cla()
     
-    plot_by_class(set_8_dev,'dev8')
+    plot_by_class(set_8_dev)
+    plt.savefig('DevSet 08.png')
     plt.cla()
-    plot_by_class(set_9_dev,'dev9')
+    plot_by_class(set_9_dev)
+    plt.savefig('DevSet 09.png')
     plt.cla()
-    plot_by_class(set_10_dev,'dev10')
+    plot_by_class(set_10_dev)
+    plt.savefig('DevSet 10.png')
     plt.cla()
 
 
-    plot_by_class(set_8_eval,'eval8')
+    plot_by_class(set_8_eval)
+    plt.savefig('EvalSet 08.png')    
     plt.cla()
-    plot_by_class(set_9_eval,'eval9')
+    plot_by_class(set_9_eval)
+    plt.savefig('EvalSet 09.png')
     plt.cla()
-    plot_by_class(set_10_eval,'eval10')
+    plot_by_class(set_10_eval)
+    plt.savefig('EvalSet 10.png')
     plt.cla()
-'''
+
     plot_decisions(set_8_train,set_8_eval,'PCA','set8')
     plot_decisions(set_8_train,set_8_eval,'QDA','set8')
     plot_decisions(set_8_train,set_8_eval,'RNF','set8')
@@ -432,7 +461,6 @@ def main():
     plot_decisions(set_8_train,set_8_eval,'KNN','set10')
     plot_decisions(set_8_train,set_8_eval,'KNM','set10')
     plot_decisions(set_8_train,set_8_eval,'LDA','set10')
-    
     
 if __name__ == "__main__":
     main()
