@@ -126,8 +126,8 @@ def main():
     # list to csv images
     datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHY/datalist.csv"
     labels,files = read_lists(datalist)
-    #model = define_base(len(labels[0]))
-    model = define_resnet(len(labels[0]))
+    model = define_base(len(labels[0]))
+    #model = define_resnet(len(labels[0]))
     histories = []
     i = 0
     print(len(labels))
@@ -138,7 +138,7 @@ def main():
     
 
     trainlen = 1000
-    epochhs = 35
+    epochhs = 100
     start = time.time()
     for label,file in list(zip(labels,files)):
         tmplist.append(read_image(file))
@@ -166,10 +166,8 @@ def main():
                              save_best_only=True,
                              mode='min')
             
-        if i == 1000:
-            break
 
-    model.save('basecnn.keras')
+    model.save('basecnnEpoch100.keras')
     scores = []
     i = 1
     for label,file in list(zip(labels,files)):

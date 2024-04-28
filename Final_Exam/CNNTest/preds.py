@@ -63,10 +63,10 @@ def main():
 
     predictions=[]
     for x in files:
-        print(x)
+        #print(x)
         img = prep_pixels(np.array([read_image(x)]))
         prediction = mymodel.predict(img)
-        print(prediction)
+        #print(prediction)
         prediction  = prediction.argmax(axis=-1)[0]
         
         predictions.append(prediction)
