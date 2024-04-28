@@ -73,7 +73,7 @@ def prep_pixels(image):
     return norm
 
 # define the model
-# define cnn model
+# define resnet model
 def define_resnet(num_classes):
     base_model = applications.resnet50.ResNet50(weights= None, include_top=False, input_shape= (RESOLUTION,RESOLUTION,1))
 
@@ -125,9 +125,10 @@ def main():
 
     # list to csv images
     datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHY/datalist.csv"
+    #datalist = "/home/Desktop/Github_Repos/Machine_Learning/Final_Exam/TEST/datalist.csv"
     labels,files = read_lists(datalist)
-    model = define_base(len(labels[0]))
-    #model = define_resnet(len(labels[0]))
+    #model = define_base(len(labels[0]))
+    model = define_resnet(len(labels[0]))
     histories = []
     i = 0
     print(len(labels))
