@@ -12,6 +12,13 @@ from tensorflow.keras.layers import MaxPooling2D
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.optimizers import SGD
+from keras.callbacks import ModelCheckpoint
+
+# resnet
+from keras import applications
+from keras.optimizers import SGD, Adam
+from tensorflow.keras.layers import Dropout,GlobalAveragePooling2D
+from keras.models import Model
 
 # for opening images
 from PIL import Image
@@ -67,7 +74,18 @@ def prep_pixels(image):
 
 # define the model
 # define cnn model
-def define_model(classnums):
+def define_resnet(num_classes):
+    base_model = applications.resnet50.ResNet50(weights= None, include_top=False, input_shape= (RESOLUTION,RESOLUTION,1))
+
+    x = base_model.output
+    x = GlobalAveragePooling2D()(x)
+    x = Dropout(0.7)(x)
+    predictions = Dense(num_classes, activation= 'softmax')(x)
+    model = Model(inputs = base_model.input, outputs = predictions)
+    adam = Adam(learning_rate=0.0001)
+    model.compile(optimizer= adam, loss='categorical_crossentropy', metrics=['accuracy'])
+    return model
+def define_base(classnums):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform', input_shape=(RESOLUTION, RESOLUTION, 1)))
     model.add(MaxPooling2D((2, 2)))
@@ -108,8 +126,8 @@ def main():
     # list to csv images
     datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHY/datalist.csv"
     labels,files = read_lists(datalist)
-    model = define_model(len(labels[0]))
-
+    #model = define_base(len(labels[0]))
+    model = define_resnet(len(labels[0]))
     histories = []
     i = 0
     print(len(labels))
@@ -120,6 +138,7 @@ def main():
     
 
     trainlen = 1000
+    epochhs = 35
     start = time.time()
     for label,file in list(zip(labels,files)):
         tmplist.append(read_image(file))
@@ -127,18 +146,30 @@ def main():
         
         if len(tmplist) == trainlen or (i + len(tmplist)==len(files)):
             images = prep_pixels(np.array(tmplist))
-            #history = model.fit(images,np.array(tmplabels),epochs=10,batch_size=32,validation_data=(images,np.array(tmplabels)), verbose=0)
-            #histories.append(history)
-            model.train_on_batch(images,np.array(tmplabels))
+            if i == 0:
+                history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0)
+            else:
+                history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0,callback=[checkpoint])                
+            histories.append(history)    
+            
+            #model.train_on_batch(images,np.array(tmplabels))
+
             i+=len(tmplist)
             print(i,"Out of",len(files),"Files trained on")
             tmplist=[]
             tmplabels=[]
             end=time.time()
             print("Time to process",i,"labels = ",end-start)
+            checkpoint = ModelCheckpoint(filepath="my_best_cnn_model.keras", 
+                             monitor='val_loss',
+                             verbose=1, 
+                             save_best_only=True,
+                             mode='min')
+            
+        if i == 1000:
+            break
 
-
-    model.save('modeltrainedontrain.keras')
+    model.save('basecnn.keras')
     scores = []
     i = 1
     for label,file in list(zip(labels,files)):

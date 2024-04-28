@@ -27,13 +27,6 @@ from bitstring import BitArray
 # Global variables
 RESOLUTION = 480
 
-# maps class names to integers
-def map_str_to_int(labels):
-    print(uniques)
-    for i,x in enumerate(labels):
-        ind = uniques.index(x)
-        labels[i] = BitArray(bin=x).int
-    return np.array(labels)
 
 # reads filelists
 def read_lists(datalist):
@@ -60,7 +53,7 @@ def main():
 
     # list to csv images
     datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TEST/test.list"
-    model = "testmodel.keras"
+    model = "resnet.keras"
     
     files = read_lists(datalist)
     
@@ -72,8 +65,9 @@ def main():
     for x in files:
         print(x)
         img = prep_pixels(np.array([read_image(x)]))
-        prediction = mymodel.predict(img)[0]
-        prediction  = prediction.argmax(axis=-1)
+        prediction = mymodel.predict(img)
+        print(prediction)
+        prediction  = prediction.argmax(axis=-1)[0]
         
         predictions.append(prediction)
 

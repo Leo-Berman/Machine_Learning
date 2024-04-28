@@ -46,7 +46,7 @@ def load_dataset_ecg(datalist):
     for x in lines:
         labels.append(x[0])
         img = Image.open(x[1]).convert('L')
-
+        #print(img.size)
         # change for resolution
         img = img.resize((RESOLUTION,RESOLUTION))
         img = asarray(img)
@@ -86,7 +86,7 @@ def prep_pixels(train, test):
 # define cnn model
 def define_model():
     model = Sequential()
-    model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform', input_shape=(480, 480, 1)))
+    model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform', input_shape=(RESOLUTION, RESOLUTION, 1)))
     model.add(MaxPooling2D((2, 2)))
     model.add(Flatten())
     model.add(Dense(100, activation='relu', kernel_initializer='he_uniform'))
@@ -153,14 +153,33 @@ def run_ecg_test_harness():
     # load dataset ecq
     trainX, trainY = load_dataset_ecg(datalist)
     testX, testY = load_dataset_ecg(datalist)
+    i = 0
+    model = define_model()
+    histories = []
+    for W,X,Y,Z in list(zip(trainX,trainY,testX,testY)):                                        
+        # prepare pixel data
+        tmptrainX, tmptestX = prep_pixels(np.array([W]), np.array([Y]))
+        #print("TrainX = ",trainX.shape)
+        #print("TrainY = ",trainY.shape)                                                       
+        histories.append(model.fit(tmptrainX,np.array([X]),epochs=10, batch_size=32, validation_data=(tmptestX, np.array([Z])), verbose=0))
+        i+=1
+        print(i,"Out of",len(trainX),"Files trained on")
 
+    scores = []
+    i = 1
+    for W,X,Y,Z in list(zip(trainX,trainY,testX,testY)):
+        tmptrainX, tmptestX = prep_pixels(np.array([W]), np.array([Y]))
+        _,acc=model.evaluate(tmptestX,np.array([Z]),verbose=0)
+        scores.append(acc)
+        print("Evaluated on",i,"out of",len(testX),"elements,",_,acc)
+        i+=1
     # prepare pixel data ecg
-    trainX, testX = prep_pixels(trainX, testX)
+    #trainX, testX = prep_pixels(trainX, testX)
 
     #print("TrainX = ",trainX.shape)
     #print("TrainY = ",trainY.shape)
     # evaluate model ecg
-    scores, histories = evaluate_model(trainX, trainY)
+    #scores, histories = evaluate_model(trainX, trainY)
 
     # learning curves ecg
     summarize_diagnostics(histories)
@@ -171,10 +190,10 @@ def run_ecg_test_harness():
 def run_test_harness():
     # load dataset
     trainX, trainY, testX, testY = load_dataset()
-
+    
     # prepare pixel data
     trainX, testX = prep_pixels(trainX, testX)
-
+    
     #print("TrainX = ",trainX.shape)
     #print("TrainY = ",trainY.shape)
     
