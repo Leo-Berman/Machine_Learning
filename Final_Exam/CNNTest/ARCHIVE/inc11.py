@@ -125,10 +125,12 @@ def main():
 
     # list to csv images
     datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHY/datalist.csv"
-    #datalist = "/home/Desktop/Github_Repos/Machine_Learning/Final_Exam/TEST/datalist.csv"
+    #datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TEST/datalist.csv"
     labels,files = read_lists(datalist)
     #model = define_base(len(labels[0]))
     model = define_resnet(len(labels[0]))
+    modelname = "resnetfullEpoch35"
+    print("Model out = ",modelname)
     histories = []
     i = 0
     print(len(labels))
@@ -138,20 +140,20 @@ def main():
 
     
 
-    trainlen = 1000
-    epochhs = 100
+    trainlen = len(labels)
+    epochhs = 35
     start = time.time()
     for label,file in list(zip(labels,files)):
         tmplist.append(read_image(file))
         tmplabels.append(label)
-        
+        print("Read ",i+len(tmplist),"Files")
         if len(tmplist) == trainlen or (i + len(tmplist)==len(files)):
             images = prep_pixels(np.array(tmplist))
-            if i == 0:
-                history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0)
-            else:
-                history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0,callback=[checkpoint])                
-            histories.append(history)    
+            #if i == 0:
+            history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0)
+            #else:
+            #    history = model.fit(images,np.array(tmplabels),epochs=epochhs,batch_size=32,verbose=0,callback=[checkpoint])                
+            #histories.append(history)    
             
             #model.train_on_batch(images,np.array(tmplabels))
 
@@ -161,14 +163,14 @@ def main():
             tmplabels=[]
             end=time.time()
             print("Time to process",i,"labels = ",end-start)
-            checkpoint = ModelCheckpoint(filepath="my_best_cnn_model.keras", 
+            checkpoint = ModelCheckpoint(filepath="my_best_"+modelname+"_model.keras", 
                              monitor='val_loss',
                              verbose=1, 
                              save_best_only=True,
                              mode='min')
             
 
-    model.save('basecnnEpoch100.keras')
+    model.save(modelname+'.keras')
     scores = []
     i = 1
     for label,file in list(zip(labels,files)):
