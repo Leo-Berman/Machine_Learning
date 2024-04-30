@@ -16,31 +16,30 @@ from tensorflow import keras
 
 from functs import map_str_to_int,read_lines,read_image,prep_pixels
 
+import numpy as np
+
+from datagen import data_gen
+
+RESOLUTION = 480
+
 def main():
 
     # list to csv images
-    datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TEST/test.list"
-    compare = "/home/tuo54571//Machine_Learning/Final_Exam/TEST/justlabels.txt"
-    model = "cbtest.keras"
-    
-    files = read_lines(datalist)
-    comp = map_str_to_int(read_lines(compare)).tolist()
+    model = "/home/tuo54571/Machine_Learning/Final_Exam/CNNTest/models/base_E10_LR_001_0H_1000U.keras"
     mymodel = keras.models.load_model(model)
+    dir = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHYPART"
+    lbl = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHYPART/datalabels.txt"
+    dataset,uninquelabels = data_gen(dir,lbl)
 
-    print(mymodel)
-
-    predictions=[]
-    for x in files:
-        img = prep_pixels(np.array([read_image(x)]))
-        prediction = mymodel.predict(img)
-        prediction  = prediction.argmax(axis=-1)[0]
-        predictions.append(prediction)
-
+    labels = map_str_to_int(read_lines(lbl))
+    
+    predictions = mymodel.predict(dataset)
+    predictions = [np.argmax(x) for x in predictions]
     corr = 0
-    for x,y in list(zip(comp,predictions)):
+    for x,y in list(zip(labels,predictions)):
         print("Actual = ",x,"Pred = ",y)
         if x == y:
             corr+=1
-    print("Accuracy rate = ",corr/len(comp))
+    print("Accuracy rate = ",corr/len(predictions)*100,"%")
 if __name__ == "__main__":
     main()

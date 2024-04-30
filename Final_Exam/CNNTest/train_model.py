@@ -13,44 +13,44 @@ import time
 
 def main():
 
-    # list to csv images
-    datalist = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHY/datalist.csv"
     
-    images,labels = data_gen()
-    #model = define_base(len(labels),RESOLUTION)
-    model = define_resnet(len(labels),RESOLUTION)
-    modelname = "resnettest"
-    print("Model out = ",modelname)
-    histories = []
-    i = 0
-    tmplist = []
-    tmplabels = []
+    # read the data set
+    dir = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHYPART"
+    lbl = "/home/tuo54571/Machine_Learning/Final_Exam/TRAINUNHEALTHYPART/datalabels.txt"
+    images,labels = data_gen(dir,lbl)
 
+    # define model parameters
+    modeltype = "base"
+    epochhs = 10
+    learnrate = .0001
+    model = None
+    
+    # defin the model
+    if modeltype == "resnet":
+        model = define_resnet(len(labels),RESOLUTION,learningrate=learnrate)
+    elif modeltype == "base":
+        model = define_base(len(labels),RESOLUTION,learningrate=learnrate)
+    else:
+        print("invalid model")
+    modelname = "models/"+modeltype+"_E"+str(epochhs)+"_LR"+str(learnrate).replace(".","_")[1:]+"_0H_1000U"
+    print("Model out = ",modelname+".keras")
+    
+    # fit and save the model
 
-
-
-    trainlen = len(labels)
-    epochhs = 20
     start = time.time()
     history = model.fit(images,epochs=epochhs)
-    histories.append(history)    
     
     end=time.time()
-    print("Time to process labels = ",end-start)
-    scores = []
-    i = 1
-    for label,file in list(zip(labels,files)):
-        image = prep_pixels(np.array([read_image(file)]))
-        _,acc=model.evaluate(image,np.array([label]),verbose=0)
-        scores.append(acc)
-        print("Evaluated on",i,"out of",len(files),"elements",_,acc)
-        i+=1
-
-    # learning curves ecg
-    #summarize_diagnostics(histories)
-
-    # summarize estimated performance ecg
-    summarize_performance(scores)
+    model.save(modelname+".keras")
+    print("model outputted")
+    
+    datalen=0
+    for x in images:
+        for y in x:
+            for z in y:
+                datalen+=1
+    datalen = datalen//2
+    print("Time to process",datalen,"files = ",end-start,"seconds")
 
 if __name__ == "__main__":
     main()
